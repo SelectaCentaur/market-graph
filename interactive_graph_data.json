@@ -9492,6 +9492,20 @@
       "relation": "Acquisition",
       "weight": 1,
       "context": ""
+    },
+    {
+      "source": 25,
+      "target": 40,
+      "relation": "Partnership",
+      "weight": 1,
+      "context": "Accompanied Microsoft to Hannover Messe"
+    },
+    {
+      "source": 18,
+      "target": 9,
+      "relation": "Compute",
+      "weight": 1,
+      "context": "Deployed NVIDIA Jetson Thor for embodied intelligence"
     }
   ],
   "global_news": [
@@ -9536,8 +9550,8 @@
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOMy1EMnJkUGtuc2NHeUhEUzBhcWo2TUdZajQ3WVlTNmxCblp3Mi0tYm9keUhPV19iekc3dUt4a2NKV2xnVjBnZlRGVHVmajBrVVJkQ1I0Y2VHWk9Fa0M1bGRNcDI3Tmo1OXlCR1RwTDhJTHQ1dGFNbVpFTWpFREpRam9Qc2tlOGVVRFNTMnFIMFhCNU8xQ21iLUFjYmJzaXFoTjR5bGZKTEwtRzNyQkF4RUJXc1JfYlhaZEl4bjVmMF9jR1dHUC1fSFJHZEZTdHQtYmZweGpmeDI?oc=5",
       "date": "Wed, 22 Ap",
       "involved_nodes": [
-        61,
-        77
+        77,
+        61
       ],
       "importance_score": 5
     },
@@ -9546,8 +9560,8 @@
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBiUHhYVDZkV3l0V3FTX21obWdlRjdfNC1oZUdQUGxUdUNYOFRNeWRSamx4RWF1WC1uZTBpaVpfWWZwUUpKM1VWSzg2cmZ6cVB1aUhLNzE3MDFjN29pYVJZZUNBZkNLdw?oc=5",
       "date": "Wed, 22 Ap",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": 5
     },
@@ -9646,8 +9660,8 @@
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1VRDBDcXdieF91VlExT0h1UFcwbEZ3WF82Q3ZJOGI0Tko5elZpZEFuSWNsM3dwWG92T0dPX0dWU2xCVnUyYkU5QUN2ZXk2NEszQVVNVnNyOFlEYU5odTJTZ0VCd1N3SmJnWGIya2E2c0ZTdU41?oc=5",
       "date": "Wed, 22 Ap",
       "involved_nodes": [
-        154,
-        61
+        61,
+        154
       ],
       "importance_score": 5
     },
@@ -9684,8 +9698,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWlZ6TWoxeGstV3oybXBTejlwV0JWZDYyVXlpbmRwVEJfX2p3NDBnY3drd0FzVl9VTTlIVnZQOV8yX2pHVU1BQi03T1RfRlVsVkp6amxaTWFCeWFrb1BqUW8xRDNVd2JqSGNwNFRnMUJMZnplMUtrc2NtTVgxUXFJQk9jX2E4WUR0MkRseElxWVRmME0?oc=5",
       "date": "Wed, 17 Se",
       "involved_nodes": [
-        142,
-        75
+        75,
+        142
       ],
       "importance_score": 5
     },
@@ -9798,8 +9812,8 @@
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNN1ItYnllaW5BcjNWcWVqRFd6ZV84aTN2Q09tQW5HdEd1YndmdmZGTUI1ckJZbE50c09YNnRUSFREMVBaRGI2MkJUU1BfbElzU3BETXVkT0JGaUZDb2E2YnI4MFVBVVQ3bEE3bUtYWEk2cnBvYkJ1MjV4Q0Y5V3RQOVYtRGUxVVFNQ0VTQWJkSnN4VWNyRUdzUGlKcjNPdGdTMzN4dHJrdjhvOFBwY0ZJTjI1Unc2VWVaYldGalRhNzlDT0F1NHByNHJTalVxc0NwOHNBTTJR?oc=5",
       "date": "Thu, 16 Ap",
       "involved_nodes": [
-        18,
-        152
+        152,
+        18
       ],
       "importance_score": 5
     },
@@ -9808,8 +9822,8 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUnVxUjBPVUpjcXdGWHlNNFVjSFMwbXFoUE9Xc29Ld2xNSVVZVWVBVkdrVV9IUENjVFptdy02UnIxWWV1ZkswS0M5OW9qQ1M2eVJCQlFSZHE1a0duSFZCUnZEUTQ3Q281OHM4WmNfLXp1SUcyNzlubTV0RHRCdl82OHhVMC1vc1kzX2RTZ1RvaExXb1lvUDBXREVMVExCZl8xdkV4dEtIbWN0eE1ZZW50WWtJckM0WGM?oc=5",
       "date": "Thu, 09 Ap",
       "involved_nodes": [
-        30,
-        143
+        143,
+        30
       ],
       "importance_score": 5
     },
@@ -9872,8 +9886,8 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQakdscmxSWVQwTlUwcXVhUmtBeFVwOFdZQklrSElfLTcxaTA0cU54dy1GQ244MHFqakJ3TEJNNUp3SDAwSUtFM0Nzb2ljVmxNRkJ0em40U0JucEtKa0xkVy0xTHo3MVNrRHYyRGQ3blc4OVNxVGFWenpMbUdsNDdxWUI5ZVh0TFQzSzRVNi1tdlZEQ3ppSXVkdXN1VC1LZzc3U1dBQ2xFM1VhWUZjS0NReUV5R1BZeDQ4YXFWMGRKOHI0NjNjbjBWMk5UVGU?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -10000,8 +10014,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdVFsY2ZVNkJoelE1VHVNbWVoMGpLWGdxdXlRVDdwSUJGUXhtX3paYndCZGh6Y3NlRkdIM2Y2YlpJZUdvZkpuV3BJSFVhbG02ek5TR2xwSTRrWlhFalZLd2RVTUZCaURQRmZfUjI3UnRXdjFtaHJTU1JWUXFKSzBnVUZYRjQ2XzAxY1B6WDgtQ0JpVHfSAZgBQVVfeXFMTkRhRHcyTm1LU2JoOFJUNmp1S3pXWGU4NzdOTjdHd01UWTVDcUpZMWtvNTNYTlZwUFVqUWlxTkM0WjlYZjRyMHlNWTJMcDA5OXpsd25Jd2RLVjAyaXZJTTdNRHNIYldSOVJwY1QwSl9JVkxEMFhXMXRhSnJqWUpGVVlpMklIaE1ZLXdldWxfV0s1ZDJ1cnpoMUI?oc=5",
       "date": "2026-05-01",
       "involved_nodes": [
-        30,
-        183
+        183,
+        30
       ],
       "importance_score": null
     },
@@ -10082,8 +10096,8 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS2V4OFNkTnlYYkh3YS12NHN5SHRVSXNKd2hkVzZPVDlFZlg4TVpLUlRmRGRZbUU3dzFqMnlqZ193dUswWExYNTJNTUpIVG1tbm8tYXlmbmM3U0wtZUs4RXZ1WTdLdjczMm00VU0tZ3g4YlU3Q0MtXzBPSThlNnR4OWhiWkF1UmhpNUwyUC1RUmpNWkhlNExz?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        177,
-        75
+        75,
+        177
       ],
       "importance_score": null
     },
@@ -10101,8 +10115,8 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdzBwejRzaHFINWg2aVdOVkZVYml4ajBhd1pxOXlOUkU4MUpMcFk5ZEJiMEhWbEx2ajEtalg3WUI3UFd6TG0xMEYzREFxbDlyWmthT3Q3UlgwMWtnbWFNZzVQbndieWx4ZTAxbWxGdEpQdEZ4YkpSZl8zREtQWnFSRGdvZ1UxOGg5WVJxZA?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -10138,8 +10152,8 @@
       "url": "https://spectrum.ieee.org/daimon-robotics-physical-ai",
       "date": "2026-04-30",
       "involved_nodes": [
-        6,
-        181
+        181,
+        6
       ],
       "importance_score": null
     },
@@ -10175,8 +10189,8 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNd21qbzNLUnk1cW92OEltVldOY0JwaDZQOWlNMWllUUQ4S1hPVFhVcEZJWUFmdlIzR2JSZjZUbkgxSXhRaHF6NWdNeWctWmxfX19CTU9YdmZlUzVJOW95LWxHRHhOUjJjVGpUdWFka3UtczFKNkt4Q09IT3R4YkN4aG5uczV5Ri1wUl9uRU9NZS03WFdfdHlaWDlaSG5DcWNNa0FBNm51ZjJVc0hjWEE?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        120,
-        40
+        40,
+        120
       ],
       "importance_score": null
     },
@@ -10349,8 +10363,8 @@
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQlp5VmVOOWljVW52U1J0cEh6Znh4ckh2T1FLRTZScV9jNEpHS0dvYkkzUDVWQnZDRlQtWTljOTFQdWpUelF0M2taNS1vQjRNX3hCTGpNT3BTU1NIZ29wb0ZRR0NORmFWS21rb09SaGdGOTZDeERDMXJHNEoyeHNLRzRwT0prR3NFajJlYUEwcVZnYlZpTFh0bVJHZUhXcVhXckw4WW9lY0MxUWwtLWRlVm5ydmU5cm02SWJCeTBQeFM?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        41,
-        28
+        28,
+        41
       ],
       "importance_score": null
     },
@@ -10422,8 +10436,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdlBHdnNQN1JBWXg0bEd6QUlYYUdNczNtQVozTHdmbW04bzI1d1hFcUZMaEFUWUdIenlwUjFtYjJjWDRKSlQ2ZjZMamRBWU1mX1BnSEZVMS1XYUtmXzRJcXpVUFd4ZmN4M1F1dXU5LUc2Um95RFlRZU9oYTZmdXNWY3dlR1lseXc0V01Sa25DeHZwQU0?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        43,
-        61
+        61,
+        43
       ],
       "importance_score": null
     },
@@ -10450,8 +10464,8 @@
       "url": "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/",
       "date": "2026-04-29",
       "involved_nodes": [
-        7,
-        174
+        174,
+        7
       ],
       "importance_score": null
     },
@@ -10579,8 +10593,8 @@
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8ydVppRXdQb1c2YWZfMzh5N1JOVGFhUVhGaXpkbVBxRGhXU3Z1aHEyTVFaRE1nSDVpZ0c2enJKa1FELWlRWW5PSW1Gbm5DVEpOUktZeVZncVIwQW1yaDZySw?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -10626,8 +10640,8 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQaE9oUU91MEt3V29rVndmWmxyWV9mbjZFQ29fcnliZXVHcnozblhpc1NNelBIaFJLa3VVbGd3MHBPQU41RVVFME13OTZBTFg5VTNOdS11THU3VmdPcHdZRzRhZGFnTkF2SFhMTTZJYXYxX09jNExMd0txOW5GbDk2Nm41T0pBcE1SYkpaQVJkdFlORHNZYnphTElFdU1VemVHT1UwQVhwaENpTHgxVjdTYURreWVaak5JRkYwdFpkNnJHcFHSAcgBQVVfeXFMTmdKVGNVdnpvcFVudWkxeHlwanVBejlWSHNhZjRQM2p5T05TYlR2YzRtQU8ycVdWc1ZDajYwd05qOU1SUmw0SE1kYVdnbGVYOWVWZ3hndUV3bUoyNGdfb19va3ZBMmM1QUNzTGV5YkhHbDZDS1BkWV93MXRWTnRwbEFMOHgzNkNJbXNSUW1oeW9UYkVUeDNKUU1UMkZ2bkNDQUw4Z1dEMWNqbWFFeGczZ25iWl9pdmpYUHNGbFpYZkdEWHk1UWlDaWQ?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        154,
-        61
+        61,
+        154
       ],
       "importance_score": null
     },
@@ -10709,8 +10723,8 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQXZYVl9wTEw4ZzdfbU4wUkFoRDhScE9VV2ZlNUZ4VFdKWEdiZ2Nzc0JkV0JPLUJlV1ptSlNNRk5VTFQzNGhvSl9LbldjWHY4R2o4VzhmQk1hMEU2RGpfNk45NVJsbnEyc3pKVkZzQXFjaW9kUzRXVW1jS2pEMDFiMEhOVS1TYlhxQWIweklmcll1dFlTMGZ3dG1CVTc4c0pLNnlQcWJ3?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        177,
-        75
+        75,
+        177
       ],
       "importance_score": null
     },
@@ -10756,9 +10770,9 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVDltX3FQSFdoTXhZeUJXUEIyRWZlNndnOG55aHFjUGxnUzdyNjBHRFhKaWh6MXhzSUppMmNtNFZIR2FseE9GN1gweWlUSVEwQnNfX1hnMnV6eThHZlI5SjdwM1JVOVZRM3RqYTlrZHBUYjBKZ2JFYWc1VldnYnBXSUJmSkRhRWNGRjFmM0pWMGhGVk90VHRXeG1tQ3VSbmlJTVA5MTBVbVc0MFpuZEJPTk4xRnF3czVaTzNQMXNLamdZbDVsMmVhX25Cc0RKN1U?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        15,
+        16,
         31,
-        16
+        15
       ],
       "importance_score": null
     },
@@ -10822,8 +10836,8 @@
       "url": "https://www.therobotreport.com/flex-teradyne-expand-partnership-scale-physical-ai/",
       "date": "2026-04-28",
       "involved_nodes": [
-        166,
-        177
+        177,
+        166
       ],
       "importance_score": null
     },
