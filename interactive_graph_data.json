@@ -718,7 +718,13 @@
       "market_cap": null,
       "revenue": null,
       "employees": null,
-      "news": []
+      "news": [
+        {
+          "date": "2026-04-27",
+          "headline": "BMW and PepsiCo robotics partner Sereact raises \u20ac93 million Series B to scale across the US - EU-Startups",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU9aclA4MEJONzV4Skh0WkRpN1N1bk5BNkdjRDYwQVh6YllHeTV5Ui1nT2pzUXNOVGtwRThwMGV5aTNzS1doZThkTHo2YmYwemlEWm51Qi1OTkhseGdhNDBtQkJzZm9faU1FS1JIX3o1dkgtVzEtSEhpWGw4bmhNMW1jQjd6ejRxQWlUZkcxZGhKc19MV3N0WENVdmpwSlFjWFhjX09qS3ZWY3VVVVpNVWhkUElCVHhJUms4amlLcG5rcWZXZGNF?oc=5"
+        }
+      ]
     },
     {
       "id": 12,
@@ -1382,6 +1388,11 @@
           "date": "2026-04-28",
           "headline": "KODEX Samsung Group June Rebalance: Rainbow Robotics Inclusion Is a Heavily Overlooked Event - Smartkarma",
           "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcEtvcTFMalRwSkt2QVpqX1RXTmRlVEJHb21kb0F2cmk4c0c4bjdfNUt6RjRuX3c4Tkg0TkVUVE4zeDJVM0Z4dlNrZ3hwLWZmX2Rlbng3ejZHeF9jbjZfY1UzUm5pRlpSQ3M0dlgwU0VDbHpUcjFaN3dhajE5VXVROU9SQzBSZ2tFZHgtME1vVUhEOXd5c2ZGYWdxS2s5cGd3ZGdsa0U4eGw3cnNORU5XbEFTWERwZmd6MGc1dnljb3ktSVROYVE?oc=5"
+        },
+        {
+          "date": "2026-05-02",
+          "headline": "\u201cAI Automation for Painting Processes\u201d\u2026 Magenta Robotics Unveils FAST Painting Automation Solution - \ubca4\ucc98\uc2a4\ud018\uc5b4",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5IVks1R3dUNmd4Z20weFptQ2NhTDhRUjZPQklUSFd5V2hPanVRZ2hMb0ttbkNSUVplMTIySVpIdFhtczJVV3dzS2JtOXFVQWNQbnBv?oc=5"
         }
       ]
     },
@@ -1792,6 +1803,21 @@
           "date": "2026-05-02",
           "headline": "Spirit Airlines shutting down after rescue talks collapse - BBC",
           "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9NMEVQdFlOdzRNYnRvODFyMUVQTzRWb2F0ZXZkMmJHOG03NDkyMDVwd3dIQzJuVExUYTZJT0V4V1prcGp3NEVDUFZhemZLYVk2MUhNV2tGaW9JUQ?oc=5"
+        },
+        {
+          "date": "2026-05-02",
+          "headline": "Spirit Airlines Cancels All Flights, Stranding Passengers - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSi1ZblcwUVEzQlNJZEVVQTJmTnFmQnpZeUtRXzFzdmtoUHdWRnh4S1U5ekFudHFaUVJIRi1JYTY3M1VoSHZ3X2ZWZUZCdlpOQW15cGVaQUEtd2RXLTNJUkxXN29qV0JmMEd3b0x2R2FWTkgtOGlMd043aEphMjVHVE43N1Z5XzBneXBEYQ?oc=5"
+        },
+        {
+          "date": "2026-05-01",
+          "headline": "Spirit Airlines Prepares to Shut Down as Rescue Deal Falls Apart - WSJ",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMmhpaklUTUR1cXRVbVk4cGxyNmd5NklYWVpTN0lrRk4xZVU1d1RISzh5bkhYQzJTWEpnT0xQMmhfeEtGQjE2NlpYeXRFczBRNUdTc2EwMHpmQ05qUWQ3NDMzZjc4Z2tCcFJOWVBhWHBiUldxeUVCYkkxNllIMkg0X04zNTBkNHV3Yjd5ZU13aVZtbUpINFRiME9NOVd2YXI0VlZpUDRWMU8zdk5IVktpRg?oc=5"
+        },
+        {
+          "date": "2026-05-02",
+          "headline": "Spirit Airlines canceled all flights and is going out of business - CNN",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZeWVaQVRRcHNtRzIyczlYTUZuR3g4VWM0Q2J2X3VXMjBOWHhaYU9qZlV6V3F3UUlWc0lfc2QwdXdGVUtrYlROdVNwam5ZSndqZk9ONTl3dC1HU1RsWHU5RkRUTlotSEZFMFFHOTNnQ3VWdG1J?oc=5"
         }
       ]
     },
@@ -2268,6 +2294,11 @@
           "date": "2026-04-29",
           "headline": "Unitree G1 humanoid robot ice skates and rollerblades - Kurt the CyberGuy",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPNU4wUGZNV3MzZUZVeEpIY2duM2c0UFVaRXhRa2RyVno3Nk9XZ1hVdHFaMmRwYmdEUHJzdnYtbmV0bmk1N3VURm9IenBXZnp4dWk4OEY0OWEyUE1BS2JhYXRHaUQyS1JTOGdxQ0duMmRfSEJ0MWMweGdZMUFmQlI2SUZTWmo2alpRRlE?oc=5"
+        },
+        {
+          "date": "2026-04-30",
+          "headline": "Unitree sells robots starting at around 10,000 yuan at its first directly operated offline store in downtown Beijing - Global Times",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5haGRSWmdRb0lKUjNSZW5zWXdtQ29pNTBRYktkY2NTMVp2Nl9uSkY2MExrUThvVHZ6V2VkbHplaUJHaENaVi1jTm1iejB3LXo3OGFrZ2RTbUtva29yZVFERWZR?oc=5"
         }
       ]
     },
@@ -2741,6 +2772,11 @@
           "date": "2026-05-01",
           "headline": "Google Deepmind's \"AI co-clinician\" beats GPT-5.4 in blind doctor tests but still trails experienced physicians - the-decoder.com",
           "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPWDNpbUJKakVlU1dUVkZ0b1BoNjlGSmdudmYwVkJNVGxJckU2TkNOenBHUlhod0oybEc2TWgyMS1UeFFMdXVOcWUyWGxsX0FoV2xsVnJaSlpNM2dBYU5pblh6dUVKTUpEcWQzTmhRdkJrMkYwRWxRaTJEb2RxbmtZaUIxa2d5NDFoY3VGYVZWVzVtellXV0tJdGJicnJZbGl4bXNVeGJfYWRzTXFVQmY1TnZKazlEemM5RWJXU0RzTW1pa0J1azEyX21Bc2N3dw?oc=5"
+        },
+        {
+          "date": "2026-04-28",
+          "headline": "Google DeepMind Veteran Raises $1.1 Billion to Build AI That Isn\u2019t Trained With Human Data - Decrypt",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNDFuNHhpUXJTRFYySG1jYmItRVNZbW1oYWxwX1BhdmMtTmRHMTZja004VS1JME1vNExhTXVaVDhhWEYxS00yMGJ5TFJIVFZCczNuR2VDTmlEdlFnRnFLQ3drN0d6Yjh2TWM4eGw1Z2VGbDBGcXE4NWVlM2d2dDlmT1g5RkQ1bzhGLXJaSnBiTVdNbm1UM2NBNUszc9IBowFBVV95cUxOQjFxYVI2b3p5T3dHX0NyczZjMEVwbTlVSDI0TUUwaEgySXVUaEFfYkZZWUFjakg2WkRScHFGUnF2YVZMSlpXZUw3QVZQRnFwTG44NHlpdDdxLUNsVlgyM0luaUR4QmhzMVBJZmFVUEtxbi1nWlJlSVZWYW83MXhxMzZIZlFxNXIwTHdaaEdPWndpNUNmTWdCZ0pjak9mdFlTVFVn?oc=5"
         }
       ]
     },
@@ -3740,6 +3776,11 @@
           "date": "2026-04-27",
           "headline": "German robotics startup Sereact raises $110M - Tech.eu",
           "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9MQ3otMFFJUFMweGNDeURPeG1nOGxDZ2lxSWQyeGxCQnJGMHFZX3hGc2RTOGpPV1RiMVl6cEpjTDFocGZzdGE2Q1QtclZkUEU0d0YtYmctbnFXX0dUMXZzZTNzZ3dhTlRqOXB5bngzRDVIUl92NWpKOGd5dw?oc=5"
+        },
+        {
+          "date": "2026-04-27",
+          "headline": "BMW and PepsiCo robotics partner Sereact raises \u20ac93 million Series B to scale across the US - EU-Startups",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU9aclA4MEJONzV4Skh0WkRpN1N1bk5BNkdjRDYwQVh6YllHeTV5Ui1nT2pzUXNOVGtwRThwMGV5aTNzS1doZThkTHo2YmYwemlEWm51Qi1OTkhseGdhNDBtQkJzZm9faU1FS1JIX3o1dkgtVzEtSEhpWGw4bmhNMW1jQjd6ejRxQWlUZkcxZGhKc19MV3N0WENVdmpwSlFjWFhjX09qS3ZWY3VVVVpNVWhkUElCVHhJUms4amlLcG5rcWZXZGNF?oc=5"
         }
       ]
     },
@@ -9506,6 +9547,27 @@
       "relation": "Compute",
       "weight": 1,
       "context": "Deployed NVIDIA Jetson Thor for embodied intelligence"
+    },
+    {
+      "source": 45,
+      "target": 166,
+      "relation": "Partnership",
+      "weight": 1,
+      "context": ""
+    },
+    {
+      "source": 45,
+      "target": 9,
+      "relation": "Partnership",
+      "weight": 1,
+      "context": ""
+    },
+    {
+      "source": 58,
+      "target": 11,
+      "relation": "Partnership",
+      "weight": 1,
+      "context": ""
     }
   ],
   "global_news": [
@@ -9550,8 +9612,8 @@
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOMy1EMnJkUGtuc2NHeUhEUzBhcWo2TUdZajQ3WVlTNmxCblp3Mi0tYm9keUhPV19iekc3dUt4a2NKV2xnVjBnZlRGVHVmajBrVVJkQ1I0Y2VHWk9Fa0M1bGRNcDI3Tmo1OXlCR1RwTDhJTHQ1dGFNbVpFTWpFREpRam9Qc2tlOGVVRFNTMnFIMFhCNU8xQ21iLUFjYmJzaXFoTjR5bGZKTEwtRzNyQkF4RUJXc1JfYlhaZEl4bjVmMF9jR1dHUC1fSFJHZEZTdHQtYmZweGpmeDI?oc=5",
       "date": "Wed, 22 Ap",
       "involved_nodes": [
-        77,
-        61
+        61,
+        77
       ],
       "importance_score": 5
     },
@@ -9560,8 +9622,8 @@
       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBiUHhYVDZkV3l0V3FTX21obWdlRjdfNC1oZUdQUGxUdUNYOFRNeWRSamx4RWF1WC1uZTBpaVpfWWZwUUpKM1VWSzg2cmZ6cVB1aUhLNzE3MDFjN29pYVJZZUNBZkNLdw?oc=5",
       "date": "Wed, 22 Ap",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": 5
     },
@@ -9717,8 +9779,8 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSnpKb1lGYi1XbkJoWnltRGJXQVJueDhkd3hjUlVyNG90c1BxUEl1ZEgxVzRDTmVMYnZraHlVTFVPN0pzLVg0RmZJRVI3aHI5WEVkMjV2VmczX0Q5QVVQX0ZTMlpjdC16UXJCNmhmYTExaHlYMS1jX0k3Qkc0cUd3ZXBoRU1MaXpxYXN5SXJ6Sm0zSW1LT0dXZkZsbk1pRm9uRG5qWnhhT29CeDZHNzYxSXFKLUM5bElVdFdYOV9zVjZmejRQcEZMeFJtVkZ0T3hwdTRROW1Rb3dMdUpO?oc=5",
       "date": "Tue, 21 Oc",
       "involved_nodes": [
-        58,
-        167
+        167,
+        58
       ],
       "importance_score": 5
     },
@@ -9745,8 +9807,8 @@
       "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPbVpWZ0NyYlRQYXJzX1lfM2txNW02dzRZd1FfemVjU0MwQzBpUE0tQTVNNU03TFdCblBRN1VmZ20xdFNyT2x4UDlHTnFUMjhsY2RmelE5T2QxdHVuSWNRT2trbzczOE1fTTNRVmJsUmpiU2QydHZyaUtoUmU2aWNVUy12X3pBQXVKTDFFSGJNVHN2OEJBenNvSnd3bHlzcV8xSnhHazEyenNBRENManJGR2g4VTBNNVFrWE0zQVd6UGF6WEZTUWlCcFptcVhfOUFWZ1g2YlYtb2lKam84WE1fNzdEa3lBYlZBem5TTU1JelNQQVdqVjRKU2dnVkpld0RBeTJyYThTUlRzT3hQSV9OQlJmYUttMVZ0YWs3aGNQdlEzdkE?oc=5",
       "date": "Tue, 21 Ap",
       "involved_nodes": [
-        21,
-        31
+        31,
+        21
       ],
       "importance_score": 5
     },
@@ -9886,8 +9948,8 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQakdscmxSWVQwTlUwcXVhUmtBeFVwOFdZQklrSElfLTcxaTA0cU54dy1GQ244MHFqakJ3TEJNNUp3SDAwSUtFM0Nzb2ljVmxNRkJ0em40U0JucEtKa0xkVy0xTHo3MVNrRHYyRGQ3blc4OVNxVGFWenpMbUdsNDdxWUI5ZVh0TFQzSzRVNi1tdlZEQ3ppSXVkdXN1VC1LZzc3U1dBQ2xFM1VhWUZjS0NReUV5R1BZeDQ4YXFWMGRKOHI0NjNjbjBWMk5UVGU?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -9898,6 +9960,24 @@
       "involved_nodes": [
         99,
         62
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Spirit Airlines Cancels All Flights, Stranding Passengers - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSi1ZblcwUVEzQlNJZEVVQTJmTnFmQnpZeUtRXzFzdmtoUHdWRnh4S1U5ekFudHFaUVJIRi1JYTY3M1VoSHZ3X2ZWZUZCdlpOQW15cGVaQUEtd2RXLTNJUkxXN29qV0JmMEd3b0x2R2FWTkgtOGlMd043aEphMjVHVE43N1Z5XzBneXBEYQ?oc=5",
+      "date": "2026-05-02",
+      "involved_nodes": [
+        27
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Spirit Airlines canceled all flights and is going out of business - CNN",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1ZeWVaQVRRcHNtRzIyczlYTUZuR3g4VWM0Q2J2X3VXMjBOWHhaYU9qZlV6V3F3UUlWc0lfc2QwdXdGVUtrYlROdVNwam5ZSndqZk9ONTl3dC1HU1RsWHU5RkRUTlotSEZFMFFHOTNnQ3VWdG1J?oc=5",
+      "date": "2026-05-02",
+      "involved_nodes": [
+        27
       ],
       "importance_score": null
     },
@@ -9916,6 +9996,15 @@
       "date": "2026-05-02",
       "involved_nodes": [
         27
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "\u201cAI Automation for Painting Processes\u201d\u2026 Magenta Robotics Unveils FAST Painting Automation Solution - \ubca4\ucc98\uc2a4\ud018\uc5b4",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5IVks1R3dUNmd4Z20weFptQ2NhTDhRUjZPQklUSFd5V2hPanVRZ2hMb0ttbkNSUVplMTIySVpIdFhtczJVV3dzS2JtOXFVQWNQbnBv?oc=5",
+      "date": "2026-05-02",
+      "involved_nodes": [
+        22
       ],
       "importance_score": null
     },
@@ -10014,8 +10103,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdVFsY2ZVNkJoelE1VHVNbWVoMGpLWGdxdXlRVDdwSUJGUXhtX3paYndCZGh6Y3NlRkdIM2Y2YlpJZUdvZkpuV3BJSFVhbG02ek5TR2xwSTRrWlhFalZLd2RVTUZCaURQRmZfUjI3UnRXdjFtaHJTU1JWUXFKSzBnVUZYRjQ2XzAxY1B6WDgtQ0JpVHfSAZgBQVVfeXFMTkRhRHcyTm1LU2JoOFJUNmp1S3pXWGU4NzdOTjdHd01UWTVDcUpZMWtvNTNYTlZwUFVqUWlxTkM0WjlYZjRyMHlNWTJMcDA5OXpsd25Jd2RLVjAyaXZJTTdNRHNIYldSOVJwY1QwSl9JVkxEMFhXMXRhSnJqWUpGVVlpMklIaE1ZLXdldWxfV0s1ZDJ1cnpoMUI?oc=5",
       "date": "2026-05-01",
       "involved_nodes": [
-        183,
-        30
+        30,
+        183
       ],
       "importance_score": null
     },
@@ -10040,6 +10129,15 @@
     {
       "headline": "Spirit Airlines Prepares to Shut Down After Trump Administration Bailout Falls Through - The New York Times",
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQWw3T29Gb2dIc3ZvSC1pQ1pNVkFZX3JKUmNKM2dHaWRqUXhSdFhUSS1SMjlEMDZCU3BsTjFRNW9UWGtoQXZoQ19hdjhWRWFOSWJ3aVAwVXZ4TXdaS05icUVTNDE0OGxSQ01PTVRvSzJMWEVVQjA5Ykk3U1hsa18tM09iRTc?oc=5",
+      "date": "2026-05-01",
+      "involved_nodes": [
+        27
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Spirit Airlines Prepares to Shut Down as Rescue Deal Falls Apart - WSJ",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMmhpaklUTUR1cXRVbVk4cGxyNmd5NklYWVpTN0lrRk4xZVU1d1RISzh5bkhYQzJTWEpnT0xQMmhfeEtGQjE2NlpYeXRFczBRNUdTc2EwMHpmQ05qUWQ3NDMzZjc4Z2tCcFJOWVBhWHBiUldxeUVCYkkxNllIMkg0X04zNTBkNHV3Yjd5ZU13aVZtbUpINFRiME9NOVd2YXI0VlZpUDRWMU8zdk5IVktpRg?oc=5",
       "date": "2026-05-01",
       "involved_nodes": [
         27
@@ -10115,8 +10213,8 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdzBwejRzaHFINWg2aVdOVkZVYml4ajBhd1pxOXlOUkU4MUpMcFk5ZEJiMEhWbEx2ajEtalg3WUI3UFd6TG0xMEYzREFxbDlyWmthT3Q3UlgwMWtnbWFNZzVQbndieWx4ZTAxbWxGdEpQdEZ4YkpSZl8zREtQWnFSRGdvZ1UxOGg5WVJxZA?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -10189,8 +10287,8 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNd21qbzNLUnk1cW92OEltVldOY0JwaDZQOWlNMWllUUQ4S1hPVFhVcEZJWUFmdlIzR2JSZjZUbkgxSXhRaHF6NWdNeWctWmxfX19CTU9YdmZlUzVJOW95LWxHRHhOUjJjVGpUdWFka3UtczFKNkt4Q09IT3R4YkN4aG5uczV5Ri1wUl9uRU9NZS03WFdfdHlaWDlaSG5DcWNNa0FBNm51ZjJVc0hjWEE?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        40,
-        120
+        120,
+        40
       ],
       "importance_score": null
     },
@@ -10363,8 +10461,8 @@
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQlp5VmVOOWljVW52U1J0cEh6Znh4ckh2T1FLRTZScV9jNEpHS0dvYkkzUDVWQnZDRlQtWTljOTFQdWpUelF0M2taNS1vQjRNX3hCTGpNT3BTU1NIZ29wb0ZRR0NORmFWS21rb09SaGdGOTZDeERDMXJHNEoyeHNLRzRwT0prR3NFajJlYUEwcVZnYlZpTFh0bVJHZUhXcVhXckw4WW9lY0MxUWwtLWRlVm5ydmU5cm02SWJCeTBQeFM?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        28,
-        41
+        41,
+        28
       ],
       "importance_score": null
     },
@@ -10374,6 +10472,15 @@
       "date": "2026-04-30",
       "involved_nodes": [
         29
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Unitree sells robots starting at around 10,000 yuan at its first directly operated offline store in downtown Beijing - Global Times",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5haGRSWmdRb0lKUjNSZW5zWXdtQ29pNTBRYktkY2NTMVp2Nl9uSkY2MExrUThvVHZ6V2VkbHplaUJHaENaVi1jTm1iejB3LXo3OGFrZ2RTbUtva29yZVFERWZR?oc=5",
+      "date": "2026-04-30",
+      "involved_nodes": [
+        30
       ],
       "importance_score": null
     },
@@ -10436,8 +10543,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdlBHdnNQN1JBWXg0bEd6QUlYYUdNczNtQVozTHdmbW04bzI1d1hFcUZMaEFUWUdIenlwUjFtYjJjWDRKSlQ2ZjZMamRBWU1mX1BnSEZVMS1XYUtmXzRJcXpVUFd4ZmN4M1F1dXU5LUc2Um95RFlRZU9oYTZmdXNWY3dlR1lseXc0V01Sa25DeHZwQU0?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        61,
-        43
+        43,
+        61
       ],
       "importance_score": null
     },
@@ -10483,8 +10590,8 @@
       "url": "https://www.therobotreport.com/gft-technologies-ai-powered-robots-move-from-inspection-action-automakers/",
       "date": "2026-04-29",
       "involved_nodes": [
-        180,
-        179
+        179,
+        180
       ],
       "importance_score": null
     },
@@ -10593,8 +10700,8 @@
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8ydVppRXdQb1c2YWZfMzh5N1JOVGFhUVhGaXpkbVBxRGhXU3Z1aHEyTVFaRE1nSDVpZ0c2enJKa1FELWlRWW5PSW1Gbm5DVEpOUktZeVZncVIwQW1yaDZySw?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -10630,8 +10737,8 @@
       "url": "https://www.therobotreport.com/schaeffler-plans-to-deploy-1000-hexagon-humanoids-2032/",
       "date": "2026-04-29",
       "involved_nodes": [
-        138,
-        178
+        178,
+        138
       ],
       "importance_score": null
     },
@@ -10686,8 +10793,8 @@
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1rRWhLclk4dkltTEk2TDBvcEhiVE1PNkhKdThObnF6aU5WemdrcWl2cXJmdnU4VGREbHR2eVJtSFR4Q25BZWFsekVzV0VPRU9kcVVGWm4xZWxlaDdBYWVkQW1yTlMwSHo0U3hMYXlwOA?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        25,
-        28
+        28,
+        25
       ],
       "importance_score": null
     },
@@ -10770,9 +10877,9 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVDltX3FQSFdoTXhZeUJXUEIyRWZlNndnOG55aHFjUGxnUzdyNjBHRFhKaWh6MXhzSUppMmNtNFZIR2FseE9GN1gweWlUSVEwQnNfX1hnMnV6eThHZlI5SjdwM1JVOVZRM3RqYTlrZHBUYjBKZ2JFYWc1VldnYnBXSUJmSkRhRWNGRjFmM0pWMGhGVk90VHRXeG1tQ3VSbmlJTVA5MTBVbVc0MFpuZEJPTk4xRnF3czVaTzNQMXNLamdZbDVsMmVhX25Cc0RKN1U?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        16,
         31,
-        15
+        15,
+        16
       ],
       "importance_score": null
     },
@@ -10836,8 +10943,8 @@
       "url": "https://www.therobotreport.com/flex-teradyne-expand-partnership-scale-physical-ai/",
       "date": "2026-04-28",
       "involved_nodes": [
-        177,
-        166
+        166,
+        177
       ],
       "importance_score": null
     },
@@ -10847,51 +10954,6 @@
       "date": "2026-04-28",
       "involved_nodes": [
         76
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Google DeepMind CEO meets South Korean business leaders - upi.com",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZlM1a2xXZ083a1lIN2ZoU2xhSFktSmZLbEZlU3lYQzQzNE5vM25jU3pySVYzYU5RV1VpbzNuZ0tnVGM0UTBISjhfN1YzZEUxamp0LVJROWxTT2xNN3ZlZ1lkYURLNkRNQ3VpaDE5bFFORmdVZlBWWHBnOW1pUVQteWxjMEtQdVI1MFpvU1djeXpObGFfQ0hTcFB3alhEZWtlU2Z4R2pyOHFvbTQ4VUhodk1UMNIBuAFBVV95cUxNQmdpOFJPVFNwYl80ZEpUakZDR3o2QmhjUFBremRVa3l3d21GYkpkSFRIcHdfczRJeWlGejBHQTlXSElDUk5XcTlVRDBkeHlpWlVhd0FmNEsyYU1VX1BaU3JmeWRRZHgzODR4V3dENlFVZjNtLVRSX1JBNXBYQk5jRngxZVZrUUhRSG1PZjVXZmFJWEtraFlFS1prLXBXMXF0SkI0bE1YNFF3d09KMy04YV81UHhsWkRO?oc=5",
-      "date": "2026-04-28",
-      "involved_nodes": [
-        39
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Google DeepMind Veteran Raises $1.1 Billion to Build AI That Isn\u2019t Trained With Human Data - Decrypt",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNDFuNHhpUXJTRFYySG1jYmItRVNZbW1oYWxwX1BhdmMtTmRHMTZja004VS1JME1vNExhTXVaVDhhWEYxS00yMGJ5TFJIVFZCczNuR2VDTmlEdlFnRnFLQ3drN0d6Yjh2TWM4eGw1Z2VGbDBGcXE4NWVlM2d2dDlmT1g5RkQ1bzhGLXJaSnBiTVdNbm1UM2NBNUszcw?oc=5",
-      "date": "2026-04-28",
-      "involved_nodes": [
-        39
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "High-speed PoWa Cobot Family From: ABB Robotics - Packaging World",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOQTh0dHZZcWVvTUxFRE9JMEdhUkxhRUNVYTAydUg1ZHJxQ2Z3SzZaWVVTaWhuakFMTG4zaG9jU0wxZWlvaGQ5YVUzUm5QdWRaX0hxaEQ2Q0pJZXNRd3BMZE05ajNvUUdmcTVITHhDLU05VXNyWFEyempITXZEY1JqcWxUS2dUTEZFUmZyQmIxYVFlenVKWGp0T2I0Z2N5bkRaWWNheXZDRUVZLVpNeDZnN3M5MEo?oc=5",
-      "date": "2026-04-28",
-      "involved_nodes": [
-        75
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "KODEX Samsung Group June Rebalance: Rainbow Robotics Inclusion Is a Heavily Overlooked Event - Smartkarma",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNNDBQUFdBWi00MERjWXhBZWlDUGJBd1ZaZkdTUVF1eEQ4eWZkREdOLTRHV2IwcldKWHhUZ1F3TXRENVNXQWpsS285Wm9OOWV6eV9sMHcxUmJyVFN3UkwxYV9jSFRvZl90cHcxUEI5XzZkUHRmV1ZUanJtTmlvRmxsTk14bFpnVllvWWVlZWJQcTUwSVhGNEtLeHNtVXRNUmdwSFJPNWR2MmF2RjJKT3NDTU9zQXFxdnFMaWc3TGVFdEFjSVlOellaTm1Qdm5FbFhxWkxQWjFiOWp6TzF1Z19hSUFfbzZMdWJhQ0JDSWdRdw?oc=5",
-      "date": "2026-04-28",
-      "involved_nodes": [
-        22
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "KODEX Samsung Group June Rebalance: Rainbow Robotics Inclusion Is a Heavily Overlooked Event - Smartkarma",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQcEtvcTFMalRwSkt2QVpqX1RXTmRlVEJHb21kb0F2cmk4c0c4bjdfNUt6RjRuX3c4Tkg0TkVUVE4zeDJVM0Z4dlNrZ3hwLWZmX2Rlbng3ejZHeF9jbjZfY1UzUm5pRlpSQ3M0dlgwU0VDbHpUcjFaN3dhajE5VXVROU9SQzBSZ2tFZHgtME1vVUhEOXd5c2ZGYWdxS2s5cGd3ZGdsa0U4eGw3cnNORU5XbEFTWERwZmd6MGc1dnljb3ktSVROYVE?oc=5",
-      "date": "2026-04-28",
-      "involved_nodes": [
-        22
       ],
       "importance_score": null
     }
