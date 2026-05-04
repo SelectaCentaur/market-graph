@@ -227,11 +227,11 @@
         <div id="right-panel-toggle" class="panel-toggle" onclick="togglePanel('right-panel')"><svg class="icon" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px; flex-wrap: wrap; gap: 8px;">
             <h1 id="news-feed-title" style="margin: 0; font-size: 16px;">Today's News</h1>
-            <div style="display: flex; gap: 4px;">
-                <button class="btn active" id="btn-time-today" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('today')">Today</button>
-                <button class="btn" id="btn-time-week" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('week')">Week</button>
-                <button class="btn" id="btn-time-month" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('month')">Month</button>
-                <button class="btn" id="btn-time-summary" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('summary')">Summary</button>
+            <div style="display: flex; gap: 4px; pointer-events: auto;">
+                <button class="btn active" id="btn-time-today" style="padding: 2px 8px; font-size: 10px; z-index: 100;" onclick="setNewsTimeframe('today')">Today</button>
+                <button class="btn" id="btn-time-week" style="padding: 2px 8px; font-size: 10px; z-index: 100;" onclick="setNewsTimeframe('week')">Week</button>
+                <button class="btn" id="btn-time-month" style="padding: 2px 8px; font-size: 10px; z-index: 100;" onclick="setNewsTimeframe('month')">Month</button>
+                <button class="btn" id="btn-time-summary" style="padding: 2px 8px; font-size: 10px; z-index: 100;" onclick="setNewsTimeframe('summary')">Summary</button>
             </div>
             <span id="news-filter-status" style="font-size: 11px; background: #333; padding: 2px 8px; border-radius: 12px; display: none; cursor: pointer; color: #fff; width: 100%; text-align: center;" onclick="clearNewsFilter()">✖ Clear Filter</span>
         </div>
@@ -9992,8 +9992,8 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSnpKb1lGYi1XbkJoWnltRGJXQVJueDhkd3hjUlVyNG90c1BxUEl1ZEgxVzRDTmVMYnZraHlVTFVPN0pzLVg0RmZJRVI3aHI5WEVkMjV2VmczX0Q5QVVQX0ZTMlpjdC16UXJCNmhmYTExaHlYMS1jX0k3Qkc0cUd3ZXBoRU1MaXpxYXN5SXJ6Sm0zSW1LT0dXZkZsbk1pRm9uRG5qWnhhT29CeDZHNzYxSXFKLUM5bElVdFdYOV9zVjZmejRQcEZMeFJtVkZ0T3hwdTRROW1Rb3dMdUpO?oc=5",
       "date": "2026-10-21",
       "involved_nodes": [
-        167,
-        58
+        58,
+        167
       ],
       "importance_score": 5
     },
@@ -10032,8 +10032,8 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPc2U4cFZNZl9TZjVnMnI2aWVfMnpLUVhYZGVYS0p6ZWl1OF9Fb0RPNXNhTnBaNFdUNmRMSGxWbVpTTVo4T1JYREJHaXl3OGxYdm9mdWdXUlAxa0NaY3V5VDFSSTVId2lURnluOVB4YTZhVkVaSWVDdFNJamtESFJGVlJUVFhSZ3BIVVRwZzdWRDRUX084eDZpTVFtb2pxZlNfQUZwNTFLRWh2RXdi?oc=5",
       "date": "2026-05-04",
       "involved_nodes": [
-        36,
-        16
+        16,
+        36
       ],
       "importance_score": null
     },
@@ -10061,10 +10061,10 @@
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tck93a1ZidEl5WU8tN1BPWm1JTTFuZjVPT0JwVlVEQnlHMl9Kd0M3aGU1RVVmaDhOTUg5eGd5MG1KMlE4WjJRQzhFZS01T2UzYWdMRVBUQnNaYkpVN1ZaUFg1TjJTaThuTnc?oc=5",
       "date": "2026-05-03",
       "involved_nodes": [
-        8,
-        2,
         11,
-        28
+        2,
+        28,
+        8
       ],
       "importance_score": null
     },
@@ -10109,8 +10109,8 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQakdscmxSWVQwTlUwcXVhUmtBeFVwOFdZQklrSElfLTcxaTA0cU54dy1GQ244MHFqakJ3TEJNNUp3SDAwSUtFM0Nzb2ljVmxNRkJ0em40U0JucEtKa0xkVy0xTHo3MVNrRHYyRGQ3blc4OVNxVGFWenpMbUdsNDdxWUI5ZVh0TFQzSzRVNi1tdlZEQ3ppSXVkdXN1VC1LZzc3U1dBQ2xFM1VhWUZjS0NReUV5R1BZeDQ4YXFWMGRKOHI0NjNjbjBWMk5UVGU?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -10129,8 +10129,8 @@
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5IVks1R3dUNmd4Z20weFptQ2NhTDhRUjZPQklUSFd5V2hPanVRZ2hMb0ttbkNSUVplMTIySVpIdFhtczJVV3dzS2JtOXFVQWNQbnBv?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        185,
-        22
+        22,
+        185
       ],
       "importance_score": null
     },
@@ -10248,8 +10248,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdVFsY2ZVNkJoelE1VHVNbWVoMGpLWGdxdXlRVDdwSUJGUXhtX3paYndCZGh6Y3NlRkdIM2Y2YlpJZUdvZkpuV3BJSFVhbG02ek5TR2xwSTRrWlhFalZLd2RVTUZCaURQRmZfUjI3UnRXdjFtaHJTU1JWUXFKSzBnVUZYRjQ2XzAxY1B6WDgtQ0JpVHfSAZgBQVVfeXFMTkRhRHcyTm1LU2JoOFJUNmp1S3pXWGU4NzdOTjdHd01UWTVDcUpZMWtvNTNYTlZwUFVqUWlxTkM0WjlYZjRyMHlNWTJMcDA5OXpsd25Jd2RLVjAyaXZJTTdNRHNIYldSOVJwY1QwSl9JVkxEMFhXMXRhSnJqWUpGVVlpMklIaE1ZLXdldWxfV0s1ZDJ1cnpoMUI?oc=5",
       "date": "2026-05-01",
       "involved_nodes": [
-        183,
-        30
+        30,
+        183
       ],
       "importance_score": null
     },
@@ -10349,8 +10349,8 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdzBwejRzaHFINWg2aVdOVkZVYml4ajBhd1pxOXlOUkU4MUpMcFk5ZEJiMEhWbEx2ajEtalg3WUI3UFd6TG0xMEYzREFxbDlyWmthT3Q3UlgwMWtnbWFNZzVQbndieWx4ZTAxbWxGdEpQdEZ4YkpSZl8zREtQWnFSRGdvZ1UxOGg5WVJxZA?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -10386,8 +10386,8 @@
       "url": "https://spectrum.ieee.org/daimon-robotics-physical-ai",
       "date": "2026-04-30",
       "involved_nodes": [
-        6,
-        181
+        181,
+        6
       ],
       "importance_score": null
     },
@@ -10688,8 +10688,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdlBHdnNQN1JBWXg0bEd6QUlYYUdNczNtQVozTHdmbW04bzI1d1hFcUZMaEFUWUdIenlwUjFtYjJjWDRKSlQ2ZjZMamRBWU1mX1BnSEZVMS1XYUtmXzRJcXpVUFd4ZmN4M1F1dXU5LUc2Um95RFlRZU9oYTZmdXNWY3dlR1lseXc0V01Sa25DeHZwQU0?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        43,
-        61
+        61,
+        43
       ],
       "importance_score": null
     },
@@ -10716,8 +10716,8 @@
       "url": "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/",
       "date": "2026-04-29",
       "involved_nodes": [
-        7,
-        174
+        174,
+        7
       ],
       "importance_score": null
     },
@@ -10735,8 +10735,8 @@
       "url": "https://www.therobotreport.com/gft-technologies-ai-powered-robots-move-from-inspection-action-automakers/",
       "date": "2026-04-29",
       "involved_nodes": [
-        180,
-        179
+        179,
+        180
       ],
       "importance_score": null
     },
@@ -10836,8 +10836,8 @@
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8ydVppRXdQb1c2YWZfMzh5N1JOVGFhUVhGaXpkbVBxRGhXU3Z1aHEyTVFaRE1nSDVpZ0c2enJKa1FELWlRWW5PSW1Gbm5DVEpOUktZeVZncVIwQW1yaDZySw?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -10920,8 +10920,8 @@
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1rRWhLclk4dkltTEk2TDBvcEhiVE1PNkhKdThObnF6aU5WemdrcWl2cXJmdnU4VGREbHR2eVJtSFR4Q25BZWFsekVzV0VPRU9kcVVGWm4xZWxlaDdBYWVkQW1yTlMwSHo0U3hMYXlwOA?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        25,
-        28
+        28,
+        25
       ],
       "importance_score": null
     },
@@ -10967,8 +10967,8 @@
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUWlBbXIwbTRsd25XaVdvUXRFTnFzbURYdGM4TGU3SDcxTkVHMnY3S096VFFRX0lPTS0zYjVpSFlYdWtjWWxvd1BoNzUxVFBiaHRIR082SndUU01TVlZKcGY0ZmdYU1dzRWxqRzJJZ2dobVRmeXd3YWtpalRhUHEwSGNUaFlNSUF1b0h1RndlOTFMMnVNMmszU3ZzWDFqRVE?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        153,
-        40
+        40,
+        153
       ],
       "importance_score": null
     },
@@ -11004,9 +11004,9 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVDltX3FQSFdoTXhZeUJXUEIyRWZlNndnOG55aHFjUGxnUzdyNjBHRFhKaWh6MXhzSUppMmNtNFZIR2FseE9GN1gweWlUSVEwQnNfX1hnMnV6eThHZlI5SjdwM1JVOVZRM3RqYTlrZHBUYjBKZ2JFYWc1VldnYnBXSUJmSkRhRWNGRjFmM0pWMGhGVk90VHRXeG1tQ3VSbmlJTVA5MTBVbVc0MFpuZEJPTk4xRnF3czVaTzNQMXNLamdZbDVsMmVhX25Cc0RKN1U?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
+        15,
         16,
-        31,
-        15
+        31
       ],
       "importance_score": null
     },
@@ -11161,8 +11161,8 @@
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxONVdZdFFpb3hUeTBaY0RCMF84bkJEaFk2MXRsQll4aktaOGhOY1Fxa1hjY19PVlZZY2MtNW9XMm9QZjFfYmpjTFc2Y3l5TFZJTm56VWFoVHhBdEpjdFZEWWNhYTBnSnZVa00xQ2ZWQmNENXJtRzVJbmNLYmlKZmM4Snp3aUJxdUdVcHJUeWpWZlhYZjRBak1nYTQ0eTNiTWdH?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        41,
-        40
+        40,
+        41
       ],
       "importance_score": null
     },
@@ -11180,8 +11180,8 @@
       "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxNTnF2VXJnX2JEal9qcUd5a2lPSmtjcDJMYjNJV0dfUlotRDlEVU1XTFNHZEprWi02ckJHaVpYQ25FV2JOak9SVzh6N0k5akJ0MmRGNWVmbXRTNHZzSEtuamxLYjJfcVVHeU5PVUhwUDgxbFFZOTA1cm91Uy1MR0JmaFdDNDRGWERYanF4NU5ZYlZrRkIySUFLQ1l1ZkRha2VWSUFJeWxBNnhSMDRLb3o4RjNhVDhiRkxka0lXOGdCVUxQSThOQk1YQV9WTmxieENGa0FUN29LUzRRREFmajFqRDNTV05BNUtkUENkTkFKVmhNZEltTmZLUEVYTXQwcWpxX2x0Mm1jSG9McDhYWl9nV1BPem9sVU11ZUxwYmx1Q2o1cktyVVc1ZklvRDhCM0Jnd3QxdDVEbjhFVllJTm9QX0NqM0VSa3NLWENsZndHZi1IcllPOVVVQTIxSEtHY2ZKMkJSektPaFJEb1BYcGJXNjBKbFYzbkQ3ZkR6b3NIS0VHRXRN?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -11208,8 +11208,8 @@
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOaHg2d3J1LXFBTHJFMl9kUjljRjJRdmVjempmeDFYZGU2b25YTDVYRl9vVWczc19LMzNEOXBDYlZmSElkbWJkbjl5STdzUDlZbGEzazdWX2c2d0syV0ZVOEJEUXRhdDhodWpnTjlPNmhCVHZqd1ZrbGdLYkNlSGFsVEMxUFVzSkFPMktGX2o0Vmw2T1d2eVZWYnVaYjdVZ2hYb0RMLURKYTV6QmRjaDdJSVU0RQ?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        26,
-        151
+        151,
+        26
       ],
       "importance_score": null
     },
@@ -11283,9 +11283,9 @@
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU9aclA4MEJONzV4Skh0WkRpN1N1bk5BNkdjRDYwQVh6YllHeTV5Ui1nT2pzUXNOVGtwRThwMGV5aTNzS1doZThkTHo2YmYwemlEWm51Qi1OTkhseGdhNDBtQkJzZm9faU1FS1JIX3o1dkgtVzEtSEhpWGw4bmhNMW1jQjd6ejRxQWlUZkcxZGhKc19MV3N0WENVdmpwSlFjWFhjX09qS3ZWY3VVVVpNVWhkUElCVHhJUms4amlLcG5rcWZXZGNF?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        184,
         11,
-        58
+        58,
+        184
       ],
       "importance_score": null
     },
@@ -11322,8 +11322,8 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOREdqZGpsLUo1MFg5b0NfakpNcFlBb1d6Rzl0ejNxY3h5ZkFHR3ZJdnZRTWtDRVQxeGkwTGFtTjA2STFjTzUtQnpJOEJ5WnhXZXVqbklyTS1BelFhMThjWVRrRDQ0Q1JIcFVCckFnTHdUcU5ybzZzX0hPc3pTQ1Y4VF9ibjQwcjVwaHE5enBYcXYwdDR6VjN0ZGFJSkQ?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        176,
-        21
+        21,
+        176
       ],
       "importance_score": null
     },
@@ -11350,8 +11350,8 @@
       "url": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxPVDJvYUR4QzVheWpuY3dOMnlVa0pGWjBNZVlrNzFaSnk4QTdGcXRJdVlRaE1nNHFSSnQtTFB4TWZ2aEVvLVUyUDIxTllfeGV0MmdsUkNNZXZqRzRiUG84Mk82ajBGSGVhS1dnMkRaY1NuanNmclFwSGE1MEpYcVFoQ0NhdmZlSWF1QzJ1dFE0c3owMjRuOHE0ME5yU0w2UXFMZHo2Q092RUVUZTItWktkOUFUSGEtMW5jemxOc2V5dTdSZTZqcEFIcFZoNVB5VE1CMHBaY0hkZkdSNHJ0REhGd3NVZmRoN0JlV0szZmdNUUswQW1hZ3hpNWRMM0NHWHBEbmcyN3dpbVBrZzQtT3lrMTJlS0o2ejU2RVNwNXlyVl9JTzVSLWY2RmNVTWtCbWw5bU9SV0h0QUdQMFAwaENqRUZpQXBlNEZ1YVdaRmZRLVNxWGVtZXRYRmlNZ3hZYkY0MnR1YjVNWFVJcjBDWHMtWVBQdnVMS2QxNTI0?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
