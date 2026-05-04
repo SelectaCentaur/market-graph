@@ -7,16 +7,16 @@
     <style>
         body { margin: 0; padding: 0; background-color: #0b0c10; color: #c5c6c7; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; overflow: hidden; }
         #graph-container { width: 100vw; height: 100vh; }
-        
+
         /* LEFT PANEL: Controls & Graph Info */
         #left-panel { position: absolute; top: 20px; left: 20px; background: rgba(20, 22, 26, 0.85); padding: 20px; border-radius: 8px; border: 1px solid #333; width: 320px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); backdrop-filter: blur(8px); pointer-events: auto; z-index: 10; max-height: calc(100vh - 40px); display: flex; flex-direction: column; }
-        
+
         /* RIGHT PANEL: The Daily Intelligence Feed */
         #right-panel { position: absolute; top: 20px; right: 20px; background: rgba(20, 22, 26, 0.85); padding: 20px; border-radius: 8px; border: 1px solid #333; width: 360px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); backdrop-filter: blur(8px); pointer-events: auto; z-index: 10; max-height: calc(100vh - 40px); display: flex; flex-direction: column; }
-        
+
         h1 { margin: 0 0 5px 0; font-size: 18px; letter-spacing: 0.5px; color: #fff; }
-        p { font-size: 13px; color: #aaa; margin: 0 0 15px 0; line-height: 1.4; }
-        
+        p { font-size: 13px; color: #ccc; margin: 0 0 15px 0; line-height: 1.4; }
+
         .scrollable-content { flex-grow: 1; overflow-y: auto; padding-right: 5px; }
         .scrollable-content::-webkit-scrollbar { width: 6px; }
         .scrollable-content::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
@@ -24,11 +24,11 @@
         .legend-item { display: flex; align-items: center; margin-bottom: 6px; font-size: 13px; cursor: pointer; transition: opacity 0.2s; }
         .legend-item:hover { opacity: 0.8; }
         .color-box { width: 14px; height: 14px; border-radius: 3px; margin-right: 10px; }
-        
-        
-        
-        
-        
+
+
+
+
+
         #selected-node-info { margin-top: 15px; padding-top: 15px; border-top: 1px solid #444; display: none; flex-shrink: 0;}
         #selected-name { font-weight: bold; font-size: 18px; margin-bottom: 5px; color: #fff; }
         #selected-type { font-size: 12px; color: #66fcf1; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; font-weight: bold;}
@@ -40,17 +40,17 @@
         .news-card:hover { background: rgba(255,255,255,0.08); border-color: #66fcf1; transform: translateX(-2px); }
         .news-card.impact-high { border-left-width: 5px; background: rgba(255, 107, 107, 0.1); border-left-color: #ff6b6b; }
         .news-card.impact-med { border-left-color: #feca57; }
-        
+
         .news-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-        .news-date { color: #888; font-size: 10px; font-weight: bold; letter-spacing: 0.5px; }
+        .news-date { color: #bbb; font-size: 10px; font-weight: bold; letter-spacing: 0.5px; }
         .news-badge { font-size: 9px; padding: 2px 6px; border-radius: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
         .badge-funding { background: rgba(29, 209, 161, 0.2); color: #1dd1a1; }
         .badge-sec { background: rgba(255, 107, 107, 0.2); color: #ff6b6b; }
         .badge-deploy { background: rgba(72, 219, 251, 0.2); color: #48dbfb; }
         .badge-general { background: rgba(200, 214, 229, 0.2); color: #c8d6e5; }
-        
+
         .news-headline { color: #fff; font-size: 13px; font-weight: 500; line-height: 1.4; }
-        
+
         .news-expanded { display: none; margin-top: 10px; padding-top: 10px; border-top: 1px dashed #444; font-size: 12px; color: #bbb; line-height: 1.5; }
         .news-expanded a { color: #66fcf1; text-decoration: none; display: inline-block; margin-top: 8px; font-weight: bold; }
         .news-expanded a:hover { text-decoration: underline; }
@@ -65,40 +65,133 @@
         .icon { width: 14px; height: 14px; fill: currentColor; vertical-align: middle; margin-right: 6px; margin-bottom: 2px;}
 
         /* Left Panel Active/Inactive Buttons */
-        .btn { background: rgba(31, 40, 51, 0.6); color: #888; border: 1px solid rgba(69, 162, 158, 0.3); transition: all 0.2s ease; }
+        .btn { background: rgba(31, 40, 51, 0.6); color: #bbb; border: 1px solid rgba(69, 162, 158, 0.3); transition: all 0.2s ease; }
         .btn:hover { background: rgba(69, 162, 158, 0.2); color: #c5c6c7; border-color: rgba(69, 162, 158, 0.8); }
         .btn.active { background: rgba(102, 252, 241, 0.1); color: #66fcf1; border-color: #66fcf1; font-weight: bold; box-shadow: 0 0 8px rgba(102, 252, 241, 0.2); }
 
         /* Search Box Icon */
         .search-wrapper { position: relative; margin-top: 15px; margin-bottom: 5px; }
-        .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; fill: #888; pointer-events: none; }
+        .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; fill: #bbb; pointer-events: none; }
         #node-search { padding-left: 30px; }
 
-    
+
         .legend-item.hidden-type { opacity: 0.4; text-decoration: line-through; filter: grayscale(100%); }
 
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+        /* SVG Icons */
+        .icon { width: 14px; height: 14px; fill: currentColor; vertical-align: middle; margin-right: 6px; margin-bottom: 2px;}
+
+        /* Collapsible Panels */
+        .panel-toggle { position: absolute; top: 15px; background: rgba(20, 22, 26, 0.9); border: 1px solid #333; color: #fff; cursor: pointer; z-index: 15; padding: 4px 2px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+        .panel-toggle:hover { background: #333; }
+        #left-panel-toggle { right: -12px; }
+        #right-panel-toggle { left: -12px; }
+
+        /* Left Panel Active/Inactive Buttons */
+        .btn { background: rgba(31, 40, 51, 0.6); color: #bbb; border: 1px solid rgba(69, 162, 158, 0.3); transition: all 0.2s ease; }
+        .btn:hover { background: rgba(69, 162, 158, 0.2); color: #c5c6c7; border-color: rgba(69, 162, 158, 0.8); }
+        .btn.active { background: rgba(102, 252, 241, 0.1); color: #66fcf1; border-color: #66fcf1; font-weight: bold; box-shadow: 0 0 8px rgba(102, 252, 241, 0.2); }
+
+        /* Interactive Legend */
+        .legend-item { display: flex; align-items: center; margin-bottom: 6px; font-size: 13px; cursor: pointer; transition: all 0.2s; padding: 4px; border-radius: 4px; border: 1px solid transparent; }
+        .legend-item:hover { background: rgba(255,255,255,0.05); }
+        .legend-item.hidden-type { opacity: 0.4; text-decoration: line-through; }
+
+        /* Search Box Icon */
+        .search-wrapper { position: relative; margin-top: 15px; margin-bottom: 5px; }
+        .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; fill: #bbb; pointer-events: none; }
+        #node-search { padding-left: 30px; }
+
+        /* Tag Hierarchy Fixes */
+        .news-header { display: flex; justify-content: flex-start; align-items: center; margin-bottom: 6px; gap: 10px; }
+        .news-date { color: #bbb; font-size: 10px; font-weight: bold; letter-spacing: 0.5px; margin-left: auto;}
+
+        /* Responsive Design */
+        #mobile-nav { display: none; }
+        @media (max-width: 800px) {
+            #left-panel, #right-panel {
+                width: 100vw;
+                left: 0;
+                right: 0;
+                top: auto !important;
+                bottom: 0 !important;
+                max-height: 40vh;
+                border-radius: 12px 12px 0 0;
+                padding: 15px;
+                box-sizing: border-box;
+                border: none;
+                border-top: 1px solid #444;
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+                z-index: 100;
+            }
+            #left-panel.mobile-open, #right-panel.mobile-open {
+                transform: translateY(0);
+            }
+            .panel-toggle { display: none !important; }
+            #mobile-nav {
+                display: flex;
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(20, 22, 26, 0.95);
+                border: 1px solid #444;
+                border-radius: 20px;
+                padding: 5px;
+                z-index: 150;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+                gap: 5px;
+            }
+            .mobile-nav-btn {
+                background: transparent;
+                border: none;
+                color: #bbb;
+                padding: 8px 16px;
+                border-radius: 15px;
+                font-weight: bold;
+                font-size: 13px;
+                cursor: pointer;
+            }
+            .mobile-nav-btn.active {
+                background: rgba(102, 252, 241, 0.1);
+                color: #66fcf1;
+            }
+        }
     </style>
 </head>
 <body>
+    <div id="mobile-nav">
+        <button class="mobile-nav-btn active" id="mobile-btn-left" onclick="toggleMobile('left-panel')">Map Info</button>
+        <button class="mobile-nav-btn" id="mobile-btn-right" onclick="toggleMobile('right-panel')">News Feed</button>
+    </div>
 
-    <div id="left-panel">
+    <div id="left-panel" class="panel-transition mobile-open">
+        <div id="left-panel-toggle" class="panel-toggle" onclick="togglePanel('left-panel')"><svg class="icon" viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg></div>
         <h1>Physical AI Ecosystem</h1>
         <p>Interactive map of capital, compute, and hardware flow.</p>
-        
+
         <div class="scrollable-content">
             <div id="legend"></div>
 
             <!-- Search Feature -->
             <div style="margin-top: 15px; margin-bottom: 15px;">
-                <label style="font-size: 11px; color: #888; text-transform: uppercase; font-weight: bold; margin-bottom: 4px; display: block;">Graph Layout</label>
+                <label style="font-size: 11px; color: #bbb; text-transform: uppercase; font-weight: bold; margin-bottom: 4px; display: block;">Graph Layout</label>
                 <select id="layout-select" onchange="changeLayout(this.value)" style="width: 100%; padding: 6px; background: rgba(0,0,0,0.3); border: 1px solid #444; border-radius: 4px; color: #fff; font-size: 13px; outline: none;">
                     <option value="supply-chain">Supply Chain View</option>
                     <option value="standard">Organic View</option>
                     <option value="geospatial">Geo-Spatial View</option>
                 </select>
             </div>
-            
+
             <div class="search-wrapper">
+                <label for="node-search" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">Search organizations</label>
                 <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
                 <input type="text" id="node-search" placeholder="Search organizations..." style="width: 100%; box-sizing: border-box; padding: 8px 10px; background: rgba(0,0,0,0.3); border: 1px solid #444; border-radius: 4px; color: #fff; font-size: 13px; outline: none; transition: border-color 0.2s;" onkeyup="handleSearch(event)">
                 <div id="search-results" style="display: none; position: absolute; top: 34px; left: 0; width: 100%; background: #1f2833; border: 1px solid #45a29e; border-top: none; border-radius: 0 0 4px 4px; max-height: 150px; overflow-y: auto; z-index: 100;"></div>
@@ -108,6 +201,7 @@
                 <strong style="font-size: 14px; margin-bottom: 5px; display: block; color: #fff;">Analysis Modes</strong>
                 <button id="btn-mode-all" class="btn active" onclick="setMode('all')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg> Full Ecosystem Overview</button>
                 <button id="btn-mode-deployment" class="btn" onclick="setMode('deployment')"><svg class="icon" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg> Focus: Enterprise Deployments</button>
+                <button class="btn" style="background: rgba(31, 40, 51, 0.3); margin-top: 15px;" onclick="togglePhysics()"><svg class="icon" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/></svg> <span id="physics-lock-text">Lock Physics</span></button>
                 <button class="btn" style="background: rgba(31, 40, 51, 0.3); margin-top: 15px;" onclick="debugGraph()"><svg class="icon" viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg> Reset / Re-center View</button>
             </div>
 
@@ -115,7 +209,7 @@
                 <div id="selected-name">Node Name</div>
                 <div id="selected-type">Type</div>
                 <div id="selected-desc" style="font-size: 13px; color: #bbb; margin-bottom: 12px; font-style: italic;"></div>
-                
+
                 <div id="selected-stats" style="display:none; font-size: 12px; color: #ddd; margin-bottom: 12px; background: rgba(0,0,0,0.3); padding: 8px; border-radius: 4px;">
                     <div id="stat-website" style="margin-bottom: 4px;"></div>
                     <div id="stat-employees" style="margin-bottom: 4px;"></div>
@@ -129,13 +223,15 @@
         </div>
     </div>
 
-    <div id="right-panel">
+    <div id="right-panel" class="panel-transition">
+        <div id="right-panel-toggle" class="panel-toggle" onclick="togglePanel('right-panel')"><svg class="icon" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg></div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #444; padding-bottom: 10px; flex-wrap: wrap; gap: 8px;">
             <h1 id="news-feed-title" style="margin: 0; font-size: 16px;">Today's News</h1>
             <div style="display: flex; gap: 4px;">
                 <button class="btn active" id="btn-time-today" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('today')">Today</button>
                 <button class="btn" id="btn-time-week" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('week')">Week</button>
                 <button class="btn" id="btn-time-month" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('month')">Month</button>
+                <button class="btn" id="btn-time-summary" style="padding: 2px 8px; font-size: 10px;" onclick="setNewsTimeframe('summary')">Summary</button>
             </div>
             <span id="news-filter-status" style="font-size: 11px; background: #333; padding: 2px 8px; border-radius: 12px; display: none; cursor: pointer; color: #fff; width: 100%; text-align: center;" onclick="clearNewsFilter()">✖ Clear Filter</span>
         </div>
@@ -146,6 +242,35 @@
 
 
     <script>
+        function toggleMobile(panelId) {
+            const left = document.getElementById('left-panel');
+            const right = document.getElementById('right-panel');
+            const btnLeft = document.getElementById('mobile-btn-left');
+            const btnRight = document.getElementById('mobile-btn-right');
+
+            if (panelId === 'left-panel') {
+                if (left.classList.contains('mobile-open')) {
+                    left.classList.remove('mobile-open');
+                    btnLeft.classList.remove('active');
+                } else {
+                    left.classList.add('mobile-open');
+                    right.classList.remove('mobile-open');
+                    btnLeft.classList.add('active');
+                    btnRight.classList.remove('active');
+                }
+            } else {
+                if (right.classList.contains('mobile-open')) {
+                    right.classList.remove('mobile-open');
+                    btnRight.classList.remove('active');
+                } else {
+                    right.classList.add('mobile-open');
+                    left.classList.remove('mobile-open');
+                    btnRight.classList.add('active');
+                    btnLeft.classList.remove('active');
+                }
+            }
+        }
+
         const graphData = {
   "nodes": [
     {
@@ -319,6 +444,11 @@
           "date": "2026-04-19",
           "headline": "Digit Humanoid Nails a 65-Pound Deadlift and Reveals How Agility Trains Its Robots - TechEBlog -",
           "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPYm9qNHAxWW11SHVYdU1odml4RzJtVGRjUzhxYk94VXhmZ1JGMllodDBxUnJ1bmY2emluQjRadkstSXVnSjBYYzdhcHF3M3ZEYzVxM2VDY0tPd0haMDRJTFM0eXh3aHVyUjd4cmowcm9rcnBGamhYVVp0dndDbUtBcm0telU1YjY1?oc=5"
+        },
+        {
+          "date": "2026-05-03",
+          "headline": "Toyota Is Taking The Fight To BMW And Tesla, But Not With Cars - CarBuzz",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tck93a1ZidEl5WU8tN1BPWm1JTTFuZjVPT0JwVlVEQnlHMl9Kd0M3aGU1RVVmaDhOTUg5eGd5MG1KMlE4WjJRQzhFZS01T2UzYWdMRVBUQnNaYkpVN1ZaUFg1TjJTaThuTnc?oc=5"
         }
       ]
     },
@@ -751,6 +881,11 @@
           "date": "2026-04-24",
           "headline": "Meet Digit: Toyota\u2019s newest worker doesn\u2019t need coffee breaks - MSN",
           "url": "https://news.google.com/rss/articles/CBMi9gJBVV95cUxOaXJKRkx2N1g5djJpdENma1Z3d2dJRy1aNzI5QnN1aGEzemFPWU9yYWlwbGlINGpLRXZCcHl2UDJQY0NWTGVyVHM3Zkp0MlEzcGhULTN1RHkyT0ZsSnJEWjRHY25Vb3hUSklpOFJJYW1FR1U1R3ZpWUx6bWZDOExSTGRCRm0zUmt1bVFXLTItNVFaeGVNNThoakcwN0prU1R6R2I3UzhCTTJGLXNydzdHYWU2eDc0VDhPVnRJYUNpOTBRY3AtTTlUWi1xOUF3MXhFcnFpWEdrY1RUODB2MDRCU09PTFdINzQ4MDd0SjU5cmVWY1B1bTlMWGUxdjE1MEhUTVBFUGRVWGtGejQycl8xVC0xazhMbVBkZWg0ZkUycE5xaXlJd3p4NEVhRHJDRDlRRlRZOUN5N3RYSTFpdm82d05NZGgxYVBJcldoZTdqNFFHdnpkc0hjbWVkanhBSU4yVjF3Z3h2VEpPVzJnbEFQd2Joek1kQQ?oc=5"
+        },
+        {
+          "date": "2026-05-03",
+          "headline": "Toyota Is Taking The Fight To BMW And Tesla, But Not With Cars - CarBuzz",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tck93a1ZidEl5WU8tN1BPWm1JTTFuZjVPT0JwVlVEQnlHMl9Kd0M3aGU1RVVmaDhOTUg5eGd5MG1KMlE4WjJRQzhFZS01T2UzYWdMRVBUQnNaYkpVN1ZaUFg1TjJTaThuTnc?oc=5"
         }
       ]
     },
@@ -871,6 +1006,11 @@
           "date": "2026-04-27",
           "headline": "BMW and PepsiCo robotics partner Sereact raises \u20ac93 million Series B to scale across the US - EU-Startups",
           "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU9aclA4MEJONzV4Skh0WkRpN1N1bk5BNkdjRDYwQVh6YllHeTV5Ui1nT2pzUXNOVGtwRThwMGV5aTNzS1doZThkTHo2YmYwemlEWm51Qi1OTkhseGdhNDBtQkJzZm9faU1FS1JIX3o1dkgtVzEtSEhpWGw4bmhNMW1jQjd6ejRxQWlUZkcxZGhKc19MV3N0WENVdmpwSlFjWFhjX09qS3ZWY3VVVVpNVWhkUElCVHhJUms4amlLcG5rcWZXZGNF?oc=5"
+        },
+        {
+          "date": "2026-05-03",
+          "headline": "Toyota Is Taking The Fight To BMW And Tesla, But Not With Cars - CarBuzz",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tck93a1ZidEl5WU8tN1BPWm1JTTFuZjVPT0JwVlVEQnlHMl9Kd0M3aGU1RVVmaDhOTUg5eGd5MG1KMlE4WjJRQzhFZS01T2UzYWdMRVBUQnNaYkpVN1ZaUFg1TjJTaThuTnc?oc=5"
         }
       ]
     },
@@ -1154,6 +1294,11 @@
           "date": "2026-05-01",
           "headline": "Exclusive / C-suite exodus at Boston Dynamics - Semafor",
           "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPcEstVUJSNkxMdjVseE9XMkdqRFNfSDU2d1VlWmt4ajVBeXloaVVtWGFKLTJBaGJic0JCVFZXVndpQXJkWDZqZW8zalFFVThfRHd5V0U0RFpad3c0cmtxU2pibUNfbllQNHBWdjhFUkc2NFRzbDBwa0lOTGZIbEtBZ1Fn?oc=5"
+        },
+        {
+          "date": "2026-05-04",
+          "headline": "Hyundai Reportedly Demanding \u2018Tens of Thousands\u2019 of Boston Dynamics Robots ASAP - Gizmodo",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPc2U4cFZNZl9TZjVnMnI2aWVfMnpLUVhYZGVYS0p6ZWl1OF9Fb0RPNXNhTnBaNFdUNmRMSGxWbVpTTVo4T1JYREJHaXl3OGxYdm9mdWdXUlAxa0NaY3V5VDFSSTVId2lURnluOVB4YTZhVkVaSWVDdFNJamtESFJGVlJUVFhSZ3BIVVRwZzdWRDRUX084eDZpTVFtb2pxZlNfQUZwNTFLRWh2RXdi?oc=5"
         }
       ]
     },
@@ -2028,6 +2173,16 @@
           "date": "2026-04-30",
           "headline": "SEC Filing: SCHEDULE 13G  - Statement of Beneficial Ownership by Certain Investors",
           "url": "https://www.sec.gov/Archives/edgar/data/1318605/000210011926001134/0002100119-26-001134-index.htm"
+        },
+        {
+          "date": "2026-05-04",
+          "headline": "Is Meta building humanoid robot to rival Tesla's Optimus? - The News International",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaTdoVHdhZ3JJYUpiRGIxcWY2aFhYQmNVdDhMVXZ2NFhnRGVtSE41bDI5SFpoNnZVRDJrd0JjVDctZnp1NjVxOTVETGM2MTJfOUV3UG1vMEg5cmhHX0ZVZDgtRU1ZWk1nc3lmUVpKUTF5YkFWRkFlRFkwbFBEYmlkYTJLT1hQOG5QbXRFT0MxTEEwYmIyQ24wOVZmVUtuQQ?oc=5"
+        },
+        {
+          "date": "2026-05-03",
+          "headline": "Toyota Is Taking The Fight To BMW And Tesla, But Not With Cars - CarBuzz",
+          "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tck93a1ZidEl5WU8tN1BPWm1JTTFuZjVPT0JwVlVEQnlHMl9Kd0M3aGU1RVVmaDhOTUg5eGd5MG1KMlE4WjJRQzhFZS01T2UzYWdMRVBUQnNaYkpVN1ZaUFg1TjJTaThuTnc?oc=5"
         }
       ]
     },
@@ -2526,7 +2681,13 @@
       "market_cap": null,
       "revenue": null,
       "employees": null,
-      "news": []
+      "news": [
+        {
+          "date": "2026-05-04",
+          "headline": "Hyundai Reportedly Demanding \u2018Tens of Thousands\u2019 of Boston Dynamics Robots ASAP - Gizmodo",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPc2U4cFZNZl9TZjVnMnI2aWVfMnpLUVhYZGVYS0p6ZWl1OF9Fb0RPNXNhTnBaNFdUNmRMSGxWbVpTTVo4T1JYREJHaXl3OGxYdm9mdWdXUlAxa0NaY3V5VDFSSTVId2lURnluOVB4YTZhVkVaSWVDdFNJamtESFJGVlJUVFhSZ3BIVVRwZzdWRDRUX084eDZpTVFtb2pxZlNfQUZwNTFLRWh2RXdi?oc=5"
+        }
+      ]
     },
     {
       "id": 37,
@@ -4015,6 +4176,11 @@
           "date": "2026-04-29",
           "headline": "Snowflake Ties GPT 5.5 And Consent Controls To Enterprise AI Adoption - simplywall.st",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQaE9oUU91MEt3V29rVndmWmxyWV9mbjZFQ29fcnliZXVHcnozblhpc1NNelBIaFJLa3VVbGd3MHBPQU41RVVFME13OTZBTFg5VTNOdS11THU3VmdPcHdZRzRhZGFnTkF2SFhMTTZJYXYxX09jNExMd0txOW5GbDk2Nm41T0pBcE1SYkpaQVJkdFlORHNZYnphTElFdU1VemVHT1UwQVhwaENpTHgxVjdTYURreWVaak5JRkYwdFpkNnJHcFHSAcgBQVVfeXFMTmdKVGNVdnpvcFVudWkxeHlwanVBejlWSHNhZjRQM2p5T05TYlR2YzRtQU8ycVdWc1ZDajYwd05qOU1SUmw0SE1kYVdnbGVYOWVWZ3hndUV3bUoyNGdfb19va3ZBMmM1QUNzTGV5YkhHbDZDS1BkWV93MXRWTnRwbEFMOHgzNkNJbXNSUW1oeW9UYkVUeDNKUU1UMkZ2bkNDQUw4Z1dEMWNqbWFFeGczZ25iWl9pdmpYUHNGbFpYZkdEWHk1UWlDaWQ?oc=5"
+        },
+        {
+          "date": "2026-05-01",
+          "headline": "Cortex AI Guardrails: Prompt Injection & Jailbreak Prevention - Snowflake",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeWgzWmRGS2FLRGRVcWVTNUtBSlQ5Ni10ZlhBQW9HaEMtcFJxTTZ5UXFPTGRnTWllTHo5Nlpmdnd6Nzg5U3RCOWt0SmF1dkFaSjRmZHlqbDdvZHdMam9Qc2ZMdkF2WmVicEdtRmE0WGh6YVpWRHd4MmJCQm8xbExPeWdCV3hUYU9iTFh3RkNKNUlRRlBsY1FvdTUycw?oc=5"
         }
       ]
     },
@@ -4097,6 +4263,11 @@
           "date": "2026-05-02",
           "headline": "RLWRLD Highlights Open-Source Dexterity Model for Human-Tool Robotics - TipRanks",
           "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOalRCNmlQZTlQVDBpd3pwZUxrSEp1ZVk1RHI5UDY5c2ZfdzlVN2ZuQWpoc0N1Q3h3RF9IOWs5QlFIZWtJa1FRdG1hRkstVHhVZlo5bDZYeWY1QmhpTEJuYnlycDJmQXlEeXlSNk5MdUQ1bnVRdk9NREl1TVFQckFQeDZjNGphUnlFR2hoSnhabWc1dndNSXJCYXpUUUx1RHRTZ0lUSTlONktBZVB6TVRuNlZlcXF1UXpi?oc=5"
+        },
+        {
+          "date": "2026-05-04",
+          "headline": "RLWRLD Positions Itself as Early Mover in Physical AI and Embodied Robotics - TipRanks",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVjRLUjJXVnRTSGtCSzJLd3ItYnA1M3YtM1hkQk91R0tJTmFaMFAwcFd2NEoxWmZxVkJoQmhLWTV6ajhQcDdvb0wycTlqSnRNQTVHU0xhOUdVTTl0dXlzN29YalNDMG9xNHVqVDltUTdNU0hqYXR3cWZ2dFpoZU9vc1dzcFJHQVdCSGJtTWhNVFpUb2JOdk04djJtX3VRbEx1a2k4aHNCaW81RmJfSEE3bGtiT1J5UFRLTENLTXpYTms?oc=5"
         }
       ]
     },
@@ -6133,6 +6304,16 @@
           "date": "2026-04-29",
           "headline": "Snowflake Ties GPT 5.5 And Consent Controls To Enterprise AI Adoption - simplywall.st",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQaE9oUU91MEt3V29rVndmWmxyWV9mbjZFQ29fcnliZXVHcnozblhpc1NNelBIaFJLa3VVbGd3MHBPQU41RVVFME13OTZBTFg5VTNOdS11THU3VmdPcHdZRzRhZGFnTkF2SFhMTTZJYXYxX09jNExMd0txOW5GbDk2Nm41T0pBcE1SYkpaQVJkdFlORHNZYnphTElFdU1VemVHT1UwQVhwaENpTHgxVjdTYURreWVaak5JRkYwdFpkNnJHcFHSAcgBQVVfeXFMTmdKVGNVdnpvcFVudWkxeHlwanVBejlWSHNhZjRQM2p5T05TYlR2YzRtQU8ycVdWc1ZDajYwd05qOU1SUmw0SE1kYVdnbGVYOWVWZ3hndUV3bUoyNGdfb19va3ZBMmM1QUNzTGV5YkhHbDZDS1BkWV93MXRWTnRwbEFMOHgzNkNJbXNSUW1oeW9UYkVUeDNKUU1UMkZ2bkNDQUw4Z1dEMWNqbWFFeGczZ25iWl9pdmpYUHNGbFpYZkdEWHk1UWlDaWQ?oc=5"
+        },
+        {
+          "date": "2026-05-01",
+          "headline": "Cortex AI Guardrails: Prompt Injection & Jailbreak Prevention - Snowflake",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeWgzWmRGS2FLRGRVcWVTNUtBSlQ5Ni10ZlhBQW9HaEMtcFJxTTZ5UXFPTGRnTWllTHo5Nlpmdnd6Nzg5U3RCOWt0SmF1dkFaSjRmZHlqbDdvZHdMam9Qc2ZMdkF2WmVicEdtRmE0WGh6YVpWRHd4MmJCQm8xbExPeWdCV3hUYU9iTFh3RkNKNUlRRlBsY1FvdTUycw?oc=5"
+        },
+        {
+          "date": "2026-05-01",
+          "headline": "Datadog, Snowflake seen 'accelerating' growth as AI spending continues: BofA - MSN",
+          "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxPNFBEZ1RsU1d3OWlRWlEtUkUxbU1jck9ZQlJmRENzQXlOdW1ER1Y3SzdKNDRNYl84ME5fdzVadUlOVjAtTjhUcTI2RzFVRzl5VVJkTG82d0d3enZUQXQtNjBBanRHYnZQRkNKeXlNZ3pqMFN6VFdiOExCaTIwMjJOZjQ2SUhOMUNNRUlDR1FPbEtuNElnNmZRdWs2cS1IN0hmRV90dG1zSHJfY0x6NFdnYXIyaHBETWZUVjZoWDZoYWMwVlRFakxlRUI0Mng4RTBGeUt5UEVqNW9fM2FVTU94cDczeFJsUmhCWTNoVWgyTFJmVzZkOXJaRE1Wd1FLMWxrRkxZRU9QdDFyaFNtWWROeUdWUkFPa0MtUlJKU2FIa1h3UXVhZDRFQ0ZWN3F5bmZHWVhoYnJRem9XU3VJZ0NEdFJvM3hfbDB3VjFmTUZzNjBoTE5uSTNWZ2VB?oc=5"
         }
       ]
     },
@@ -6736,6 +6917,40 @@
       "revenue": null,
       "employees": null,
       "news": []
+    },
+    {
+      "id": 189,
+      "name": "Linkerbot",
+      "type": "Robot OEM",
+      "description": "China robot-hand-building unicorn",
+      "website": null,
+      "market_cap": null,
+      "revenue": null,
+      "employees": null,
+      "news": [
+        {
+          "date": "2026-05-04",
+          "headline": "Exclusive: China robot-hand-building unicorn Linkerbot targets $6 billion valuation - Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNN1RLMFQ0ZUx2ek1VSHhYNzl2eGhoTkYyZVE1R000MVkwQy0xYXd1VXVGRTM3RUlTSDlPUkZGQ2ZYbGF5QkxoRzN2MGZ5RmV4aEsxRTMzUkxkazQtYjQyNk8zRl9xYlZKZ1pQT0FId09IYzE3bVUyMTN6eGlhMmNwRHcydGlUTWsxSVZwZjNTcG9LSnB5UnY1cnZYVFNiNGxfRWNLclUwMFVXbERNcFZydUVYMA?oc=5"
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "name": "Meta",
+      "type": "Developer - Humanoid",
+      "description": "Building humanoid robot to rival Tesla Optimus",
+      "website": null,
+      "market_cap": null,
+      "revenue": null,
+      "employees": null,
+      "news": [
+        {
+          "date": "2026-05-04",
+          "headline": "Is Meta building humanoid robot to rival Tesla's Optimus? - The News International",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaTdoVHdhZ3JJYUpiRGIxcWY2aFhYQmNVdDhMVXZ2NFhnRGVtSE41bDI5SFpoNnZVRDJrd0JjVDctZnp1NjVxOTVETGM2MTJfOUV3UG1vMEg5cmhHX0ZVZDgtRU1ZWk1nc3lmUVpKUTF5YkFWRkFlRFkwbFBEYmlkYTJLT1hQOG5QbXRFT0MxTEEwYmIyQ24wOVZmVUtuQQ?oc=5"
+        }
+      ]
     }
   ],
   "links": [
@@ -9762,6 +9977,13 @@
       "relation": "Funding",
       "weight": 1,
       "context": ""
+    },
+    {
+      "source": 36,
+      "target": 16,
+      "relation": "Deployment",
+      "weight": 10,
+      "context": "Hyundai demanding tens of thousands of robots ASAP"
     }
   ],
   "global_news": [
@@ -9770,8 +9992,8 @@
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPSnpKb1lGYi1XbkJoWnltRGJXQVJueDhkd3hjUlVyNG90c1BxUEl1ZEgxVzRDTmVMYnZraHlVTFVPN0pzLVg0RmZJRVI3aHI5WEVkMjV2VmczX0Q5QVVQX0ZTMlpjdC16UXJCNmhmYTExaHlYMS1jX0k3Qkc0cUd3ZXBoRU1MaXpxYXN5SXJ6Sm0zSW1LT0dXZkZsbk1pRm9uRG5qWnhhT29CeDZHNzYxSXFKLUM5bElVdFdYOV9zVjZmejRQcEZMeFJtVkZ0T3hwdTRROW1Rb3dMdUpO?oc=5",
       "date": "2026-10-21",
       "involved_nodes": [
-        58,
-        167
+        167,
+        58
       ],
       "importance_score": 5
     },
@@ -9780,8 +10002,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWlZ6TWoxeGstV3oybXBTejlwV0JWZDYyVXlpbmRwVEJfX2p3NDBnY3drd0FzVl9VTTlIVnZQOV8yX2pHVU1BQi03T1RfRlVsVkp6amxaTWFCeWFrb1BqUW8xRDNVd2JqSGNwNFRnMUJMZnplMUtrc2NtTVgxUXFJQk9jX2E4WUR0MkRseElxWVRmME0?oc=5",
       "date": "2026-09-17",
       "involved_nodes": [
-        142,
-        75
+        75,
+        142
       ],
       "importance_score": 5
     },
@@ -9790,11 +10012,61 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQmFTUmdEa1o1bllteFdWaE5fUVZJMFhObGlHblRpdXNKUE1OWVNsYVlYaEFzbTVqN3pfTVRBVXVMalo2U05MLW5peEQxOUllbnpGSE1vOVp2eWluY2N1Z3MwLXlaMWYyRWpJMndQSVVJSTFGVmFWZ3dvSkd0QjhOSDZNclMwdW94SU5CMTZGcXU3R0gxSVBiaTlCbEp3cmxqUVFadWRJOVFLVEF1MHpRTVFvVnBweWdCcHNwbFc2OUdWUnFkN0E?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
+        117,
         57,
-        7,
-        117
+        7
       ],
       "importance_score": 5
+    },
+    {
+      "headline": "Exclusive: China robot-hand-building unicorn Linkerbot targets $6 billion valuation - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNN1RLMFQ0ZUx2ek1VSHhYNzl2eGhoTkYyZVE1R000MVkwQy0xYXd1VXVGRTM3RUlTSDlPUkZGQ2ZYbGF5QkxoRzN2MGZ5RmV4aEsxRTMzUkxkazQtYjQyNk8zRl9xYlZKZ1pQT0FId09IYzE3bVUyMTN6eGlhMmNwRHcydGlUTWsxSVZwZjNTcG9LSnB5UnY1cnZYVFNiNGxfRWNLclUwMFVXbERNcFZydUVYMA?oc=5",
+      "date": "2026-05-04",
+      "involved_nodes": [
+        189
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Hyundai Reportedly Demanding \u2018Tens of Thousands\u2019 of Boston Dynamics Robots ASAP - Gizmodo",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPc2U4cFZNZl9TZjVnMnI2aWVfMnpLUVhYZGVYS0p6ZWl1OF9Fb0RPNXNhTnBaNFdUNmRMSGxWbVpTTVo4T1JYREJHaXl3OGxYdm9mdWdXUlAxa0NaY3V5VDFSSTVId2lURnluOVB4YTZhVkVaSWVDdFNJamtESFJGVlJUVFhSZ3BIVVRwZzdWRDRUX084eDZpTVFtb2pxZlNfQUZwNTFLRWh2RXdi?oc=5",
+      "date": "2026-05-04",
+      "involved_nodes": [
+        16,
+        36
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Is Meta building humanoid robot to rival Tesla's Optimus? - The News International",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaTdoVHdhZ3JJYUpiRGIxcWY2aFhYQmNVdDhMVXZ2NFhnRGVtSE41bDI5SFpoNnZVRDJrd0JjVDctZnp1NjVxOTVETGM2MTJfOUV3UG1vMEg5cmhHX0ZVZDgtRU1ZWk1nc3lmUVpKUTF5YkFWRkFlRFkwbFBEYmlkYTJLT1hQOG5QbXRFT0MxTEEwYmIyQ24wOVZmVUtuQQ?oc=5",
+      "date": "2026-05-04",
+      "involved_nodes": [
+        28,
+        190
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "RLWRLD Positions Itself as Early Mover in Physical AI and Embodied Robotics - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNVjRLUjJXVnRTSGtCSzJLd3ItYnA1M3YtM1hkQk91R0tJTmFaMFAwcFd2NEoxWmZxVkJoQmhLWTV6ajhQcDdvb0wycTlqSnRNQTVHU0xhOUdVTTl0dXlzN29YalNDMG9xNHVqVDltUTdNU0hqYXR3cWZ2dFpoZU9vc1dzcFJHQVdCSGJtTWhNVFpUb2JOdk04djJtX3VRbEx1a2k4aHNCaW81RmJfSEE3bGtiT1J5UFRLTENLTXpYTms?oc=5",
+      "date": "2026-05-04",
+      "involved_nodes": [
+        62
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Toyota Is Taking The Fight To BMW And Tesla, But Not With Cars - CarBuzz",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tck93a1ZidEl5WU8tN1BPWm1JTTFuZjVPT0JwVlVEQnlHMl9Kd0M3aGU1RVVmaDhOTUg5eGd5MG1KMlE4WjJRQzhFZS01T2UzYWdMRVBUQnNaYkpVN1ZaUFg1TjJTaThuTnc?oc=5",
+      "date": "2026-05-03",
+      "involved_nodes": [
+        11,
+        28,
+        2,
+        8
+      ],
+      "importance_score": null
     },
     {
       "headline": "Weekend Round-Up: Apple's Record Quarter, Meta's Q1 Beat, Microsoft's AI Revenue Surge, Alphabet's Earnin - Benzinga",
@@ -9837,8 +10109,8 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQakdscmxSWVQwTlUwcXVhUmtBeFVwOFdZQklrSElfLTcxaTA0cU54dy1GQ244MHFqakJ3TEJNNUp3SDAwSUtFM0Nzb2ljVmxNRkJ0em40U0JucEtKa0xkVy0xTHo3MVNrRHYyRGQ3blc4OVNxVGFWenpMbUdsNDdxWUI5ZVh0TFQzSzRVNi1tdlZEQ3ppSXVkdXN1VC1LZzc3U1dBQ2xFM1VhWUZjS0NReUV5R1BZeDQ4YXFWMGRKOHI0NjNjbjBWMk5UVGU?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -9847,8 +10119,8 @@
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOalRCNmlQZTlQVDBpd3pwZUxrSEp1ZVk1RHI5UDY5c2ZfdzlVN2ZuQWpoc0N1Q3h3RF9IOWs5QlFIZWtJa1FRdG1hRkstVHhVZlo5bDZYeWY1QmhpTEJuYnlycDJmQXlEeXlSNk5MdUQ1bnVRdk9NREl1TVFQckFQeDZjNGphUnlFR2hoSnhabWc1dndNSXJCYXpUUUx1RHRTZ0lUSTlONktBZVB6TVRuNlZlcXF1UXpi?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        99,
-        62
+        62,
+        99
       ],
       "importance_score": null
     },
@@ -9917,6 +10189,25 @@
       "importance_score": null
     },
     {
+      "headline": "Cortex AI Guardrails: Prompt Injection & Jailbreak Prevention - Snowflake",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeWgzWmRGS2FLRGRVcWVTNUtBSlQ5Ni10ZlhBQW9HaEMtcFJxTTZ5UXFPTGRnTWllTHo5Nlpmdnd6Nzg5U3RCOWt0SmF1dkFaSjRmZHlqbDdvZHdMam9Qc2ZMdkF2WmVicEdtRmE0WGh6YVpWRHd4MmJCQm8xbExPeWdCV3hUYU9iTFh3RkNKNUlRRlBsY1FvdTUycw?oc=5",
+      "date": "2026-05-01",
+      "involved_nodes": [
+        61,
+        154
+      ],
+      "importance_score": null
+    },
+    {
+      "headline": "Datadog, Snowflake seen 'accelerating' growth as AI spending continues: BofA - MSN",
+      "url": "https://news.google.com/rss/articles/CBMi2gJBVV95cUxPNFBEZ1RsU1d3OWlRWlEtUkUxbU1jck9ZQlJmRENzQXlOdW1ER1Y3SzdKNDRNYl84ME5fdzVadUlOVjAtTjhUcTI2RzFVRzl5VVJkTG82d0d3enZUQXQtNjBBanRHYnZQRkNKeXlNZ3pqMFN6VFdiOExCaTIwMjJOZjQ2SUhOMUNNRUlDR1FPbEtuNElnNmZRdWs2cS1IN0hmRV90dG1zSHJfY0x6NFdnYXIyaHBETWZUVjZoWDZoYWMwVlRFakxlRUI0Mng4RTBGeUt5UEVqNW9fM2FVTU94cDczeFJsUmhCWTNoVWgyTFJmVzZkOXJaRE1Wd1FLMWxrRkxZRU9QdDFyaFNtWWROeUdWUkFPa0MtUlJKU2FIa1h3UXVhZDRFQ0ZWN3F5bmZHWVhoYnJRem9XU3VJZ0NEdFJvM3hfbDB3VjFmTUZzNjBoTE5uSTNWZ2VB?oc=5",
+      "date": "2026-05-01",
+      "involved_nodes": [
+        154
+      ],
+      "importance_score": null
+    },
+    {
       "headline": "Exclusive / C-suite exodus at Boston Dynamics - Semafor",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPcEstVUJSNkxMdjVseE9XMkdqRFNfSDU2d1VlWmt4ajVBeXloaVVtWGFKLTJBaGJic0JCVFZXVndpQXJkWDZqZW8zalFFVThfRHd5V0U0RFpad3c0cmtxU2pibUNfbllQNHBWdjhFUkc2NFRzbDBwa0lOTGZIbEtBZ1Fn?oc=5",
       "date": "2026-05-01",
@@ -9957,8 +10248,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNdVFsY2ZVNkJoelE1VHVNbWVoMGpLWGdxdXlRVDdwSUJGUXhtX3paYndCZGh6Y3NlRkdIM2Y2YlpJZUdvZkpuV3BJSFVhbG02ek5TR2xwSTRrWlhFalZLd2RVTUZCaURQRmZfUjI3UnRXdjFtaHJTU1JWUXFKSzBnVUZYRjQ2XzAxY1B6WDgtQ0JpVHfSAZgBQVVfeXFMTkRhRHcyTm1LU2JoOFJUNmp1S3pXWGU4NzdOTjdHd01UWTVDcUpZMWtvNTNYTlZwUFVqUWlxTkM0WjlYZjRyMHlNWTJMcDA5OXpsd25Jd2RLVjAyaXZJTTdNRHNIYldSOVJwY1QwSl9JVkxEMFhXMXRhSnJqWUpGVVlpMklIaE1ZLXdldWxfV0s1ZDJ1cnpoMUI?oc=5",
       "date": "2026-05-01",
       "involved_nodes": [
-        183,
-        30
+        30,
+        183
       ],
       "importance_score": null
     },
@@ -10039,8 +10330,8 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS2V4OFNkTnlYYkh3YS12NHN5SHRVSXNKd2hkVzZPVDlFZlg4TVpLUlRmRGRZbUU3dzFqMnlqZ193dUswWExYNTJNTUpIVG1tbm8tYXlmbmM3U0wtZUs4RXZ1WTdLdjczMm00VU0tZ3g4YlU3Q0MtXzBPSThlNnR4OWhiWkF1UmhpNUwyUC1RUmpNWkhlNExz?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        177,
-        75
+        75,
+        177
       ],
       "importance_score": null
     },
@@ -10058,8 +10349,8 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdzBwejRzaHFINWg2aVdOVkZVYml4ajBhd1pxOXlOUkU4MUpMcFk5ZEJiMEhWbEx2ajEtalg3WUI3UFd6TG0xMEYzREFxbDlyWmthT3Q3UlgwMWtnbWFNZzVQbndieWx4ZTAxbWxGdEpQdEZ4YkpSZl8zREtQWnFSRGdvZ1UxOGg5WVJxZA?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -10223,8 +10514,8 @@
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQdDhkMkxrX3ZXMF9McXZYX0wwNnk4U2ZVQzJhYVliNVo0bXVZVmRuS0VrYWpiLTFvM2hzc0t2eHJiYzdLUHVCQ0t0ak9aVG41b3ROTEc1UTZHb2ZKVXFwSUNvS3MwY0Jfa1h2WW5heTJrNGswaFRPdWVCemFNSmg4LXN0ajVyX2oxMzdubDJkcWc3ZEhjQ19BVHZ1Z29sV29WOElaRGxtVWoyaUk2Z2JueExETU1qV1c0Q3dVX2V0Q3phR3ZGRHJEXw?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        99,
-        62
+        62,
+        99
       ],
       "importance_score": null
     },
@@ -10306,8 +10597,8 @@
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPQlp5VmVOOWljVW52U1J0cEh6Znh4ckh2T1FLRTZScV9jNEpHS0dvYkkzUDVWQnZDRlQtWTljOTFQdWpUelF0M2taNS1vQjRNX3hCTGpNT3BTU1NIZ29wb0ZRR0NORmFWS21rb09SaGdGOTZDeERDMXJHNEoyeHNLRzRwT0prR3NFajJlYUEwcVZnYlZpTFh0bVJHZUhXcVhXckw4WW9lY0MxUWwtLWRlVm5ydmU5cm02SWJCeTBQeFM?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        28,
-        41
+        41,
+        28
       ],
       "importance_score": null
     },
@@ -10397,8 +10688,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQdlBHdnNQN1JBWXg0bEd6QUlYYUdNczNtQVozTHdmbW04bzI1d1hFcUZMaEFUWUdIenlwUjFtYjJjWDRKSlQ2ZjZMamRBWU1mX1BnSEZVMS1XYUtmXzRJcXpVUFd4ZmN4M1F1dXU5LUc2Um95RFlRZU9oYTZmdXNWY3dlR1lseXc0V01Sa25DeHZwQU0?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        43,
-        61
+        61,
+        43
       ],
       "importance_score": null
     },
@@ -10444,8 +10735,8 @@
       "url": "https://www.therobotreport.com/gft-technologies-ai-powered-robots-move-from-inspection-action-automakers/",
       "date": "2026-04-29",
       "involved_nodes": [
-        179,
-        180
+        180,
+        179
       ],
       "importance_score": null
     },
@@ -10517,8 +10808,8 @@
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOV1VtNFdqRlhNVGM0d0E3U2l5UTF6OXN3RW1OU2hURUxSU1o3MjZwUU9vZl9vbGhvUVFhT1VsWFhqQ1lXME9tOWNGS0Jsdi1fZ3ZQNU9WMDI4RkR1Um9pVjh6MWVydFZoMGx3bGR4YnlPbDVwTmlIMXJsdGFIY3V2cGFRelhYbEliUGl6MDJOLU4wTU9DUHJYNWsyX2Q4MlhtQlB3M2FlUDZLenVkQ0J4OUt4WVVPZnA0ZzhKV3F0bUFVNGQwemxZZTJn?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        99,
-        62
+        62,
+        99
       ],
       "importance_score": null
     },
@@ -10545,8 +10836,8 @@
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8ydVppRXdQb1c2YWZfMzh5N1JOVGFhUVhGaXpkbVBxRGhXU3Z1aHEyTVFaRE1nSDVpZ0c2enJKa1FELWlRWW5PSW1Gbm5DVEpOUktZeVZncVIwQW1yaDZySw?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -10629,8 +10920,8 @@
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1rRWhLclk4dkltTEk2TDBvcEhiVE1PNkhKdThObnF6aU5WemdrcWl2cXJmdnU4VGREbHR2eVJtSFR4Q25BZWFsekVzV0VPRU9kcVVGWm4xZWxlaDdBYWVkQW1yTlMwSHo0U3hMYXlwOA?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        25,
-        28
+        28,
+        25
       ],
       "importance_score": null
     },
@@ -10666,8 +10957,8 @@
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQQXZYVl9wTEw4ZzdfbU4wUkFoRDhScE9VV2ZlNUZ4VFdKWEdiZ2Nzc0JkV0JPLUJlV1ptSlNNRk5VTFQzNGhvSl9LbldjWHY4R2o4VzhmQk1hMEU2RGpfNk45NVJsbnEyc3pKVkZzQXFjaW9kUzRXVW1jS2pEMDFiMEhOVS1TYlhxQWIweklmcll1dFlTMGZ3dG1CVTc4c0pLNnlQcWJ3?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        177,
-        75
+        75,
+        177
       ],
       "importance_score": null
     },
@@ -10713,9 +11004,9 @@
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVDltX3FQSFdoTXhZeUJXUEIyRWZlNndnOG55aHFjUGxnUzdyNjBHRFhKaWh6MXhzSUppMmNtNFZIR2FseE9GN1gweWlUSVEwQnNfX1hnMnV6eThHZlI5SjdwM1JVOVZRM3RqYTlrZHBUYjBKZ2JFYWc1VldnYnBXSUJmSkRhRWNGRjFmM0pWMGhGVk90VHRXeG1tQ3VSbmlJTVA5MTBVbVc0MFpuZEJPTk4xRnF3czVaTzNQMXNLamdZbDVsMmVhX25Cc0RKN1U?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        15,
+        31,
         16,
-        31
+        15
       ],
       "importance_score": null
     },
@@ -10769,8 +11060,8 @@
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOTnlQaE9JOThZU1NDQ05sYUxIMG96QTRxNWxTdUFQWnlFcDNZMlRBMEU3RUl0Tm9HQVNiYXBYT0ZQWnZsNzFXWENSQ3VSd04yOEdmVkRyZHhGclNWWnc2STRjamJ3OTdDRml1ZGRMNmF1NlJfS3o5RjRqT1BsS0VNd1F5ZmhKY01GakM3NnpxSWVLX0FCM3JYZ0JGMVdSZVRMYTR4S0ZDQVhyT0NLX185ZnduRzhYaU50R2p5dFVFU0RxZGllRzVJ?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        76,
-        45
+        45,
+        76
       ],
       "importance_score": null
     },
@@ -10889,8 +11180,8 @@
       "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxNTnF2VXJnX2JEal9qcUd5a2lPSmtjcDJMYjNJV0dfUlotRDlEVU1XTFNHZEprWi02ckJHaVpYQ25FV2JOak9SVzh6N0k5akJ0MmRGNWVmbXRTNHZzSEtuamxLYjJfcVVHeU5PVUhwUDgxbFFZOTA1cm91Uy1MR0JmaFdDNDRGWERYanF4NU5ZYlZrRkIySUFLQ1l1ZkRha2VWSUFJeWxBNnhSMDRLb3o4RjNhVDhiRkxka0lXOGdCVUxQSThOQk1YQV9WTmxieENGa0FUN29LUzRRREFmajFqRDNTV05BNUtkUENkTkFKVmhNZEltTmZLUEVYTXQwcWpxX2x0Mm1jSG9McDhYWl9nV1BPem9sVU11ZUxwYmx1Q2o1cktyVVc1ZklvRDhCM0Jnd3QxdDVEbjhFVllJTm9QX0NqM0VSa3NLWENsZndHZi1IcllPOVVVQTIxSEtHY2ZKMkJSektPaFJEb1BYcGJXNjBKbFYzbkQ3ZkR6b3NIS0VHRXRN?oc=5",
       "date": "2026-04-28",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -10992,9 +11283,9 @@
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbU9aclA4MEJONzV4Skh0WkRpN1N1bk5BNkdjRDYwQVh6YllHeTV5Ui1nT2pzUXNOVGtwRThwMGV5aTNzS1doZThkTHo2YmYwemlEWm51Qi1OTkhseGdhNDBtQkJzZm9faU1FS1JIX3o1dkgtVzEtSEhpWGw4bmhNMW1jQjd6ejRxQWlUZkcxZGhKc19MV3N0WENVdmpwSlFjWFhjX09qS3ZWY3VVVVpNVWhkUElCVHhJUms4amlLcG5rcWZXZGNF?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        11,
+        184,
         58,
-        184
+        11
       ],
       "importance_score": null
     },
@@ -11021,8 +11312,8 @@
       "url": "https://news.google.com/rss/articles/CBMigwNBVV95cUxPQW5lQ25GWlEyTGZuWGxjckFaOHQxY1RJVFdmMEVFc0ZvU2dlM3hBbFZPZFVYbXdZa2IyTHFKWVhUdENjc2FGQWZnMFN4NkxMRWNmMGxqVnItclM3Ql9XMTVnbzgtcFRvbUpRRXVrbW9GcmtGQlNGZHc5S0l1b09MSk5kQ0tZUFBNM2VKV05HanVGSDFRdGhmRWZIR0RFMlZaYnVCVF81MlRWdm1TTmxjb1QxcG1rRWhhUmx5NjJKNl9ORU5hTEFKZUFkRm9LRlZvZW02SlhXZG14N2Y5bHJSWnpuVF9aLXpIejZSQ2RDVng5NHh2ZWdObENNWkdLb1J2aUdHakdQZDllaGhLX0lsQ1dyNmNEZWV5VGVIbVNfSThpS0Rkcmp5X0puUmsxV3JqdEF4TmFWRmREOXQ1Vmk3R1h0b0RvZVFaUEtXUFBURUxDQVNoUjR4UF84eE5QdWZkU0pJZ3NtUmZ0RFRhejRmeS1ULTBPYm5ELWo4UUFOanZIMnM?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        119,
-        21
+        21,
+        119
       ],
       "importance_score": null
     },
@@ -11031,8 +11322,8 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOREdqZGpsLUo1MFg5b0NfakpNcFlBb1d6Rzl0ejNxY3h5ZkFHR3ZJdnZRTWtDRVQxeGkwTGFtTjA2STFjTzUtQnpJOEJ5WnhXZXVqbklyTS1BelFhMThjWVRrRDQ0Q1JIcFVCckFnTHdUcU5ybzZzX0hPc3pTQ1Y4VF9ibjQwcjVwaHE5enBYcXYwdDR6VjN0ZGFJSkQ?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        176,
-        21
+        21,
+        176
       ],
       "importance_score": null
     },
@@ -11059,8 +11350,8 @@
       "url": "https://news.google.com/rss/articles/CBMi-wJBVV95cUxPVDJvYUR4QzVheWpuY3dOMnlVa0pGWjBNZVlrNzFaSnk4QTdGcXRJdVlRaE1nNHFSSnQtTFB4TWZ2aEVvLVUyUDIxTllfeGV0MmdsUkNNZXZqRzRiUG84Mk82ajBGSGVhS1dnMkRaY1NuanNmclFwSGE1MEpYcVFoQ0NhdmZlSWF1QzJ1dFE0c3owMjRuOHE0ME5yU0w2UXFMZHo2Q092RUVUZTItWktkOUFUSGEtMW5jemxOc2V5dTdSZTZqcEFIcFZoNVB5VE1CMHBaY0hkZkdSNHJ0REhGd3NVZmRoN0JlV0szZmdNUUswQW1hZ3hpNWRMM0NHWHBEbmcyN3dpbVBrZzQtT3lrMTJlS0o2ejU2RVNwNXlyVl9JTzVSLWY2RmNVTWtCbWw5bU9SV0h0QUdQMFAwaENqRUZpQXBlNEZ1YVdaRmZRLVNxWGVtZXRYRmlNZ3hZYkY0MnR1YjVNWFVJcjBDWHMtWVBQdnVMS2QxNTI0?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        43,
-        1
+        1,
+        43
       ],
       "importance_score": null
     },
@@ -11078,8 +11369,8 @@
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVWJLeW9OaFhtTnFITGVUdGU2SzJpMzdNMmU1ekJJR1NxdngyLUk4SFo5T1dZOFNlTS1zVExXWXdHMEFBZklURkZ6Z0FXTmdhbWFZYm9ZemIxdVVkZHdXT2JGT2pDVnR3R2xkYTBnYkdkM0hDZ1I0Wk1kY1ZaYjVvRkRRNTJPVWpSLTltUVhuRllyT01JMXZZTHlZWmFCVlVOaFo0SDVoblQ?oc=5",
       "date": "2026-04-27",
       "involved_nodes": [
-        58,
-        80
+        80,
+        58
       ],
       "importance_score": null
     },
@@ -11091,94 +11382,57 @@
         58
       ],
       "importance_score": null
-    },
-    {
-      "headline": "Sereact raises $110M to scale AI \u2018robotic brain\u2019 and expand into the US - SiliconANGLE",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNSmRPMHJ2X0NQMHRIanhDbEpxNFZXZk9lZUJXUVhvVEtxRzExMTZWZDNhLWZjMTNQdzNzMFI5eE5DRHJ2dWVTOUtxQnhRR01meHVpSHdkamdIaW42N21GY2J5X25DSHVoWEgtTWVnYTVMclJRbDN6VVRJaTI0cjJWTjM3TEZheFpweGVWcXNDUUppbHc?oc=5",
-      "date": "2026-04-27",
-      "involved_nodes": [
-        58,
-        80
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Tech Voices: Bessent on TikTok deal, Coinbase-Base, Dyna Robotics - MSN",
-      "url": "https://news.google.com/rss/articles/CBMi6gJBVV95cUxPUXNSS1FOTWp3NE9KVkI0MlRDcXlKbDR1dHZ0SFZETkFQcXp4N3pHdEt0QlpLcmN4bkZyZEtITmtDNzYzMmk0SmRrai1WY1BNYkJ6S2tNcXhxcnlmbzlSdEFwUkdTRmhTcHVsS0gzNENCSF90UVVHZHd0OWpwNzQyZGFtaGpWM19EMWc2Sk5Qcm0yYzYtQ2hwMVgxYXJmNGloaFJ3M2EyY3dwYUVOYTNnbWdtSGRHNVhzRkFiR0kzUnk0UFRwNlp4dTR1M19iV29YU2FTZXF3dkZpcHNnd0ZUQ2pBQjJlNHJXb1JaOVlqcktGSGM3Y0VKWlR4SVZwT2ZvenNSYVNucGx3OHpHR0k0X0piN2RNZ1Z6dXFxNWlrM0k5TGU3V0wwQkQyNEp4TDd0dEc3cWJjWThrMHZXR2pDdkRmU2w1NjlqNmFDUUQyTURVeklyMkhYU0tpS0NodGFYMlBGS0l6ZkdFQQ?oc=5",
-      "date": "2026-04-27",
-      "involved_nodes": [
-        63
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Unitree G1 Humanoid Robots Are Reshaping The Robotics Investment Stack - Forbes",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQTmQtQXlMZjF4anYydmZCN1U4M1JrSlQzamFqYXh3NnREMDQwdF9mMmlZT25leWtGbVY2LXZ3UGdIeFZ6NEt3QmZDU2V0R0NWTTZCMlpnaXhZcURFUmpRX2xJZi1JVGlDdjUwcUFwYzRlZU1YMDVYS0hkU3hianptLXN6TkxLbVBYdW5XcGlzYWQ5Sm5JYlNhY3laNGVhUGlKR2k5QWllUTB6dkUtWUZwcVUxU3lRSG1HVUJxN3Q5dw?oc=5",
-      "date": "2026-04-27",
-      "involved_nodes": [
-        30
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "World\u2019s first mass humanoid robot delivery begins as UBTech sends Walker S2 units - MSN",
-      "url": "https://news.google.com/rss/articles/CBMiigNBVV95cUxNRjVwNC1OTDJGXzlmTk4yMkk5T0FZUjhKZnBrNXRzeEZvbjE1aUVpNWJzYnJCSzZYV2NLbEs0U1pLWkcyZnUxX3VPQXV2ODFoWFFyeTlVVzNlRWtodlJWelk3SW9Ud0tBbTVyQVdDc3hVaXZ4SGhFU0k5SE9YRnlCZzBRR3F0SHl5cWJYQktaUm41cVNBTm0xQ19UU09EblBuN0E4aTA2S25qa1U4WFBGNEY1bTlMUHg5R1o4UHVRam4yTEtwOXVSMWY1YVFpOE43aERhcW9IZmFfWXJlTC13bVoyaFphYnJfb3VLRlk1XzhrUUo0NG1hZWE3b0QyYmVWRXlGbGhkTmQtdjRHVllCZ3ZFdHlONS1TT3NFOXRqS25kUVlIbVJmaUNhX3VkN1N6S2Q5Y2RZS052UE1VdURVSDZhTk56Y182SnBHbGhSeHJ2V2oxSEZJXzhxYmotTmJaWmExQjl0R28xampRTkFCMHRUTm4wU2xHdmd2ZWhjd0lzLWhtNUtsY29B?oc=5",
-      "date": "2026-04-27",
-      "involved_nodes": [
-        29
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Seeing before the market: exclusive physical intelligence for Americas oil trading - Wood Mackenzie",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeGZNb2ctRGc4X3J3eWRCWGdDVU0yWHZDVG5MOXNsTWRTbHlUczlXXzc5VWs1Vk5TZU90bmloWHhzYlQtNVBrS29LTkJyZ3c0LXdxZDY4SlBhSVk3VGxweVhVVXpGX0hqM01HcXZfNWhXZ21uR3hsVEEyamU2MkQyV3JMLURGbF9BcEY0SEZGTHBYM09MMTVvWk90aVZhb25Pd2s4ZEFVM2F1MlN2TThyTU9mX3RlMUc2NG5R?oc=5",
-      "date": "2026-04-26",
-      "involved_nodes": [
-        43,
-        1
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Skild AI acquires Zebra Technologies robotics automation business - MSN",
-      "url": "https://news.google.com/rss/articles/CBMi7wJBVV95cUxOejBsamM1a0NCVF9RMURObmlrLXZrYUp1YVVVVTNzUHl2R0FaLXNiVFV4WXlkZlVuUlo3Nkc3LXVBZE9US0xUV01WdE41YnhqaGpsVTY3ZTFFb1J4WlRWT19DRlhDajE5Q0N6N3lycVcteFVKVFJiT2t4UXhzTTduWVN1WnAyLUc1aWhlVS02R3hJYmIwRVRoRHg2RThtN3lEWWhJdWRNMnNFLTN3anZMZmZCLVd1bnUwMkpvZ1ROOVVnX21KWlZ6SlR4RkhnWG5WSlVqbW1kMHlWOVF1aVZ1akY3T2x2c3ZLc1o3TXRjMGR5OEJjMUxWNDR4T3ZPZkkyV0V6UkRZVEMwT1NfaVQxM2ZuQ2xQa3AxdlVGZENSbzRReUVKVm5PYTdHLUZpdVZhenlCWmFva1FKWXZrVFBKSDJKaHc0UTVsTG9oVklsNWo5ODNvc2o2aWxobGpkR2sxNzlJOElyZTRQU253ajI0?oc=5",
-      "date": "2026-04-26",
-      "involved_nodes": [
-        26,
-        151
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Unitree humanoid robot executes skating, flips and spins - VnExpress International",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQUjQ4T295WG1rV0NHX1BjYm5BLUd5emx2Zi1JLTdRVlV4WE43dmp5WDlHYTRzVnVuVVRpM1FSZ3VuTzQ1X2R0NWlSWEpzVG5LejJYdmhtdDhQalcycXYzR3V0d1lWT08wN2hDcFRLNXhmRGI0WXlCMTZHLTZmVm43LUhzX0pVcTZqeDN3bDBERjkwRmRjTFZHVXJPUEk5Vjd0YlJYb2xpeGNSLUp0aWhwNXlR?oc=5",
-      "date": "2026-04-26",
-      "involved_nodes": [
-        30
-      ],
-      "importance_score": null
     }
   ]
 };
 
         const colors = {
-            'Robot OEM': '#ff9ff3',    
-            'End User': '#48dbfb',      
-            'Supplier - AI Model': '#feca57',      
+            'Robot OEM': '#ff9ff3',
+            'End User': '#48dbfb',
+            'Supplier - AI Model': '#feca57',
             'Supplier - Compute': '#ff7979',
             'Supplier - Actuators': '#ffb142',
             'Supplier - Sensor': '#e056fd',
             'Supplier - Data': '#6ab04c',
-            'Integrator': '#c8d6e5',    
-            'Investor': '#1dd1a1',      
-            'Outlet': '#ff6b6b'        
+            'Integrator': '#c8d6e5',
+            'Investor': '#1dd1a1',
+            'Outlet': '#ff6b6b'
         };
 
         let hiddenTypes = new Set();
         const legend = document.getElementById('legend');
+
+        // Panel Toggles
+        function togglePanel(panelId) {
+            const panel = document.getElementById(panelId);
+            const isLeft = panelId === 'left-panel';
+            const icon = document.querySelector(`#${panelId}-toggle svg path`);
+
+            if (panel.style.transform.includes('translateX')) {
+                // Open it
+                panel.style.transform = 'translateX(0)';
+                icon.setAttribute('d', isLeft ? "M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z" : "M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z");
+            } else {
+                // Close it
+                panel.style.transform = isLeft ? 'translateX(calc(-100% - 20px))' : 'translateX(calc(100% + 20px))';
+                panel.style.transition = 'transform 0.3s ease';
+                icon.setAttribute('d', isLeft ? "M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" : "M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z");
+            }
+        }
+
+        // Interactive Legend State
+        let hiddenTypes = new Set();
+
+        // Re-write legend generation to make it interactive
+        const legend = document.getElementById('legend');
+        legend.innerHTML = '';
         Object.entries(colors).forEach(([type, color]) => {
             const item = document.createElement('div');
             item.className = 'legend-item';
+            item.tabIndex = 0;
+            item.setAttribute('role', 'button');
+            item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.onclick(); } };
+            item.id = `legend-${type.replace(/\s/g, '')}`;
             item.innerHTML = `<div class="color-box" style="background:${color}"></div>${type}`;
             item.onclick = () => {
                 if (hiddenTypes.has(type)) {
@@ -11188,7 +11442,38 @@
                     hiddenTypes.add(type);
                     item.classList.add('hidden-type');
                 }
-                
+
+                // Hide nodes of this type from physics and rendering
+                const filteredNodes = graphData.nodes.filter(n => !hiddenTypes.has(n.type));
+                const filteredNodeIds = new Set(filteredNodes.map(n => n.id));
+                const filteredLinks = graphData.links.filter(l => {
+                    const sid = typeof l.source === 'object' ? l.source.id : l.source;
+                    const tid = typeof l.target === 'object' ? l.target.id : l.target;
+                    return filteredNodeIds.has(sid) && filteredNodeIds.has(tid);
+                });
+
+                Graph.graphData({ nodes: filteredNodes, links: filteredLinks });
+                applyFilters(); // Re-apply current mode on top of legend filter
+            };
+            legend.appendChild(item);
+        });
+
+        /* replaced */ //Object.entries(colors).forEach(([type, color]) => {
+            const item = document.createElement('div');
+            item.className = 'legend-item';
+            item.tabIndex = 0;
+            item.setAttribute('role', 'button');
+            item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.onclick(); } };
+            item.innerHTML = `<div class="color-box" style="background:${color}"></div>${type}`;
+            item.onclick = () => {
+                if (hiddenTypes.has(type)) {
+                    hiddenTypes.delete(type);
+                    item.classList.remove('hidden-type');
+                } else {
+                    hiddenTypes.add(type);
+                    item.classList.add('hidden-type');
+                }
+
                 // Use built-in force-graph visibility toggles for safe hiding
                 Graph.nodeVisibility(n => !hiddenTypes.has(n.type));
                 Graph.linkVisibility(l => {
@@ -11269,9 +11554,9 @@
                     const t = typeof link.target === 'object' ? link.target : graphData.nodes.find(n => n.id === link.target);
                     if (modeLinks.has(link)) {
                         if ((s.type === 'End User' && t.type === 'Robot OEM') || (t.type === 'End User' && s.type === 'Robot OEM')) {
-                            return 'rgba(72, 219, 251, 0.9)'; 
+                            return 'rgba(72, 219, 251, 0.9)';
                         }
-                        return 'rgba(255,255,255,0.5)'; 
+                        return 'rgba(255,255,255,0.5)';
                     }
                     return 'rgba(255,255,255,0.01)';
                 }
@@ -11284,7 +11569,7 @@
                     const t = typeof link.target === 'object' ? link.target : graphData.nodes.find(n => n.id === link.target);
                     if (modeLinks.has(link)) {
                         if ((s.type === 'End User' && t.type === 'Robot OEM') || (t.type === 'End User' && s.type === 'Robot OEM')) {
-                            return (link.weight||1) * 2.0; 
+                            return (link.weight||1) * 2.0;
                         }
                         return (link.weight||1) * 1.0;
                     }
@@ -11308,7 +11593,7 @@
             .onLinkClick(link => {
                 highlightNodes.clear();
                 highlightLinks.clear();
-                
+
                 // Clear any active node info UI before switching context
                 document.getElementById('selected-node-info').innerHTML = `
                     <div id="selected-name"></div>
@@ -11331,15 +11616,15 @@
                     highlightNodes.add(s);
                     highlightNodes.add(t);
                     updatePanelEdge(link, s, t);
-                    
+
                     // Graph.d3Force charge override removed to respect layout
                     // Graph.d3Force link override removed to respect layout
                     Graph.d3ReheatSimulation();
-                    
+
                     setTimeout(() => {
                         Graph.zoomToFit(1000, 150, n => highlightNodes.has(n));
                     }, 400);
-                    
+
                     // Graph.d3Force charge override removed to respect layout
                     // Graph.d3Force link override removed to respect layout
                     Graph.d3ReheatSimulation();
@@ -11361,7 +11646,7 @@
                 // Focus Mode Triggered by Click
                 highlightNodes.clear();
                 highlightLinks.clear();
-                
+
                 if (node) {
                     highlightNodes.add(node);
                     graphData.links.forEach(link => {
@@ -11373,31 +11658,32 @@
                             highlightNodes.add(t);
                         }
                     });
-                    
-                    
-                    updatePanel(node);
-                    
-                    // Filter news to this node
-                    currentNewsFilter = node.id;
-                    const filterStatus = document.getElementById('news-filter-status');
-                    if(filterStatus) {
-                        filterStatus.style.display = 'inline-block';
-                        filterStatus.innerText = `✖ Clear: ${node.name}`;
-                    }
-                    renderNewsList();
 
+
+                    updatePanel(node);
+
+                    // Do NOT filter right panel (leave global)
+                    currentNewsFilter = null;
+                    const filterStatus = document.getElementById('news-filter-status');
+                    if(filterStatus) filterStatus.style.display = 'none';
+                    renderNewsList();
 
                     // Re-organize physics to center the clicked node and its cluster
                     // Graph.d3Force charge override removed to respect layout
                     // Graph.d3Force link override removed to respect layout
-                    
+
                     Graph.d3ReheatSimulation();
-                    
+
                     // BUG FIX: Do not fly to old coordinates while physics pushes the node away!
                     // Let the physics settle for a moment, then bound the camera to the new cluster position.
-                    setTimeout(() => {
-                        Graph.zoomToFit(1000, 150, n => highlightNodes.has(n));
-                    }, 400);
+                    let attempts = 0;
+                    const zoomInterval = setInterval(() => {
+                        attempts++;
+                        if (Graph.d3Alpha() < 0.05 || attempts > 20) {
+                            Graph.zoomToFit(1000, 150, n => highlightNodes.has(n));
+                            clearInterval(zoomInterval);
+                        }
+                    }, 100);
 
                     console.log("[DEBUG] Node clicked:", node.name, "Targeting cluster...");
 
@@ -11426,50 +11712,50 @@
 
             // Map scaling based on valuation/connections (using val)
             let r = Math.max(4, Math.sqrt(node.val) * 2.0); // Slightly larger base nodes
-            if (isHighlighted) r *= 1.5; 
+            if (isHighlighted) r *= 1.5;
 
             ctx.beginPath();
             ctx.arc(node.x, node.y, r, 0, 2 * Math.PI, false);
-            
+
             let fillStyle = colors[node.type] || '#ccc';
             if (isDimmed) fillStyle = 'rgba(100,100,100,0.05)';
-            
+
             ctx.fillStyle = fillStyle;
-            
+
             // Highlight stroke
             if (isHighlighted || (currentMode !== 'all' && isInMode)) {
                 ctx.lineWidth = 1 / globalScale;
                 ctx.strokeStyle = '#fff';
                 ctx.stroke();
             }
-            
+
             ctx.fill();
 
             // Semantic Zoom Text: Only show text if zoomed in (globalScale > 1.4), or if highlighted/mode active
             const showText = globalScale > 1.4 || isHighlighted || isInMode;
-            
+
             if (showText && !isDimmed) {
                 const label = node.name;
                 const fontSize = Math.max(12 / globalScale, 4);
-                
+
                 ctx.font = `${isHighlighted ? 'bold' : 'normal'} ${fontSize}px Helvetica`;
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'top';
                 ctx.fillStyle = (isHighlighted || isInMode) ? '#ffffff' : 'rgba(200,200,200,0.9)';
-                
+
                 if (isHighlighted || isInMode) {
                     ctx.shadowColor = 'rgba(0,0,0,0.8)';
                     ctx.shadowBlur = 4;
                 }
-                
+
                 // Add a slight dark background pill behind text for readability over edges
                 const textWidth = ctx.measureText(label).width;
                 ctx.fillStyle = 'rgba(11, 12, 16, 0.7)';
                 ctx.fillRect(node.x - textWidth/2 - 2, node.y + r + 1, textWidth + 4, fontSize + 2);
-                
+
                 ctx.fillStyle = (isHighlighted || isInMode) ? '#ffffff' : 'rgba(200,200,200,0.9)';
                 ctx.fillText(label, node.x, node.y + r + 2);
-                ctx.shadowBlur = 0; 
+                ctx.shadowBlur = 0;
             }
         });
 
@@ -11481,7 +11767,7 @@
         let currentLayoutMode = 'supply-chain';
 
         const regionalMapping = {
-            'US': ["Physical Intelligence", "Agility Robotics", "Figure AI", "Covariant", "IEEE Spectrum", "TechCrunch", "NVIDIA", "Brookfield", "Apptronik", "Boston Dynamics", "Galaxea AI", "Mind Robotics", "Rhoda AI", "Robotera", "Sanctuary AI", "Skild AI", "Tesla", "Amazon", "GXO Logistics", "Microsoft", "OpenAI", "Qualcomm", "Intel", "Databricks", "Foundry Robotics", "Vention", "Wiliot", "Andreessen Horowitz", "Genesis AI", "Viam", "Cortex AI", "RLWRLD", "Dyna Robotics", "X Square Robot", "xAI", "Tesla Manufacturing", "Dojo Compute", "OpenAI Robotics Lab", "Fauna Robotics", "RIVR", "Amazon Industrial Fund", "Alphabet / Google", "Intrinsic", "Scale AI", "TBPN Company", "FedEx", "Nomadic", "Founders Fund", "Lightspeed Venture Partners", "Thrive Capital", "Lux Capital", "Berkshire Grey", "Dexterity", "Nimble", "Aurora Innovation", "TQ Ventures", "Pear VC", "Jeff Dean", "Zoox", "Zendar", "Eclipse", "Khosla Ventures", "Capacity", "Generalist AI", "Rivian", "Hark", "Ford", "Magna International", "General Motors", "AgiBot", "Cartwheel", "LandingAI"], 
+            'US': ["Physical Intelligence", "Agility Robotics", "Figure AI", "Covariant", "IEEE Spectrum", "TechCrunch", "NVIDIA", "Brookfield", "Apptronik", "Boston Dynamics", "Galaxea AI", "Mind Robotics", "Rhoda AI", "Robotera", "Sanctuary AI", "Skild AI", "Tesla", "Amazon", "GXO Logistics", "Microsoft", "OpenAI", "Qualcomm", "Intel", "Databricks", "Foundry Robotics", "Vention", "Wiliot", "Andreessen Horowitz", "Genesis AI", "Viam", "Cortex AI", "RLWRLD", "Dyna Robotics", "X Square Robot", "xAI", "Tesla Manufacturing", "Dojo Compute", "OpenAI Robotics Lab", "Fauna Robotics", "RIVR", "Amazon Industrial Fund", "Alphabet / Google", "Intrinsic", "Scale AI", "TBPN Company", "FedEx", "Nomadic", "Founders Fund", "Lightspeed Venture Partners", "Thrive Capital", "Lux Capital", "Berkshire Grey", "Dexterity", "Nimble", "Aurora Innovation", "TQ Ventures", "Pear VC", "Jeff Dean", "Zoox", "Zendar", "Eclipse", "Khosla Ventures", "Capacity", "Generalist AI", "Rivian", "Hark", "Ford", "Magna International", "General Motors", "AgiBot", "Cartwheel", "LandingAI"],
             'Asia': ["Toyota", "Fourier Intelligence", "GALBOT", "Rainbow Robotics", "UBTECH", "Unitree Robotics", "BYD", "Foxconn", "Geely", "Hyundai", "Xiaomi", "Qatar Investment Authority", "SoftBank", "Shenzhen Capital Group", "Samsung Electronics", "Samsung Heavy Industries", "Samsung Future Robotics Office", "FANUC", "Foxconn / Hon Hai", "Hyundai Motor Group", "Hyundai Mobis", "SoftBank Vision Fund", "Bharat Forge", "Mitsubishi Electric", "Ant Group", "Meituan", "Today Capital", "JD Group", "SF Technology", "Seer", "Astribot", "Kepler Robotics", "Tether", "Mobileye", "New Hope", "Honda Trading", "Kia", "Yaskawa", "Honda", "Sona Comstar"],
             'Europe': ["BMW", "KNAPP", "1X Technologies", "Neura Robotics", "Spirit AI", "Mercedes-Benz", "Google DeepMind", "Bosch", "Siemens", "RobCo", "Wandelbots", "Renault Group", "Sereact", "Inbolt", "ABB", "Agile Robots", "Deutsche Telekom", "thyssenkrupp", "Wayve", "Arduino", "Kardex", "Natix Network", "BASF", "Universal Robots", "Volkswagen", "Porsche", "KUKA", "Hexagon"],
             'Other': ["Mentee Robotics", "Mercado Libre"]
@@ -11497,7 +11783,7 @@
         const clusterForce = function(alpha) {
             graphData.nodes.forEach(node => {
                 let targetX = 0, targetY = 0;
-                
+
                 if (currentLayoutMode === 'supply-chain') {
                     if (node.type && node.type.startsWith('Supplier')) { targetX = -450; targetY = -250; }
                     else if (node.type === 'Robot OEM') { targetX = 0; targetY = 0; }
@@ -11513,33 +11799,34 @@
                 } else {
                     targetX = 0; targetY = 0; // Organic
                 }
-                
+
                 const pullStrength = currentLayoutMode === 'standard' ? 0.02 : 0.08;
                 node.vx -= (node.x - targetX) * alpha * pullStrength;
                 node.vy -= (node.y - targetY) * alpha * pullStrength;
             });
         };
-        
+
         Graph.d3Force('cluster', clusterForce);
 
         function changeLayout(mode) {
             currentLayoutMode = mode;
-            
+
             if (currentLayoutMode === 'supply-chain') {
-                Graph.d3Force('charge').strength(-400);
+                Graph.d3Force('collide', d3.forceCollide(node => Math.max(5, Math.sqrt(node.val) * 2.5) + 8).iterations(2));
+        Graph.d3Force('charge').strength(-400);
                 Graph.d3Force('link').distance(l => {
                     const s = typeof l.source === 'object' ? l.source : graphData.nodes.find(n => n.id === l.source);
                     const t = typeof l.target === 'object' ? l.target : graphData.nodes.find(n => n.id === l.target);
-                    if (s && t && s.type === t.type) return 40; 
-                    return 160; 
+                    if (s && t && s.type === t.type) return 40;
+                    return 160;
                 });
             } else if (currentLayoutMode === 'geospatial') {
                 Graph.d3Force('charge').strength(-300);
                 Graph.d3Force('link').distance(l => {
                     const s = typeof l.source === 'object' ? l.source : graphData.nodes.find(n => n.id === l.source);
                     const t = typeof l.target === 'object' ? l.target : graphData.nodes.find(n => n.id === l.target);
-                    if (s && t && getRegion(s.name) === getRegion(t.name)) return 40; 
-                    return 250; 
+                    if (s && t && getRegion(s.name) === getRegion(t.name)) return 40;
+                    return 250;
                 });
             } else {
                 Graph.d3Force('charge').strength(-600);
@@ -11552,33 +11839,56 @@
         changeLayout('supply-chain');
 
 
+        let isPhysicsLocked = false;
+        function togglePhysics() {
+            isPhysicsLocked = !isPhysicsLocked;
+            const textEl = document.getElementById('physics-lock-text');
+            if (isPhysicsLocked) {
+                // To lock, set nodes' fx/fy to their current x/y
+                const currentNodes = Graph.graphData().nodes;
+                currentNodes.forEach(node => {
+                    node.fx = node.x;
+                    node.fy = node.y;
+                });
+                textEl.innerText = "Unlock Physics";
+            } else {
+                const currentNodes = Graph.graphData().nodes;
+                currentNodes.forEach(node => {
+                    node.fx = undefined;
+                    node.fy = undefined;
+                });
+                Graph.d3ReheatSimulation();
+                textEl.innerText = "Lock Physics";
+            }
+        }
+
         function debugGraph() {
             console.log("[DEBUG MODE] Initiated.");
             console.log("Nodes:", graphData.nodes);
             console.log("Edges:", graphData.links);
             console.log("Highlighted Nodes:", Array.from(highlightNodes).map(n => n.name));
-            
+
             // Force a complete reset to prevent getting lost in dark space
             setMode('all');
             highlightNodes.clear();
             highlightLinks.clear();
             document.getElementById('selected-node-info').style.display = 'none';
-            
-    
+
+
         // Add strong collision force to spread the hairball out
         changeLayout(currentLayoutMode); // Reset physics back to whatever layout is selected
         Graph.d3ReheatSimulation();
-            
+
             Graph.nodeColor(Graph.nodeColor())
                  .nodeVal(Graph.nodeVal())
                  .linkWidth(Graph.linkWidth())
                  .linkColor(Graph.linkColor())
                  .linkDirectionalParticles(Graph.linkDirectionalParticles());
-            
+
             setTimeout(() => {
                 Graph.zoomToFit(1000, 50);
             }, 300);
-            
+
             alert("Debug data dumped to browser console (F12). View has been reset and centered.");
         }
 
@@ -11586,14 +11896,14 @@
             currentMode = mode;
             document.getElementById('btn-mode-all').className = mode === 'all' ? 'btn active' : 'btn';
             document.getElementById('btn-mode-deployment').className = mode === 'deployment' ? 'btn active' : 'btn';
-            
+
             const newsBtn = document.getElementById('btn-mode-news');
             if (newsBtn) newsBtn.className = mode === 'news' ? 'btn active' : 'btn';
-            
+
             highlightNodes.clear();
             highlightLinks.clear();
             document.getElementById('selected-node-info').style.display = 'none';
-            
+
             const newsPanel = document.getElementById('daily-news-panel');
             if (newsPanel) {
                 if (mode === 'news') {
@@ -11607,41 +11917,80 @@
             applyFilters();
         }
 
-        
+
         // --- SEARCH FUNCTIONALITY ---
+        let searchIndex = -1;
         function handleSearch(event) {
             const query = event.target.value.toLowerCase().trim();
             const resultsBox = document.getElementById('search-results');
-            
+
+            if (event.key === 'Escape') {
+                resultsBox.style.display = 'none';
+                event.target.blur();
+                return;
+            }
+
+            if (resultsBox.style.display === 'block') {
+                const items = resultsBox.children;
+                if (event.key === 'ArrowDown') {
+                    event.preventDefault();
+                    searchIndex = Math.min(searchIndex + 1, items.length - 1);
+                    updateSearchSelection(items);
+                    return;
+                } else if (event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    searchIndex = Math.max(searchIndex - 1, 0);
+                    updateSearchSelection(items);
+                    return;
+                } else if (event.key === 'Enter' && searchIndex >= 0 && searchIndex < items.length) {
+                    event.preventDefault();
+                    items[searchIndex].click();
+                    return;
+                }
+            }
+
             if (query.length < 2) {
                 resultsBox.style.display = 'none';
+                searchIndex = -1;
                 return;
             }
 
             const matches = graphData.nodes.filter(n => n.name.toLowerCase().includes(query) || (n.description && n.description.toLowerCase().includes(query)));
-            
+
             if (matches.length > 0) {
                 resultsBox.innerHTML = '';
+                searchIndex = -1;
                 matches.slice(0, 5).forEach(node => { // Limit to top 5 results
                     const div = document.createElement('div');
-                    div.style.cssText = 'padding: 8px 10px; font-size: 12px; cursor: pointer; border-bottom: 1px solid #333; color: #c5c6c7;';
-                    div.innerHTML = `<strong style="color: ${colors[node.type] || '#fff'};">${node.name}</strong> <span style="font-size: 10px; color: #888;">(${node.type})</span>`;
-                    
+                    div.style.cssText = 'padding: 8px 10px; font-size: 12px; cursor: pointer; border-bottom: 1px solid #333; color: #c5c6c7; outline: none;';
+                    div.tabIndex = -1;
+                    div.innerHTML = `<strong style="color: ${colors[node.type] || '#fff'};">${node.name}</strong> <span style="font-size: 10px; color: #bbb;">(${node.type})</span>`;
+
                     div.onmouseenter = () => { div.style.background = '#0b0c10'; };
                     div.onmouseleave = () => { div.style.background = 'transparent'; };
-                    
+
                     div.onclick = () => {
                         resultsBox.style.display = 'none';
                         document.getElementById('node-search').value = '';
                         triggerNodeClick(node);
                     };
-                    
+
                     resultsBox.appendChild(div);
                 });
                 resultsBox.style.display = 'block';
             } else {
-                resultsBox.innerHTML = '<div style="padding: 8px 10px; font-size: 12px; color: #888;">No results found</div>';
+                resultsBox.innerHTML = '<div style="padding: 8px 10px; font-size: 12px; color: #bbb;">No results found</div>';
                 resultsBox.style.display = 'block';
+            }
+        }
+
+        function updateSearchSelection(items) {
+            for (let i = 0; i < items.length; i++) {
+                if (i === searchIndex) {
+                    items[i].style.background = '#0b0c10';
+                } else {
+                    items[i].style.background = 'transparent';
+                }
             }
         }
 
@@ -11653,11 +12002,18 @@
             }
         });
 
+        document.getElementById('node-search').addEventListener('blur', () => {
+            setTimeout(() => {
+                const resultsBox = document.getElementById('search-results');
+                if (resultsBox) resultsBox.style.display = 'none';
+            }, 200); // delay to allow click event to fire on results
+        });
+
         // Trigger a fake click on a node from search
         function triggerNodeClick(node) {
             highlightNodes.clear();
             highlightLinks.clear();
-            
+
             highlightNodes.add(node);
             graphData.links.forEach(link => {
                 const s = typeof link.source === 'object' ? link.source : graphData.nodes.find(n => n.id === link.source);
@@ -11668,15 +12024,13 @@
                     highlightNodes.add(t);
                 }
             });
-            
+
             updatePanel(node);
-            
-            currentNewsFilter = node.id;
+
+            // Do NOT filter right panel (leave global)
+            currentNewsFilter = null;
             const filterStatus = document.getElementById('news-filter-status');
-            if(filterStatus) {
-                filterStatus.style.display = 'inline-block';
-                filterStatus.innerText = `✖ Clear: ${node.name}`;
-            }
+            if(filterStatus) filterStatus.style.display = 'none';
             renderNewsList();
 
             // Graph.d3Force charge override removed to respect layout
@@ -11695,23 +12049,24 @@
         }
         // -----------------------------
 
-        
+
         let currentNewsFilter = null;
         let currentNewsTimeframe = 'today';
 
         function setNewsTimeframe(timeframe) {
             currentNewsTimeframe = timeframe;
-            
+
             // Update buttons
             document.getElementById('btn-time-today').classList.remove('active');
             document.getElementById('btn-time-week').classList.remove('active');
             document.getElementById('btn-time-month').classList.remove('active');
+            document.getElementById('btn-time-summary').classList.remove('active');
             document.getElementById(`btn-time-${timeframe}`).classList.add('active');
-            
+
             // Update Title
-            const titles = { 'today': "Today's News", 'week': "Top News (This Week)", 'month': "Top News (This Month)" };
+            const titles = { 'today': "Today's News", 'week': "Top News (This Week)", 'month': "Top News (This Month)", 'summary': "Daily Summary" };
             document.getElementById('news-feed-title').innerText = titles[timeframe];
-            
+
             renderNewsList();
         }
  // node id
@@ -11746,10 +12101,10 @@
             const newsList = document.getElementById('news-list');
             if (!newsList) return;
             newsList.innerHTML = '';
-            
+
             if (graphData.global_news && graphData.global_news.length > 0) {
-                const filteredNews = currentNewsFilter ? 
-                    graphData.global_news.filter(n => n.involved_nodes && n.involved_nodes.includes(currentNewsFilter)) : 
+                const filteredNews = currentNewsFilter ?
+                    graphData.global_news.filter(n => n.involved_nodes && n.involved_nodes.includes(currentNewsFilter)) :
                     graphData.global_news;
 
                 // Filter by timeframe
@@ -11758,8 +12113,8 @@
                     if (!news.date) return true;
                     const newsDate = new Date(news.date);
                     const diffDays = (now - newsDate) / (1000 * 60 * 60 * 24);
-                    
-                    if (currentNewsTimeframe === 'today') return diffDays <= 2; // "Today" gives a little buffer (48h) to not be completely empty
+
+                    if (currentNewsTimeframe === 'today' || currentNewsTimeframe === 'summary') return diffDays <= 2; // "Today" gives a little buffer (48h) to not be completely empty
                     if (currentNewsTimeframe === 'week') return diffDays <= 7;
                     if (currentNewsTimeframe === 'month') return diffDays <= 30;
                     return true;
@@ -11783,13 +12138,32 @@
                     return new Date(b.news.date) - new Date(a.news.date);
                 });
 
+                if (currentNewsTimeframe === 'summary') {
+                    let ul = document.createElement('ul');
+                    ul.style.paddingLeft = '20px';
+                    ul.style.color = '#ccc';
+                    ul.style.fontSize = '13px';
+                    ul.style.lineHeight = '1.5';
+                    sortedNews.forEach(itemObj => {
+                        let li = document.createElement('li');
+                        li.style.marginBottom = '8px';
+                        li.innerHTML = `<a href="${itemObj.news.url}" target="_blank" style="color:#66fcf1; text-decoration:none;">${itemObj.news.headline}</a>`;
+                        ul.appendChild(li);
+                    });
+                    newsList.appendChild(ul);
+                    return;
+                }
+
                 sortedNews.forEach((itemObj, idx) => {
                     const news = itemObj.news;
                     const analysis = itemObj.analysis;
                     const item = document.createElement('div');
-                    
+                    item.tabIndex = 0;
+                    item.setAttribute('role', 'button');
+                    item.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.onclick(); } };
+
                     item.className = `news-card impact-${analysis.impact}`;
-                    
+
                     let badgeClass = 'badge-general';
                     let badgeText = 'UPDATE';
                     if (analysis.category === 'funding') { badgeClass = 'badge-funding'; badgeText = 'FUNDING'; }
@@ -11802,7 +12176,7 @@
                             const node = graphData.nodes.find(n => n.id === nid);
                             return node ? node.name : null;
                         }).filter(n => n);
-                        
+
                         if (orgNames.length > 0) {
                             orgTags = `<div style="margin-top: 4px; margin-bottom: 6px;">` + orgNames.map(name => `<span class="news-org-tag" style="font-size: 10px; background: rgba(102, 252, 241, 0.15); border: 1px solid rgba(102, 252, 241, 0.3); padding: 2px 6px; border-radius: 4px; margin-right: 4px; color: #66fcf1; font-weight: bold; cursor: pointer; display: inline-block;" data-org="${name}">${name}</span>`).join('') + `</div>`;
                         }
@@ -11810,8 +12184,8 @@
 
                     item.innerHTML = `
                         <div class="news-header">
-                            <span class="news-date">${news.date}</span>
                             <span class="news-badge ${badgeClass}">${badgeText}</span>
+                            <span class="news-date">${news.date}</span>
                         </div>
                         ${orgTags}
                         <div class="news-headline">${news.headline}</div>
@@ -11820,7 +12194,7 @@
                             <br><a href="${news.url}" target="_blank">Read Full Source ↗</a>
                         </div>
                     `;
-                    
+
                     // Bidirectional highlighting
                     item.onmouseenter = () => {
                         if (!item.classList.contains('expanded')) {
@@ -11835,29 +12209,29 @@
                             Graph.nodeColor(Graph.nodeColor()).nodeVal(Graph.nodeVal());
                         }
                     };
-                    
+
                     item.onmouseleave = () => {
                         if (!item.classList.contains('expanded')) {
                             highlightNodes.clear();
                             Graph.nodeColor(Graph.nodeColor()).nodeVal(Graph.nodeVal());
                         }
                     };
-                    
+
                     // Expand/Collapse accordion
                     item.onclick = (e) => {
                         if (e.target.tagName.toLowerCase() === 'a') return; // let links work naturally
                         const exp = document.getElementById(`news-exp-${idx}`);
                         const isExpanded = exp.style.display === 'block';
-                        
+
                         // Close all others
                         document.querySelectorAll('.news-expanded').forEach(el => { el.style.display = 'none'; });
                         document.querySelectorAll('.news-card').forEach(el => { el.classList.remove('expanded'); el.style.borderColor = 'transparent'; });
-                        
+
                         if (!isExpanded) {
                             exp.style.display = 'block';
                             item.classList.add('expanded');
                             item.style.borderColor = '#66fcf1';
-                            
+
                             // Lock graph highlight to this news item's nodes
                             highlightNodes.clear();
                             highlightLinks.clear();
@@ -11876,17 +12250,17 @@
                         } else {
                             // Collapse and reset graph
                             highlightNodes.clear();
-                    
+
         // Add strong collision force to spread the hairball out
         Graph.d3Force('charge').strength(-800);
                             Graph.d3ReheatSimulation();
                             Graph.nodeColor(Graph.nodeColor()).nodeVal(Graph.nodeVal());
                         }
                     };
-                    
+
                     newsList.appendChild(item);
                 });
-                
+
                 // Add click listeners to all org tags so they jump the graph
                 document.querySelectorAll('.news-org-tag').forEach(tag => {
                     tag.onclick = (e) => {
@@ -11908,23 +12282,23 @@
         function applyFilters() {
             modeNodes.clear();
             modeLinks.clear();
-            
+
             if (currentMode === 'deployment') {
                 const deploymentLinks = graphData.links.filter(l => {
                     const s = typeof l.source === 'object' ? l.source : graphData.nodes.find(n => n.id === l.source);
                     const t = typeof l.target === 'object' ? l.target : graphData.nodes.find(n => n.id === l.target);
-                    return (s.type === 'End User' && t.type === 'Robot OEM') || 
+                    return (s.type === 'End User' && t.type === 'Robot OEM') ||
                            (t.type === 'End User' && s.type === 'Robot OEM');
                 });
-                
+
                 deploymentLinks.forEach(l => {
                     modeLinks.add(l);
                     modeNodes.add(typeof l.source === 'object' ? l.source : graphData.nodes.find(n => n.id === l.source));
                     modeNodes.add(typeof l.target === 'object' ? l.target : graphData.nodes.find(n => n.id === l.target));
                 });
-                
+
                 const activeOems = new Set(Array.from(modeNodes).filter(n => n.type === 'Robot OEM'));
-                
+
                 graphData.links.forEach(l => {
                     const s = typeof l.source === 'object' ? l.source : graphData.nodes.find(n => n.id === l.source);
                     const t = typeof l.target === 'object' ? l.target : graphData.nodes.find(n => n.id === l.target);
@@ -11942,14 +12316,14 @@
                 Graph.d3Force('charge').strength(n => modeNodes.has(n) ? -800 : -20);
                 Graph.d3Force('link').distance(l => modeLinks.has(l) ? 100 : 20);
             } else {
-        
+
         // Add strong collision force to spread the hairball out
         Graph.d3Force('charge').strength(-800);
                 Graph.d3Force('link').distance(90);
             }
-            
+
             Graph.d3ReheatSimulation();
-            
+
             Graph.nodeColor(Graph.nodeColor())
                  .nodeVal(Graph.nodeVal())
                  .linkWidth(Graph.linkWidth())
@@ -11982,7 +12356,7 @@
         function updatePanel(node) {
             const panel = document.getElementById('selected-node-info');
             if (!node) return;
-            
+
             // Re-establish base structure in case we arrived here from an Edge Click view
             panel.innerHTML = `
                 <div id="selected-name"></div>
@@ -11996,13 +12370,15 @@
                 </div>
                 <strong style="font-size:12px; color:#fff; display:block; margin-bottom:6px; border-top: 1px solid #444; padding-top: 10px;">🔗 Ecosystem Connections</strong>
                 <div id="selected-connections"></div>
+                <strong style="font-size:12px; color:#fff; display:block; margin-top:10px; margin-bottom:6px; border-top: 1px solid #444; padding-top: 10px;">📰 Node News</strong>
+                <div id="selected-news" style="max-height: 200px; overflow-y: auto;"></div>
             `;
-            
+
             panel.style.display = 'block';
             document.getElementById('selected-name').innerText = node.name;
             document.getElementById('selected-name').style.color = colors[node.type] || '#fff';
             document.getElementById('selected-type').innerText = node.type;
-            
+
             const descEl = document.getElementById('selected-desc');
             if (node.description) {
                 descEl.innerText = node.description;
@@ -12014,19 +12390,19 @@
             // Update stats
             const statsPanel = document.getElementById('selected-stats');
             let hasStats = false;
-            
+
             const wEl = document.getElementById('stat-website');
             if(node.website) { wEl.innerHTML = `🌐 <a href="${node.website}" target="_blank" style="color:#48dbfb; text-decoration:none;">${node.website}</a>`; hasStats = true; wEl.style.display='block';} else {wEl.style.display='none';}
-            
+
             const eEl = document.getElementById('stat-employees');
             if(node.employees) { eEl.innerHTML = `👥 <b>Employees:</b> ${node.employees}`; hasStats = true; eEl.style.display='block';} else {eEl.style.display='none';}
-            
+
             const rEl = document.getElementById('stat-revenue');
             if(node.revenue) { rEl.innerHTML = `💰 <b>Revenue:</b> ${node.revenue}`; hasStats = true; rEl.style.display='block';} else {rEl.style.display='none';}
-            
+
             const mEl = document.getElementById('stat-marketcap');
             if(node.market_cap) { mEl.innerHTML = `📈 <b>Valuation/Cap:</b> ${node.market_cap}`; hasStats = true; mEl.style.display='block';} else {mEl.style.display='none';}
-            
+
             statsPanel.style.display = hasStats ? 'block' : 'none';
 
             // Old news ticker removed. News is now handled in the right panel.
@@ -12039,7 +12415,7 @@
                 const t = typeof l.target === 'object' ? l.target : graphData.nodes.find(n => n.id === l.target);
                 return s.id === node.id || t.id === node.id;
             });
-            
+
             if (connections.length === 0) {
                 connectionsDiv.innerHTML = '<em>No direct connections found.</em>';
                 return;
@@ -12051,12 +12427,29 @@
                 const isSource = s.id === node.id;
                 const otherNode = isSource ? t : s;
                 const arrow = isSource ? '→' : '←';
-                
+
                 const div = document.createElement('div');
                 div.className = 'connection-item';
                 div.innerHTML = `<strong>${arrow} ${otherNode.name}</strong><br><span style="color:#aaa; font-size:11px;">${link.relation}</span>`;
                 connectionsDiv.appendChild(div);
             });
+
+            // Populate specific news
+            const newsDiv = document.getElementById('selected-news');
+            newsDiv.innerHTML = '';
+            if (graphData.global_news) {
+                const nodeNews = graphData.global_news.filter(n => n.involved_nodes && n.involved_nodes.includes(node.id));
+                if (nodeNews.length > 0) {
+                    nodeNews.slice(0, 5).forEach(news => {
+                        const div = document.createElement('div');
+                        div.style.cssText = 'margin-bottom: 8px; font-size: 11px; border-bottom: 1px dashed #333; padding-bottom: 5px;';
+                        div.innerHTML = `<a href="${news.url}" target="_blank" style="color: #48dbfb; text-decoration: none;">${news.headline}</a><br><span style="color: #bbb; font-size: 9px;">${news.date}</span>`;
+                        newsDiv.appendChild(div);
+                    });
+                } else {
+                    newsDiv.innerHTML = '<em style="color:#bbb; font-size:11px;">No recent news found.</em>';
+                }
+            }
         }
     </script>
 <script>renderNewsList();</script></body>
