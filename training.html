@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt. Hood Timberline Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --surface-color: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #aaaaaa;
+            --accent-ctl: #3498db;
+            --accent-atl: #e74c3c;
+            --accent-tsb: #f1c40f;
+            --accent-miles: #2ecc71;
+            --accent-vert: #9b59b6;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            font-weight: 600;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        .card {
+            background-color: var(--surface-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: var(--accent-ctl);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="index.html">← Back to Market Graph</a>
+        </div>
+        <div class="header">
+            <h1>Mt. Hood Timberline Training</h1>
+            <div class="last-updated" id="lastUpdated">Loading...</div>
+        </div>
+
+        <div class="card">
+            <h2>Performance Management Chart (CTL / ATL / TSB)</h2>
+            <div class="chart-container">
+                <canvas id="pmcChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Weekly Mileage: Plan vs Actual</h2>
+            <div class="chart-container">
+                <canvas id="milesChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Weekly Vertical Gain (ft): Plan vs Actual</h2>
+            <div class="chart-container">
+                <canvas id="vertChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('training_data.json');
+                const data = await response.json();
+                
+                document.getElementById('lastUpdated').innerText = 'Last Updated: ' + data.last_updated + ' UTC';
+
+                // PMC Chart
+                const pmcCtx = document.getElementById('pmcChart').getContext('2d');
+                const labels = data.pmc.map(d => d.date);
+                new Chart(pmcCtx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'Fitness (CTL)',
+                                data: data.pmc.map(d => d.ctl),
+                                borderColor: '#3498db',
+                                backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                                fill: true,
+                                pointRadius: 0,
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Fatigue (ATL)',
+                                data: data.pmc.map(d => d.atl),
+                                borderColor: '#e74c3c',
+                                borderDash: [5, 5],
+                                pointRadius: 0,
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Form (TSB)',
+                                data: data.pmc.map(d => d.tsb),
+                                borderColor: '#f1c40f',
+                                pointRadius: 0,
+                                tension: 0.4,
+                                hidden: true
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        plugins: {
+                            legend: { labels: { color: '#ffffff' } }
+                        },
+                        scales: {
+                            x: { ticks: { color: '#aaaaaa' }, grid: { color: '#333' } },
+                            y: { ticks: { color: '#aaaaaa' }, grid: { color: '#333' } }
+                        }
+                    }
+                });
+
+                // Miles Chart
+                const milesCtx = document.getElementById('milesChart').getContext('2d');
+                const weekLabels = data.hood_plan.map(d => 'Week ' + d.week_number + ' (' + d.week_start + ')');
+                new Chart(milesCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: weekLabels,
+                        datasets: [
+                            {
+                                label: 'Actual Miles',
+                                data: data.hood_plan.map(d => d.actual_miles),
+                                backgroundColor: '#2ecc71'
+                            },
+                            {
+                                label: 'Target Miles',
+                                data: data.hood_plan.map(d => d.target_miles),
+                                type: 'line',
+                                borderColor: '#ffffff',
+                                borderDash: [5, 5],
+                                pointBackgroundColor: '#ffffff',
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { labels: { color: '#ffffff' } }
+                        },
+                        scales: {
+                            x: { ticks: { color: '#aaaaaa' }, grid: { color: '#333' } },
+                            y: { ticks: { color: '#aaaaaa' }, grid: { color: '#333' } }
+                        }
+                    }
+                });
+
+                // Vert Chart
+                const vertCtx = document.getElementById('vertChart').getContext('2d');
+                new Chart(vertCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: weekLabels,
+                        datasets: [
+                            {
+                                label: 'Actual Vert (ft)',
+                                data: data.hood_plan.map(d => d.actual_vert),
+                                backgroundColor: '#9b59b6'
+                            },
+                            {
+                                label: 'Target Vert (ft)',
+                                data: data.hood_plan.map(d => d.target_vert),
+                                type: 'line',
+                                borderColor: '#ffffff',
+                                borderDash: [5, 5],
+                                pointBackgroundColor: '#ffffff',
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { labels: { color: '#ffffff' } }
+                        },
+                        scales: {
+                            x: { ticks: { color: '#aaaaaa' }, grid: { color: '#333' } },
+                            y: { ticks: { color: '#aaaaaa' }, grid: { color: '#333' } }
+                        }
+                    }
+                });
+
+            } catch (error) {
+                console.error("Error loading training data:", error);
+                document.getElementById('lastUpdated').innerText = 'Error loading data.';
+            }
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
