@@ -11431,8 +11431,8 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWlZ6TWoxeGstV3oybXBTejlwV0JWZDYyVXlpbmRwVEJfX2p3NDBnY3drd0FzVl9VTTlIVnZQOV8yX2pHVU1BQi03T1RfRlVsVkp6amxaTWFCeWFrb1BqUW8xRDNVd2JqSGNwNFRnMUJMZnplMUtrc2NtTVgxUXFJQk9jX2E4WUR0MkRseElxWVRmME0?oc=5",
       "date": "2026-09-17",
       "involved_nodes": [
-        75,
-        142
+        142,
+        75
       ],
       "importance_score": 5
     },
@@ -11441,9 +11441,9 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQmFTUmdEa1o1bllteFdWaE5fUVZJMFhObGlHblRpdXNKUE1OWVNsYVlYaEFzbTVqN3pfTVRBVXVMalo2U05MLW5peEQxOUllbnpGSE1vOVp2eWluY2N1Z3MwLXlaMWYyRWpJMndQSVVJSTFGVmFWZ3dvSkd0QjhOSDZNclMwdW94SU5CMTZGcXU3R0gxSVBiaTlCbEp3cmxqUVFadWRJOVFLVEF1MHpRTVFvVnBweWdCcHNwbFc2OUdWUnFkN0E?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        57,
+        117,
         7,
-        117
+        57
       ],
       "importance_score": 5
     },
@@ -11525,8 +11525,8 @@
       "url": "https://www.therobotreport.com/nyobolt-raises-funding-bring-fast-charging-more-robots/",
       "date": "2026-05-08",
       "involved_nodes": [
-        199,
-        167
+        167,
+        199
       ],
       "importance_score": null
     },
@@ -11592,8 +11592,8 @@
       "date": "2026-05-06",
       "involved_nodes": [
         40,
-        39,
-        65
+        65,
+        39
       ],
       "importance_score": null
     },
@@ -11602,8 +11602,8 @@
       "url": "https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/",
       "date": "2026-05-06",
       "involved_nodes": [
-        57,
-        7
+        7,
+        57
       ],
       "importance_score": null
     },
@@ -11657,10 +11657,10 @@
       "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNcVVVcGZjcGM0aUswU2dyUUxVTFlhTThiZEZldkRoaVU5MnhMVUVDV05ENUVXTHU5YmR0a3RTZWRXcC1WRkRneWgtOUd0WEd6TGdxQXhLODBSaHY4dkFvWHI1ZHBoUjdrbkU5NExPWEE1emxBYmJtRWdLZUtYQnBnTFl6Zmtxd2k5ekoxR1RtcTlBYlJ3STJySElUQlBEd0VBc2hNcGZ6Q0NmN3BwUXFwQnF6S0lzekk?oc=5",
       "date": "2026-05-05",
       "involved_nodes": [
-        195,
         40,
         39,
-        65
+        65,
+        195
       ],
       "importance_score": null
     },
@@ -11687,8 +11687,8 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWXZocUpBSTQ3eUtkV2YyZF9ISGM2dDNXSllfNVpFek5XTE5EeHFuVURMNXNRVDQ2VXlTLUx3U1kxTE5fMWo0M21IUUxDLTZIejQ4Wm9zMW1MV05RcGhZRGJqbWpIclpidzBpTFBYYXhrSkg2N1B4eU0yR2plSHduSEZnN1NWSGlob0psUk5ueDFqR3hZMVE0TXo0R0FVVEZpbnhkMnlYZXZyTmo1?oc=5",
       "date": "2026-05-05",
       "involved_nodes": [
-        16,
-        36
+        36,
+        16
       ],
       "importance_score": null
     },
@@ -11697,8 +11697,8 @@
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNkZQYkZsOFJTMmp2a0hHeWZLTnBlVkZMMUhBV0puOGRMTFJHenRySi1KakFlZTlZbFl5SjE3dzVXcGRiZDllRHFSVFZVSk1lVGUzZkZTRGRxNGZMWS0wU2gzbk5BOGFLZWRjRE05clpUYUFwSUE4ekh0dDlYM3NlcS1iVC1Ia1R1ZEU1anhPR1VadnFnZHVJb0s1MkdHYktYWlQ5Y2R0MlI?oc=5",
       "date": "2026-05-05",
       "involved_nodes": [
-        16,
-        36
+        36,
+        16
       ],
       "importance_score": null
     },
@@ -11844,8 +11844,8 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPc2U4cFZNZl9TZjVnMnI2aWVfMnpLUVhYZGVYS0p6ZWl1OF9Fb0RPNXNhTnBaNFdUNmRMSGxWbVpTTVo4T1JYREJHaXl3OGxYdm9mdWdXUlAxa0NaY3V5VDFSSTVId2lURnluOVB4YTZhVkVaSWVDdFNJamtESFJGVlJUVFhSZ3BIVVRwZzdWRDRUX084eDZpTVFtb2pxZlNfQUZwNTFLRWh2RXdi?oc=5",
       "date": "2026-05-04",
       "involved_nodes": [
-        16,
-        36
+        36,
+        16
       ],
       "importance_score": null
     },
@@ -11863,8 +11863,8 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaTdoVHdhZ3JJYUpiRGIxcWY2aFhYQmNVdDhMVXZ2NFhnRGVtSE41bDI5SFpoNnZVRDJrd0JjVDctZnp1NjVxOTVETGM2MTJfOUV3UG1vMEg5cmhHX0ZVZDgtRU1ZWk1nc3lmUVpKUTF5YkFWRkFlRFkwbFBEYmlkYTJLT1hQOG5QbXRFT0MxTEEwYmIyQ24wOVZmVUtuQQ?oc=5",
       "date": "2026-05-04",
       "involved_nodes": [
-        190,
-        28
+        28,
+        190
       ],
       "importance_score": null
     },
@@ -11936,10 +11936,10 @@
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tck93a1ZidEl5WU8tN1BPWm1JTTFuZjVPT0JwVlVEQnlHMl9Kd0M3aGU1RVVmaDhOTUg5eGd5MG1KMlE4WjJRQzhFZS01T2UzYWdMRVBUQnNaYkpVN1ZaUFg1TjJTaThuTnc?oc=5",
       "date": "2026-05-03",
       "involved_nodes": [
-        2,
         11,
         28,
-        8
+        8,
+        2
       ],
       "importance_score": null
     },
@@ -11984,8 +11984,8 @@
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQakdscmxSWVQwTlUwcXVhUmtBeFVwOFdZQklrSElfLTcxaTA0cU54dy1GQ244MHFqakJ3TEJNNUp3SDAwSUtFM0Nzb2ljVmxNRkJ0em40U0JucEtKa0xkVy0xTHo3MVNrRHYyRGQ3blc4OVNxVGFWenpMbUdsNDdxWUI5ZVh0TFQzSzRVNi1tdlZEQ3ppSXVkdXN1VC1LZzc3U1dBQ2xFM1VhWUZjS0NReUV5R1BZeDQ4YXFWMGRKOHI0NjNjbjBWMk5UVGU?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -12013,8 +12013,8 @@
       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5IVks1R3dUNmd4Z20weFptQ2NhTDhRUjZPQklUSFd5V2hPanVRZ2hMb0ttbkNSUVplMTIySVpIdFhtczJVV3dzS2JtOXFVQWNQbnBv?oc=5",
       "date": "2026-05-02",
       "involved_nodes": [
-        185,
-        22
+        22,
+        185
       ],
       "importance_score": null
     },
@@ -12077,8 +12077,8 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeWgzWmRGS2FLRGRVcWVTNUtBSlQ5Ni10ZlhBQW9HaEMtcFJxTTZ5UXFPTGRnTWllTHo5Nlpmdnd6Nzg5U3RCOWt0SmF1dkFaSjRmZHlqbDdvZHdMam9Qc2ZMdkF2WmVicEdtRmE0WGh6YVpWRHd4MmJCQm8xbExPeWdCV3hUYU9iTFh3RkNKNUlRRlBsY1FvdTUycw?oc=5",
       "date": "2026-05-01",
       "involved_nodes": [
-        154,
-        61
+        61,
+        154
       ],
       "importance_score": null
     },
@@ -12214,8 +12214,8 @@
       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPS2V4OFNkTnlYYkh3YS12NHN5SHRVSXNKd2hkVzZPVDlFZlg4TVpLUlRmRGRZbUU3dzFqMnlqZ193dUswWExYNTJNTUpIVG1tbm8tYXlmbmM3U0wtZUs4RXZ1WTdLdjczMm00VU0tZ3g4YlU3Q0MtXzBPSThlNnR4OWhiWkF1UmhpNUwyUC1RUmpNWkhlNExz?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        177,
-        75
+        75,
+        177
       ],
       "importance_score": null
     },
@@ -12233,8 +12233,8 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdzBwejRzaHFINWg2aVdOVkZVYml4ajBhd1pxOXlOUkU4MUpMcFk5ZEJiMEhWbEx2ajEtalg3WUI3UFd6TG0xMEYzREFxbDlyWmthT3Q3UlgwMWtnbWFNZzVQbndieWx4ZTAxbWxGdEpQdEZ4YkpSZl8zREtQWnFSRGdvZ1UxOGg5WVJxZA?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -12307,8 +12307,8 @@
       "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNd21qbzNLUnk1cW92OEltVldOY0JwaDZQOWlNMWllUUQ4S1hPVFhVcEZJWUFmdlIzR2JSZjZUbkgxSXhRaHF6NWdNeWctWmxfX19CTU9YdmZlUzVJOW95LWxHRHhOUjJjVGpUdWFka3UtczFKNkt4Q09IT3R4YkN4aG5uczV5Ri1wUl9uRU9NZS03WFdfdHlaWDlaSG5DcWNNa0FBNm51ZjJVc0hjWEE?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        120,
-        40
+        40,
+        120
       ],
       "importance_score": null
     },
@@ -12435,8 +12435,8 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPY3NOR2N5TVFud3FtS2UxMXc3Ml9qV2ZmZnVUTTRfaF93b05DMHVPRm1zMFhGMWFSQ0dqeHNNRUdDb1gxUVNNdzNYajZ6WTRlb0ozSnN4cFY5NVgzWjM5cm1WeTJvWUtCQVBBbXl6MkRhUldieU1abjlISXNmS2VTeXVWbUhkMUYxZjl6WUI0VTF5UdIBlwFBVV95cUxOcmFBNHlYMTB6UWRYNklIWjlTakcxZ2VFamlwV3pfcFltd3lGYk5yV0szb2lpUEVKN0NLZHU5Q1h3WHE0Y2I1LWpqNHZyOXpuVHZfNlJFWGN3Z1JvcWk5b3dtalg4cUFTcU40NWduOFpRRlNNVG4tdV9ILXlObDBMeUpPNDIyWDF2eEJwUUxQUUhRX1dQWW5r?oc=5",
       "date": "2026-04-30",
       "involved_nodes": [
-        75,
-        55
+        55,
+        75
       ],
       "importance_score": null
     },
@@ -12609,8 +12609,8 @@
       "url": "https://techcrunch.com/2026/04/29/coby-adcocks-scout-ai-raises-100-million-to-train-models-for-war-we-visited-its-bootcamp/",
       "date": "2026-04-29",
       "involved_nodes": [
-        7,
-        174
+        174,
+        7
       ],
       "importance_score": null
     },
@@ -12729,8 +12729,8 @@
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8ydVppRXdQb1c2YWZfMzh5N1JOVGFhUVhGaXpkbVBxRGhXU3Z1aHEyTVFaRE1nSDVpZ0c2enJKa1FELWlRWW5PSW1Gbm5DVEpOUktZeVZncVIwQW1yaDZySw?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        1,
-        43
+        43,
+        1
       ],
       "importance_score": null
     },
@@ -12776,8 +12776,8 @@
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQaE9oUU91MEt3V29rVndmWmxyWV9mbjZFQ29fcnliZXVHcnozblhpc1NNelBIaFJLa3VVbGd3MHBPQU41RVVFME13OTZBTFg5VTNOdS11THU3VmdPcHdZRzRhZGFnTkF2SFhMTTZJYXYxX09jNExMd0txOW5GbDk2Nm41T0pBcE1SYkpaQVJkdFlORHNZYnphTElFdU1VemVHT1UwQVhwaENpTHgxVjdTYURreWVaak5JRkYwdFpkNnJHcFHSAcgBQVVfeXFMTmdKVGNVdnpvcFVudWkxeHlwanVBejlWSHNhZjRQM2p5T05TYlR2YzRtQU8ycVdWc1ZDajYwd05qOU1SUmw0SE1kYVdnbGVYOWVWZ3hndUV3bUoyNGdfb19va3ZBMmM1QUNzTGV5YkhHbDZDS1BkWV93MXRWTnRwbEFMOHgzNkNJbXNSUW1oeW9UYkVUeDNKUU1UMkZ2bkNDQUw4Z1dEMWNqbWFFeGczZ25iWl9pdmpYUHNGbFpYZkdEWHk1UWlDaWQ?oc=5",
       "date": "2026-04-29",
       "involved_nodes": [
-        154,
-        61
+        61,
+        154
       ],
       "importance_score": null
     },
