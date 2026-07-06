@@ -10005,6 +10005,23 @@
       "revenue": null,
       "employees": null,
       "news": []
+    },
+    {
+      "id": 237,
+      "name": "Bezos",
+      "type": "Investor",
+      "description": null,
+      "website": null,
+      "market_cap": null,
+      "revenue": null,
+      "employees": null,
+      "news": [
+        {
+          "date": "2026-07-06",
+          "headline": "Physical Intelligence secures $400M at a $2B valuation led by Bezos and OpenAI: Can it compete with Tesla? - Tech Funding News",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUm1famZUMGpRb2RLSVZxZEZxWDZkTERjRms5XzFYMTViMW5IWEZaV3dQeDBfbHFlOGVaYUdFS1lXUXVhSHpDWXNEczZJUGhsWThOc200SXZMTXhZTkhhUGVvOV9xbHhxRkpBVUs1VjR3WnJvRVRBUF90VmpGckowNWxwXzdIRmNqT3N5bG4zb2l0X29SR21KcU1XVnB4UDdLZ1RYYWF0ZXZ2Zjd2YXktOHpFZ0hTM0ZCSkV3SEZLbFBzWExqM21ZY3RoYw?oc=5"
+        }
+      ]
     }
   ],
   "links": [
@@ -13780,6 +13797,27 @@
       "relation": "Partnership",
       "weight": 3650000000,
       "context": "Facility to support Microsoft AI cloud contract"
+    },
+    {
+      "source": 237,
+      "target": 1,
+      "relation": "Funding",
+      "weight": 400000000,
+      "context": "Led funding round on 2026-07-05"
+    },
+    {
+      "source": 41,
+      "target": 1,
+      "relation": "Funding",
+      "weight": 400000000,
+      "context": "Led funding round on 2026-07-05"
+    },
+    {
+      "source": 55,
+      "target": 26,
+      "relation": "Funding",
+      "weight": 1400000000,
+      "context": "Series C Lead on 2026-01-14"
     }
   ],
   "global_news": [
@@ -13798,20 +13836,33 @@
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNWlZ6TWoxeGstV3oybXBTejlwV0JWZDYyVXlpbmRwVEJfX2p3NDBnY3drd0FzVl9VTTlIVnZQOV8yX2pHVU1BQi03T1RfRlVsVkp6amxaTWFCeWFrb1BqUW8xRDNVd2JqSGNwNFRnMUJMZnplMUtrc2NtTVgxUXFJQk9jX2E4WUR0MkRseElxWVRmME0?oc=5",
       "date": "2026-09-17",
       "involved_nodes": [
-        75,
-        142
+        142,
+        75
       ],
       "importance_score": 5
+    },
+    {
+      "headline": "Physical Intelligence secures $400M at a $2B valuation led by Bezos and OpenAI: Can it compete with Tesla? - Tech Funding News",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUm1famZUMGpRb2RLSVZxZEZxWDZkTERjRms5XzFYMTViMW5IWEZaV3dQeDBfbHFlOGVaYUdFS1lXUXVhSHpDWXNEczZJUGhsWThOc200SXZMTXhZTkhhUGVvOV9xbHhxRkpBVUs1VjR3WnJvRVRBUF90VmpGckowNWxwXzdIRmNqT3N5bG4zb2l0X29SR21KcU1XVnB4UDdLZ1RYYWF0ZXZ2Zjd2YXktOHpFZ0hTM0ZCSkV3SEZLbFBzWExqM21ZY3RoYw?oc=5",
+      "date": "2026-07-06",
+      "involved_nodes": [
+        237,
+        43,
+        28,
+        1,
+        41
+      ],
+      "importance_score": null
     },
     {
       "headline": "ABB teams up with Nvidia to improve factory robot training - Reuters",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ1hxODZjRy1pTTkxWTN3aTNycDdhX3VWSDlKdTF3Um9fRUhQYzdfcXllOXZscXBnRXVVaklLT0YxMGRfbXVOdWd0LTYxZm0zSVlXOXpyNzZyYncxbTQ0QXFaTV9wX1pBSWNqUEpiNmxoWHdJd3ZlajkzTWRSaDZ0NktjR1BTZ1ZCM0NSbVdyVHptX3lTM1ZGWS1kTjJSVFNPSEh1bQ?oc=5",
       "date": "2026-06-02",
       "involved_nodes": [
-        228,
+        231,
         9,
-        75,
-        231
+        228,
+        75
       ],
       "importance_score": null
     },
@@ -13831,8 +13882,8 @@
       "date": "2026-06-02",
       "involved_nodes": [
         16,
-        39,
-        43
+        43,
+        39
       ],
       "importance_score": null
     },
@@ -13879,10 +13930,10 @@
       "url": "https://www.marktechpost.com/2026/06/01/how-to-speed-up-transformer-training-using-nvidia-apex-fusedadam-fusedlayernorm-and-native-torch-amp/",
       "date": "2026-06-02",
       "involved_nodes": [
-        228,
         215,
-        9,
-        188
+        188,
+        228,
+        9
       ],
       "importance_score": null
     },
@@ -13891,9 +13942,9 @@
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTUNIZHo1OHNUb08xQ0dPbGhITHo4MlB4bkJXa0VhQUZiaGIxTXVmYU83bjNQdjg2UUd1OWpEX0lNSUJtV3FOZk9UWVhNNHRqUzJXUnIwUmpURFp4bmxZTGdiTkNzZEZkdWg1QWF5WnFpbG5tUjl4RXgyS05iOUFtMGFLdWVMNTdsbDJmUUJ4NlVLRGdTeWhJUHY2Sms0QmU4bUV2SXJFUy1QSUp4LTk2Skljbk5LZw?oc=5",
       "date": "2026-06-02",
       "involved_nodes": [
-        40,
         234,
-        223
+        223,
+        40
       ],
       "importance_score": null
     },
@@ -13922,8 +13973,8 @@
       "date": "2026-06-02",
       "involved_nodes": [
         228,
-        40,
-        9
+        9,
+        40
       ],
       "importance_score": null
     },
@@ -13933,18 +13984,6 @@
       "date": "2026-06-02",
       "involved_nodes": [
         235
-      ],
-      "importance_score": null
-    },
-    {
-      "headline": "Physical Intelligence secures $400M at a $2B valuation led by Bezos and OpenAI: Can it compete with Tesla? - Tech Funding News",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPUm1famZUMGpRb2RLSVZxZEZxWDZkTERjRms5XzFYMTViMW5IWEZaV3dQeDBfbHFlOGVaYUdFS1lXUXVhSHpDWXNEczZJUGhsWThOc200SXZMTXhZTkhhUGVvOV9xbHhxRkpBVUs1VjR3WnJvRVRBUF90VmpGckowNWxwXzdIRmNqT3N5bG4zb2l0X29SR21KcU1XVnB4UDdLZ1RYYWF0ZXZ2Zjd2YXktOHpFZ0hTM0ZCSkV3SEZLbFBzWExqM21ZY3RoYw?oc=5",
-      "date": "2026-06-02",
-      "involved_nodes": [
-        1,
-        28,
-        41,
-        43
       ],
       "importance_score": null
     },
@@ -13971,10 +14010,10 @@
       "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUE5mdXpIelhSTF9FYU1TVThQeEpBTkV5VF85YklDWWhHVTlDNHkxTDQ4SENDanhKSkVERFlBZUhDcG1VbWpCVEU5aG5hZXhkUGtxVnJ1bzZJOGVtWUNSVVoxRy1OdlgyWGVCVm1HR0dqWHFFb3pvYXI0akhkNVEyU1JlSQ?oc=5",
       "date": "2026-06-02",
       "involved_nodes": [
-        32,
-        41,
         22,
-        28
+        32,
+        28,
+        41
       ],
       "importance_score": null
     },
@@ -13983,10 +14022,10 @@
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONVhFZUJ3TTVqckRDLWpEV2xoLUVKN1M4RnppalBzV2EtbmhnYmZfMzljWmlaRlVXeWVaYXhiNmxSSmFBQktfQUc0Mm11T1hUajhiTzllWHIzWGphM19TR3Z1VVFiUS0yd3pYOVlOTFNGVW9wOVNzeEllbnBTMExaS2lfMWJ5Q1ZDUW5V?oc=5",
       "date": "2026-06-02",
       "involved_nodes": [
-        32,
-        41,
         22,
-        28
+        32,
+        28,
+        41
       ],
       "importance_score": null
     },
@@ -14004,9 +14043,9 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNOVlxZVJKeGxWSU42SVBseE4tNExvNWtIcEs3RXY0OGdBOW5jZzdUMmpFTy14ck1qT3hoRmdDQ3JiTGRyNTRRU3hnZXpac184R1BSbzNoVWN4bzc3U2NqaVJXZzNzZExobmpTTkpQdWF0b3pIMFhlMWJ3d0FIX3FHV2x5WFQzVVdac2xtN0NsY051WFZWaUZVSkxRYTU0Zld5a0ZtdXY3UjBsTXBpYXR5RTFXa3Z1X0Y2QWc?oc=5",
       "date": "2026-06-02",
       "involved_nodes": [
+        30,
         228,
-        9,
-        30
+        9
       ],
       "importance_score": null
     },
@@ -14043,9 +14082,9 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQmFTUmdEa1o1bllteFdWaE5fUVZJMFhObGlHblRpdXNKUE1OWVNsYVlYaEFzbTVqN3pfTVRBVXVMalo2U05MLW5peEQxOUllbnpGSE1vOVp2eWluY2N1Z3MwLXlaMWYyRWpJMndQSVVJSTFGVmFWZ3dvSkd0QjhOSDZNclMwdW94SU5CMTZGcXU3R0gxSVBiaTlCbEp3cmxqUVFadWRJOVFLVEF1MHpRTVFvVnBweWdCcHNwbFc2OUdWUnFkN0E?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
+        7,
         57,
-        117,
-        7
+        117
       ],
       "importance_score": 5
     },
@@ -14054,9 +14093,9 @@
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOMGxiUnBmZlRxODM4akY2NEV6NW50aV9BR2FueFA5azBDdlUxUmdxZWw4SXlzcUJ1ZGVfLXpaM0N3Vjh2aS01SVNJM2o1SUdSTmdwNHMwZVNiOFVHTEtJb0RvWFcwZ0RBcDdIdmljY01WM3hHZ1hQenlWZGlDbDVnNk41V0YzNEFSM1ZaaVB5ZDBYcGpIU1E?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
+        20,
         15,
-        39,
-        20
+        39
       ],
       "importance_score": null
     },
@@ -14065,9 +14104,9 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeV9WbTd1WGN2QlRxckdyQzc2dUFCZmQ2ZHotM3o2Y1doeTV3OWtTb3FNVHdLWWdrUGRXcUJfVXk1Q1hrdlp2V3ZNQ1p3Y3QtdE15c1pDajR0RDlUc1FNVUNpRmRKckkyRER0YzAxSGt6b0tVb290a1lSSDZZSXB6QWh5VWxFRjR3eWV0MnZ0V1Z4dWZkWHUyUXUwUXgxb3c1Zm8wYmpGb3lEMWdQWkpwNExXRlFqZVFnN25Z?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        191,
         232,
-        29
+        29,
+        191
       ],
       "importance_score": null
     },
@@ -14085,8 +14124,8 @@
       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBfNFpYSFM1WXRLLTl0ZjY4UjZqemZkbHNXb0wtZFRKc05YRE05eVZCbm5KWkpzTXhMdEZMQ1NweDJFekFPTHFFaGFVS1BOeUY0YlBfRA?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        40,
-        223
+        223,
+        40
       ],
       "importance_score": null
     },
@@ -14095,8 +14134,8 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPX0hIb0U3a3BhRmprZDdvOUd4YjFCN1piN25CNHN3Q2NveTZ2RURnS0o2bTZxWVRqeHFPLWJkWGk0Q213dVRadUpRbFFpbnlVc0U2M1VNSDJvdEwwTnRPVkhCZjhGTUNVRXZuUkx0SFVJLUFyNE1FX2NTUTJ0VDJzSkFTdjhJMnY3TzBGS3F1dDFRc2JCRFZzU18zTkNOdXpiWm1hMUZUMXBnYlBickRBT3dydDFoT2JxdWk4TXh4allZNEswb0E?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        45,
         201,
+        45,
         230,
         78
       ],
@@ -14117,8 +14156,8 @@
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdU9XSG9rdEh0Wlh0a0c1QVBRZTBLVjh6elJRYjNEVExyamEyOW5vRzlUelBwcnFzNXEyOTBLX2F6OWF1aldaRUo1U21sWjh4Zkc5Nkh4N3RCLWpJYzNTdTdyQTFmYTE0S2RtTXQwUXRnOUN1cDFaLTR1Wm5IRGIxTFRkVFluZGQzd2NYLUlMREw0bUo0UnZGR05jZDdtUm9Sbm83Y3FIR3BkR183ckhDTW9fUV9fSlpsTXdkWDJ4THNrR2E0YjlhRHZxbGxua25LbWRXLWZB0gHeAUFVX3lxTE1oR0NGaW5TMFRBMzEzWDdlS0s3bUZtRnpmb291d2lOSkIxemhoMGJrc1JaQTU5bDFuX2drbGhlOWRLaUMtTUhPaWZrR2Z1UDQxakhadVBiT0xYUmlHZDRPeXBoLWJsVjRJeEZjU0d4R01Sc2d3U050NEJCa0l3VEpKNmY1cFhzWnpFam4yaVM2Y2JoZlhMWldyVVR1bldYY21kenNqSnJDX3BJaGU0aVp0OXZpVUdZTEJnYklnRGhqdTRWTDlvTUsxb2NPSXhGS2MwY2ZnOWZKbE5OVl9lZw?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        40,
-        9
+        9,
+        40
       ],
       "importance_score": null
     },
@@ -14145,9 +14184,9 @@
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQNDRacEdVN1FYNzVFQVJmNm1GNUNlbElmV1NTOVZZaTdyZVAySVpGSlUxT2pvc1BBMndlS2RIMHZSWEVkdTJJMGJ5NWFZSVI2cklGMHF0Z0pqbHFEYXhIS3RPd2RTa241WkVqQkYzMldIY2pENzVTOGZhWFVfOVIxdg?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
+        30,
         228,
-        9,
-        30
+        9
       ],
       "importance_score": null
     },
@@ -14156,8 +14195,8 @@
       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeE9aZm5LVGZIT2syS3J1WC0tV1llaF85M3FJc0w1NVRJUkVzLXVMQVptRjkteEdlaVdId3phWXhXdkREQm1NWENOX3dIYVdSeFRUQnhrSVpOc3lGOVpLMG9KRVpZX0o2eUNHTEttWXRueXFGcnV0VHdLcW9DN1JHZTgwMTY?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        75,
-        231
+        231,
+        75
       ],
       "importance_score": null
     },
@@ -14166,8 +14205,8 @@
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPRE9iS2JlZnJTN0hPSjMzM1ZweURObTZ5eng0RXdfOVZEUFN6ZDBCcVpod19JZE55TGNOQlBFVTVtNWs2ak0ybWZfSGpjLUpYOGllWHJFeGZ4TlJFQUhvMVlQSVN2NTlTWUMxUGJ1enk2MzdjdEZIdTFNYWJGalNld1F6emhfdXdhNlNYSDBMcnAwZ9IBlwFBVV95cUxOUTBkdDlXUHI4akZlenhoUHdyVmJNS09ERmZXTEtjemIzLVphdHdibEtpdXlIQnBCeFJFc1V4cFhLQWdkdVFCczNiWjF0YWs4UUZJdmxuWlNiYUx0UTVYZmtLd0k3U3JXdHN6ZjNlOHg4bVlPazd5YUo5M0IyRlBUNWE2TUlpeEY3VEE2bzFPSDRvX1NTQktj?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        9,
-        30
+        30,
+        9
       ],
       "importance_score": null
     },
@@ -14176,9 +14215,9 @@
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOeERtcmJ2cG5UTU5Ec1c5Z3lZeGVZeWUycVZ1XzMxSUNGUWxINktYV0dxOUNFUFJlMU5seW5ycDJPMk82Qjg2Ymkyb3ZGOEFPWGFuMTNNMGI4aXZVTWdyT3htTEFXQ3J4SmR5ejJ0ai1kMnpwd3lkX2lIMEdSS0pHb0t0UUdBOGN3enhTOTdYd3diM1RoRWNiY1pSYkcyN0N1eGVqZ3hMalluUDA2T1ZB?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
+        30,
         228,
-        9,
-        30
+        9
       ],
       "importance_score": null
     },
@@ -14262,10 +14301,10 @@
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNLU40WFQ3UUtIeGRmS2Y0cGJ5QVJtTElOXzRHdkoycC1EUjFfbmZSOXhVUVhtZU9EQlo4azBBdE5qS0NUWGdteGJpVzZWU3EtUFpGOEtmX2dXZHVRVjVVVW02VmdOMkNaTmFwaUZhemZieElHRVFtNkhZZ2wtYmZ3cERZbm10WF9wSEVhRGFkbzdIUmlSRG55cVdPMXlfRTlhRlJ3T0IyaktYZ1FGQjdVeTQtT19IVnZ3TXd1Yg?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        228,
-        9,
+        30,
         229,
-        30
+        228,
+        9
       ],
       "importance_score": null
     },
@@ -14274,8 +14313,8 @@
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNc3ZIa25XQkxJZXpYaExTLXlDTHRXVk9ISTl3OXlLOFN2X3FnSnBycWNCZUpfWjNpTjNmTWloRTl3LWVFNHkxSXljbllVbXl0anRqNkd5TkNFR09fQ2F6OFpzQVpBemtaOFFuQ1F5em1fS3dHQUpkdGJHc3J3TE1xS1lackU5YzRwQk1zRWxpYmF6b2RidzlQSA?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        33,
-        26
+        26,
+        33
       ],
       "importance_score": null
     },
@@ -14350,9 +14389,9 @@
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSU5KaTN0cVZRTzJia2poUm83RGNwdmI1X0pIbjdfYUtMQWl4ZUZsLV9qRGZQLWR3Q0JzdXBvZUJpdktWeDlTYUtzOW52VDdqRHMwX1htNWtwSE1kZ0t0bEgxNDJBWUItekNERkpUcHp5SnRrSVBLNndob2FEY1BheTIxM1FaWHlUTTY1WThQM25Kc3JEeEhGQmNEZWtfWk9vQ05BbV9zMXZNalFkUURTSXVMQmRqSmNiS0ZHbWMxdHNFbk1XWkVJ0gHHAUFVX3lxTE5EOGU2dWxIeElidGdKcEJwYmZLTGFtS3NrbktXOS1acXVLUWlEQUkwbHJaMlo2cVJoN2hwWkhJNm9zREF6Z29kSVBFV1NIVHRyUmNYczdOSHhhcGVRRmloNHlkRzRvRE5CVlYyMDRYS3Jxd2gxU2kzdHAwSW1yalBjWkU0YlZyNUx0akJDUVg0SDRUZW13Zmt2cXZ5RFliUkdiUTVySWlNUkdYaDg5V0F1bmtuX2NvQmhnYUZ0eWRVVkxiUG1tU3M?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        191,
         232,
-        29
+        29,
+        191
       ],
       "importance_score": null
     },
@@ -14361,8 +14400,8 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOSGw1T1Ywd3JfYWgtTm1UWmdRYVRCMUtQeGlwdHAweDZ4SElhMG40THpELUMzTjg3V3Bjd0RIaVIyV1QzN21QNWhZbTFKMmt1dHRCWWNwaDcxYzdmMm5IY0xsUVlsa2dVQmM0LTd0R3lYaDBGV3hfc2o5dk9LcGp2NnYzalJ6N0JiQVBmOHV0bkNFU213TWZjZmlMUmhUUmcyMmtHNF9FQnh3blp0VDhMRGo3SndlRlQweDVF?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        80,
-        58
+        58,
+        80
       ],
       "importance_score": null
     },
@@ -14380,8 +14419,8 @@
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWVRlemY1VWRPdThJUjA4NFRMNGNxZ2tyVFNULWpkb081TGJ5S21zWDZCY2VvbFBqc3VzUEg2cHlHM1Z1ek1FNFJSQnVINXY1STJPV0RveVVhbUU2VXdUV2N3bmFRVDBDdmJ2VzhoZ0JnM1JldzJyRGV2WUI5azRnX01ycVBfSVZMWERsalZ1alFyLU54SmdVX2otVDM5bmRpNFZ0X1Q4X3JENnU2WjlDLWVkaGJxdUxUWTBjRUVIYmRWNVRU0gHEAUFVX3lxTE84aXFUUTRPZkdJSXFwa3RPcU1vZm85a0tENWl6cDRkZjVQSlhGS2hfWDBfRUZwb2tYT1Y2T0F6X282SE4yYWNCd0tiNkQ1NjZ5S1NQUnhYRXFWcWUwaWwxM19NUTUxLTlqSExQTTl0N1ZxbEt3Y21qMG1qT01XMmF4ZGYyOUdfdXplcnJzV1c1Y0pRazZOMV9PamVkLVh3TkQ0OVYtQVk2bzhaT3VFMDhJYjlsZjk5MVJkTDFjS1RnbWxacDk?oc=5",
       "date": "2026-06-01",
       "involved_nodes": [
-        9,
-        30
+        30,
+        9
       ],
       "importance_score": null
     },
@@ -14418,8 +14457,8 @@
       "url": "https://www.marktechpost.com/2026/05/30/genesis-ai-releases-nyx-quadrants-and-genesis-world-1-0-physics-platform-for-scalable-robotics-foundation-model-evaluation/",
       "date": "2026-05-30",
       "involved_nodes": [
-        57,
-        215
+        215,
+        57
       ],
       "importance_score": null
     },
@@ -14438,8 +14477,8 @@
       "date": "2026-05-30",
       "involved_nodes": [
         16,
-        39,
-        36
+        36,
+        39
       ],
       "importance_score": null
     },
@@ -14495,9 +14534,9 @@
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMDdsWV9SdFJxU2ZiX2lxX2dLaGR4Zm1DVUNXaVNobGFhTk4tZlBxTllRT2JqaFpoS3hUcGlzTEpJZGJxZHlES2E0V3Z3Z0N3WW10YXVWUEFKSGYzTnZtZzQzTmVIZ1VoSmt0Tjh3SU9oUmVDZW4tckdPaVBCbXJwbl8wWmd4WUh5cW13c1pCNFBYVFlFV19QbVhBQXhsc1FUcUFpeE9HQ0lZUllvVnFEZzd0YmJEU2JuaVRWc2hzMFd0MVBSRFJ6dEdkSWdJdVJTMTczOVVXNUREQXpDVFgxWVdlVDFWdw?oc=5",
       "date": "2026-05-28",
       "involved_nodes": [
-        40,
+        223,
         9,
-        223
+        40
       ],
       "importance_score": null
     },
@@ -14535,9 +14574,9 @@
       "date": "2026-05-27",
       "involved_nodes": [
         225,
-        176,
+        154,
         61,
-        154
+        176
       ],
       "importance_score": null
     },
@@ -14601,12 +14640,12 @@
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUUJDbE52Vno4d0VTaGdJV0R1M2w4dnU3eWlpZ2hTYVRaUTZQMVZIVU5McUZpOFZzUXo2ZVhpZUVtR0g0aGIwUGszWkRmaDRUWVdwNHhpa1lsbEtDRThnaDRTY3Y3VkVJNE90bENkNmp0Zk5ScEZlUEFhcFVMNkFoTTl0dHdSSDQtTklMejFXdnBDWllJNzVyclVwTVNXTUpvLXJCT1BpMVhCY1dTbTZ1UQ?oc=5",
       "date": "2026-05-19",
       "involved_nodes": [
-        29,
         15,
-        16,
         28,
+        29,
         3,
-        139
+        139,
+        16
       ],
       "importance_score": null
     },
@@ -14626,8 +14665,8 @@
       "date": "2026-05-19",
       "involved_nodes": [
         16,
-        36,
-        82
+        82,
+        36
       ],
       "importance_score": null
     },
@@ -14645,10 +14684,10 @@
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5xWTJOR0dPZThwT3JiR05sNjZZRkw1b3lVQU5aVWFwZkpLMExZNFJWNVV5OFVpZzVuUmpZVjlXMnRSaHNTeXJPdDJlQjRHNE9yT2RMbTZMbWxQWkt6SGtveVZQOA?oc=5",
       "date": "2026-05-18",
       "involved_nodes": [
-        75,
-        43,
+        201,
         142,
-        201
+        75,
+        43
       ],
       "importance_score": null
     },
@@ -14667,8 +14706,8 @@
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPYWRIb1lYM1dnRkp6bWJNaFFQeE1QdzlMV2UyWmc0NVNuRVBVeVIxZUp0dHRxVkkwYTdxUjBjSXVfS25IelhHVHdRUEhUXzFuQ01waWxWSWJWUWJvRmZrVFkwaXBwOHdGeFZNMGM0NW1NZy1lbnlDSTlHdDA3VHVXOENrbjMzUjhSVmRUZmhpRkprV2dhY0JRRjNHZ0oxSjhyZEVV?oc=5",
       "date": "2026-05-18",
       "involved_nodes": [
-        16,
-        129
+        129,
+        16
       ],
       "importance_score": null
     },
@@ -14705,8 +14744,8 @@
       "date": "2026-05-18",
       "involved_nodes": [
         215,
-        9,
-        188
+        188,
+        9
       ],
       "importance_score": null
     },
@@ -14772,10 +14811,10 @@
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNWXdKelVlNXV4OFljdE95Rk9qbm9zWmZLV0pCd0Z4ZlpxcmdsTXBFSVRIbV9IOEdqSm5OSDR5X2t0akpkd3VkWmVsd2pmTVcxSGl0LTVOd0hIQnJMUzZIS3JSN3BqMXJUVGczeXlQLVdfc2hrN3NKVUplMER6eC1NVktPWXJ6YUFpZ1ltMU5wTXhYeW5qLUtBallLSXNWUU5WN0Z5QVVJUGVrcjBiaDVRWDVJZW9UTFlYck1CUVlEVGhMcXFWRWR4VFNyeEl4MXpBN2c?oc=5",
       "date": "2026-05-15",
       "involved_nodes": [
+        216,
         217,
-        40,
         80,
-        216
+        40
       ],
       "importance_score": null
     },
@@ -14822,8 +14861,8 @@
       "url": "https://www.marktechpost.com/2026/05/15/zyphra-releases-zaya1-8b-diffusion-preview-the-first-moe-diffusion-model-converted-from-an-autoregressive-llm-with-up-to-7-7x-speedup/",
       "date": "2026-05-15",
       "involved_nodes": [
-        218,
-        215
+        215,
+        218
       ],
       "importance_score": null
     },
@@ -14905,8 +14944,8 @@
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPRWpWNEM0WkxQSTJ4bFF6SjA3bjRCZnNtYmR0YnhheVE1aUx6dVBqclNpUzQwLUlsTWQ1SWRSODJFR3BlMHgwRU9qR3d2Slc3V0VEWWc4Skc5ZUJhMGZOYTJiRWR1TWhXbjFHMlB1RlVxUmhsXzB0ckdYVE5MLVN3QnNzU3g3N1RxRHY1WnM3aXZ3RkZf?oc=5",
       "date": "2026-05-14",
       "involved_nodes": [
-        125,
-        20
+        20,
+        125
       ],
       "importance_score": null
     },
@@ -14915,8 +14954,8 @@
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1aa0g5Yk9IZm8zcFdZM2hDbzJubExoOFFxTlo5cHlOVlN4dzZoTWdudTJZWkhlVDNsak96X0NlaXBMQnZJcE02Q2lqWnVGWjF6R0VNVlNGM284U0ZoNHdVMlgtdkMwN1RfRFg1RUt4Yy1IZw?oc=5",
       "date": "2026-05-14",
       "involved_nodes": [
-        125,
-        20
+        20,
+        125
       ],
       "importance_score": null
     },
@@ -14943,9 +14982,9 @@
       "url": "https://techcrunch.com/2026/05/13/rivian-spinoff-mind-robotics-raises-another-400m/",
       "date": "2026-05-13",
       "involved_nodes": [
-        125,
+        20,
         7,
-        20
+        125
       ],
       "importance_score": null
     },
@@ -14954,8 +14993,8 @@
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVmx4T2xoTVZKRnhDYjJ1cDFBZF9LM1ZlbldQdy01czNmT1BKQXZvVFRQUmNRaEx0R01WbjlKd0JrRnF3R1g0cFprRTdEd3BIbDl6ZUJNdG5xb0Y1RUtSa1NsZU8zeTB2Rk9aUnBRQ2tlYTJQZkJGMGZETTM4OWpaWENEQWdfYXVfRUZ4S3I1QkxrU0t0X2JKNUxTRkZRSEZJSHJtVUFWU3ZVREE5ZUJyNEVR?oc=5",
       "date": "2026-05-13",
       "involved_nodes": [
-        30,
-        188
+        188,
+        30
       ],
       "importance_score": null
     },
@@ -14982,8 +15021,8 @@
       "url": "https://www.therobotreport.com/comau-omron-robotics-partner-offer-robotics-more-industries/",
       "date": "2026-05-12",
       "involved_nodes": [
-        210,
-        211
+        211,
+        210
       ],
       "importance_score": null
     },
@@ -15058,8 +15097,8 @@
       "url": "https://www.marktechpost.com/2026/05/11/sakana-ai-and-nvidia-introduce-twell-with-cuda-kernels-for-20-5-inference-and-21-9-training-speedup-in-llms/",
       "date": "2026-05-11",
       "involved_nodes": [
-        9,
-        208
+        208,
+        9
       ],
       "importance_score": null
     },
@@ -15140,8 +15179,8 @@
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRDU4RW93dGFGWXdXTUcwX0FPOHlWS084WnJSRFo0OGVDSHV6aWY5eUdvUjVOd0FOOFREVWlsUWpMbWxrLVZ5WlJ0M21hYkQzWXRvWFFSdHJ5cG9tSkQwZVBfSDhCVUdXdFVrWEFSQnI2SVB3SDZHSnFiN0hBMmZTUWxnOG5iZzI3Q3dac0ZsVWJySGlDXzlyZXFEQWtlaF9laE5MeDAxQktkb1pGNjlQVVE3MExnMjZIUGRR?oc=5",
       "date": "2026-05-08",
       "involved_nodes": [
-        62,
-        197
+        197,
+        62
       ],
       "importance_score": null
     },
@@ -15150,8 +15189,8 @@
       "url": "https://www.therobotreport.com/nyobolt-raises-funding-bring-fast-charging-more-robots/",
       "date": "2026-05-08",
       "involved_nodes": [
-        199,
-        167
+        167,
+        199
       ],
       "importance_score": null
     },
@@ -15197,8 +15236,8 @@
       "url": "https://www.marktechpost.com/2026/05/07/openai-introduces-mrc-multipath-reliable-connection-a-new-open-networking-protocol-for-large-scale-ai-supercomputer-training-clusters/",
       "date": "2026-05-07",
       "involved_nodes": [
-        41,
-        80
+        80,
+        41
       ],
       "importance_score": null
     },
@@ -15207,8 +15246,8 @@
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQLUkwVVNTZTZPYjJCcHZuN242bkV4SnprRjM0WV83Z3NIOGFPSlBxNnZqV0JjS2VWXzBzcVBBRlRzQ2VGbnhrOFNYeE5NQzduOWN1TnV5Sl9HTnhaM2UxVVdWRHN1aWlXQi1MZkM0RzdEOWllSTV3V2llQ05TWlYzbFBMUkNfeGE2c1FuN1IwdWZjQkNEVEtqMXMxWkg?oc=5",
       "date": "2026-05-07",
       "involved_nodes": [
-        57,
-        99
+        99,
+        57
       ],
       "importance_score": null
     },
@@ -15226,9 +15265,9 @@
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPYUlJTkxVNW4yaDRJcDIzd0xwcFNOWlVBLV9UeENtSmFCNE5IdkItT0tQTWl4QUtkUUVaTjBGNVN5ZzhSaHBXaHBDVG0zdktGeHhvaXFFakZpaEFOZ1RyNnJkNmZ1em9PUUdYc2FuUkgtSTUzRG12Zy1DZy1kZk1TcnB4ZS00Ulo3MHNwQXJVQzd2WWJzSTEtend2X3FMeDd4RUFYSEg1RU1SUTZDanZidm1NTGo0WVJIZnlvcHRHX3RaN2Nmbnc?oc=5",
       "date": "2026-05-06",
       "involved_nodes": [
-        40,
+        65,
         39,
-        65
+        40
       ],
       "importance_score": null
     },
@@ -15237,8 +15276,8 @@
       "url": "https://techcrunch.com/2026/05/06/khosla-backed-robotics-startup-genesis-ai-has-gone-full-stack-demo-shows/",
       "date": "2026-05-06",
       "involved_nodes": [
-        57,
-        7
+        7,
+        57
       ],
       "importance_score": null
     },
